@@ -248,6 +248,19 @@ def google_maps_url(source_name: str, lat: float, lng: float) -> str:
     return f"https://www.google.com/maps/search/?api=1&query={query}"
 
 
+def overview_search_query(source_name: str, region: str) -> str:
+    """Web search query: Japanese when present, else source name, plus region."""
+    name = _clean_formatting(source_name)
+    label = japanese_original_name(name) or name.strip()
+    return f"{label}, {region}, Japan"
+
+
+def google_overview_url(source_name: str, region: str) -> str:
+    """Google Search URL for the Overview popup button (new tab)."""
+    query = overview_search_query(source_name, region)
+    return f"https://www.google.com/search?q={quote_plus(query)}"
+
+
 def normalize_group_name(name: str) -> str:
     """Simplify source labels: drop [N] prefix and trailing - {kanji/kana}."""
     name = name.strip()

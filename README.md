@@ -23,12 +23,13 @@ Hosted at **[cobalto.dev/japantravelplan](https://cobalto.dev/japantravelplan)**
 You only need **`index.html`** — copy or download that single file and open it in any modern browser. All place data is embedded inside it, so no server, install, or rest of the repo is required. You do need an **internet connection** while using the map so the app can load jQuery, Leaflet, and OpenStreetMap tiles from the web.
 
 1. Open `index.html` locally (double-click or drag into a browser), or visit the hosted URL.
-2. Use **Show on map** checkboxes to choose which sources appear on the map.
-3. Unchecked regions are hidden on the map; their sidebar lists stay **collapsed** and cannot be expanded until re-enabled.
-4. Search filters the **sidebar list only** (within currently checked sources). Matching groups auto-expand while searching.
-5. Click a place in an expanded list or a visible map pin to zoom to it and open a popup with an **Open in Google Maps** link.
-6. **Clear** resets the search, re-enables all sources, and collapses all region lists.
-7. **Light / Dim / Dark** changes the sidebar theme only; the map always uses OpenStreetMap.
+2. On phones, use the **List / Map** tabs at the bottom to switch views; tapping a place in the list jumps to the map.
+3. Use **Show on map** checkboxes to choose which sources appear on the map.
+4. Unchecked regions are hidden on the map; their sidebar lists stay **collapsed** and cannot be expanded until re-enabled.
+5. Search filters the **sidebar list only** (within currently checked sources). Matching groups auto-expand while searching.
+6. Click a place in an expanded list or a visible map pin to zoom to it. The popup offers **Maps** (Google Maps in a new tab/app) and **Overview** (Google Search in a new tab).
+7. **Clear** resets the search, re-enables all sources, and collapses all region lists.
+8. **Light / Dim / Dark** changes the sidebar theme only; the map always uses OpenStreetMap.
 
 No build step is required to *view* the map once `index.html` exists — including a copy saved to your phone, laptop, or cloud drive.
 
@@ -74,6 +75,7 @@ Group names in the app are simplified (e.g. `[1] Kanto - 脚下照顧` → `Kant
 - Names with Japanese script are shown as **`Romaji (original)`** when applicable.
 - KML entries that mix a regionalized label (e.g. Portuguese) with Japanese use the Japanese name for display normalization and for Google Maps links.
 - Google Maps URLs use **`query={name},{lat},{lng}`** — Japanese-only in the query when the source name contains Japanese.
+- Overview search uses **`{label}, {region}, Japan`** (Japanese label when present) via Google Search in a new tab.
 - Tokusatsu links use the place name from the markdown table plus coordinates.
 
 ## Favicon

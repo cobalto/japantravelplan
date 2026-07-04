@@ -199,7 +199,7 @@ Coordinates column format: `lng,lat,0` (KML order).
   "order": ["Tokyo", "Kanto", …, "Tokusatsu"],
   "groups": {
     "Tokyo": [
-      { "name": "…", "lat": 35.0, "lng": 139.0, "url": "https://…" }
+      { "name": "…", "lat": 35.0, "lng": 139.0, "url": "https://…", "overviewUrl": "https://www.google.com/search?q=…" }
     ]
   }
 }
@@ -235,7 +235,10 @@ Each pin popup shows:
 
 1. Place name (bold)
 2. Group name (small)
-3. "Open in Google Maps" link (`p.url`)
+3. **Maps** button — opens `p.url` (Google Maps) in a new tab
+4. **Overview** button — opens `p.overviewUrl` (Google Search) in a new tab
+
+Overview URL query (build time): `{japanese if present else source name}, {region}, Japan` via `overview_search_query()` / `google_overview_url()` in `normalize_names.py`.
 
 ### Themes
 
@@ -244,6 +247,14 @@ Light / Dim / Dark affect **sidebar UI only**. Map always uses OpenStreetMap.
 ### Groups start collapsed
 
 All region lists begin collapsed on load.
+
+### Mobile layout (≤767px)
+
+- Side-by-side layout becomes **List / Map** tabs fixed at the bottom (safe-area aware)
+- Default view: **List**; selecting a place switches to **Map** and zooms to the pin
+- Map calls `invalidateSize()` on tab switch, orientation change, and resize
+- Touch targets enlarged (44px min on controls); search input `font-size: 16px` to avoid iOS zoom
+- Desktop (≥768px): tabs hidden, sidebar + map always visible; edit `app/index.shell.html` only
 
 ---
 
@@ -300,6 +311,7 @@ python3 app/build-places.py
 # - group "Tokyo" not "TOKYO"
 # - mixed-name URL uses Japanese only (search for 美遊ヘアスタジオ)
 # - Tokusatsu entries have name+coords in url field
+# - overviewUrl present on all places; sample query 美遊ヘアスタジオ, Tokyo, Japan
 # - PLACES_DATA place count ~2280, 10 groups
 ```
 

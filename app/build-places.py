@@ -4,7 +4,12 @@ import json
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from normalize_names import google_maps_url, normalize_group_name, normalize_place_name
+from normalize_names import (
+    google_maps_url,
+    google_overview_url,
+    normalize_group_name,
+    normalize_place_name,
+)
 
 APP = Path(__file__).resolve().parent
 ROOT = APP.parent
@@ -23,6 +28,7 @@ def parse_kml(path):
     name_el = doc.find(".//kml:Document/kml:name", NS)
     if name_el is not None and name_el.text:
         group_name = name_el.text.strip()
+    gname = normalize_group_name(group_name)
     places = []
     for pm in doc.findall(".//kml:Placemark", NS):
         name_el = pm.find("kml:name", NS)
@@ -39,11 +45,13 @@ def parse_kml(path):
             "lat": lat,
             "lng": lng,
             "url": google_maps_url(original, lat, lng),
+            "overviewUrl": google_overview_url(original, gname),
         })
-    return normalize_group_name(group_name), places
+    return gname, places
 
 
 def parse_md(path):
+    region = normalize_group_name(path.stem)
     places = []
     for line in path.read_text(encoding="utf-8").splitlines():
         if not line.startswith("|") or line.startswith("| ---"):
@@ -56,13 +64,15 @@ def parse_md(path):
             continue
         lat, lng = float(parts[1]), float(parts[0])
         url = cols[2] if len(cols) > 2 and cols[2].startswith("http") else google_maps_url(cols[0], lat, lng)
+        source = cols[0]
         places.append({
-            "name": normalize_place_name(cols[0]),
+            "name": normalize_place_name(source),
             "lat": lat,
             "lng": lng,
             "url": url,
+            "overviewUrl": google_overview_url(source, region),
         })
-    return normalize_group_name(path.stem), places
+    return region, places
 
 
 def main():
