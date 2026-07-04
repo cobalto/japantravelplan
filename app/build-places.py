@@ -4,7 +4,7 @@ import json
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from normalize_names import normalize_group_name, normalize_place_name
+from normalize_names import google_maps_url, normalize_group_name, normalize_place_name
 
 APP = Path(__file__).resolve().parent
 ROOT = APP.parent
@@ -32,10 +32,13 @@ def parse_kml(path):
         parts = coords_el.text.strip().split(",")
         if len(parts) < 2:
             continue
+        original = name_el.text.strip()
+        lat, lng = float(parts[1]), float(parts[0])
         places.append({
-            "name": normalize_place_name(name_el.text.strip()),
-            "lat": float(parts[1]),
-            "lng": float(parts[0]),
+            "name": normalize_place_name(original),
+            "lat": lat,
+            "lng": lng,
+            "url": google_maps_url(original, lat, lng),
         })
     return normalize_group_name(group_name), places
 
@@ -51,10 +54,13 @@ def parse_md(path):
         parts = cols[1].split(",")
         if len(parts) < 2:
             continue
+        lat, lng = float(parts[1]), float(parts[0])
+        url = cols[2] if len(cols) > 2 and cols[2].startswith("http") else google_maps_url(cols[0], lat, lng)
         places.append({
             "name": normalize_place_name(cols[0]),
-            "lat": float(parts[1]),
-            "lng": float(parts[0]),
+            "lat": lat,
+            "lng": lng,
+            "url": url,
         })
     return normalize_group_name(path.stem), places
 

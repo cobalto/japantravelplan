@@ -129,7 +129,10 @@
     .filter-count { color: var(--text-muted); }
     #place-list { flex: 1; overflow-y: auto; padding: 8px; }
     .group { margin-bottom: 12px; }
-    .group.map-off .group-title { color: var(--text-muted); }
+    .group.map-off .group-title {
+      color: var(--text-muted);
+      cursor: default;
+    }
     .group.map-off .group-title::after {
       content: " · hidden on map"; font-weight: 400;
       color: var(--text-faint); font-size: 11px;
@@ -153,6 +156,13 @@
     .place.active { background: var(--bg-active); font-weight: 600; }
     .group-count { color: var(--text-muted); font-weight: 400; }
     #map { flex: 1; background: #ddd; }
+    .leaflet-popup-content a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    .leaflet-popup-content a:hover { text-decoration: underline; }
+    html.dim .leaflet-popup-content a,
+    html.dark .leaflet-popup-content a { color: #8ab4f8; }
   </style>
   <script>
     (function () {
@@ -249,23 +259,27 @@
       });
     }
 
+    function groupId($el) {
+      return Number($el.attr("data-gid"));
+    }
+
     function applySearchFilter() {
       var q = getSearchQuery();
       $(".place").each(function () {
         var $el = $(this);
-        var gid = $el.closest(".group").data("gid");
+        var gid = groupId($el.closest(".group"));
         var hidden = q && (!groupEnabled[gid] || !placeMatchesQuery($el, q));
         $el.toggleClass("search-hidden", hidden);
       });
       $(".group").each(function () {
         var $g = $(this);
-        var gid = $g.data("gid");
+        var gid = groupId($g);
         if (!q) {
-          $g.removeClass("group-no-match").addClass("collapsed");
+          $g.removeClass("group-no-match");
           return;
         }
         if (!groupEnabled[gid]) {
-          $g.addClass("group-no-match");
+          $g.addClass("group-no-match").removeClass("collapsed");
           return;
         }
         var matches = $g.find(".place:not(.search-hidden)").length;
@@ -289,12 +303,24 @@
       $("#filter-summary").text(text);
     }
 
-    function setGroupEnabled(gid, enabled) {
+    function setGroupEnabled(gid, enabled, skipSearch) {
+      gid = Number(gid);
       groupEnabled[gid] = enabled;
-      $("#filter-g" + gid).prop("checked", enabled);
-      $(".group[data-gid='" + gid + "']").toggleClass("map-off", !enabled);
+      document.getElementById("filter-g" + gid).checked = enabled;
+      var $group = $(".group[data-gid='" + gid + "']");
+      $group.toggleClass("map-off", !enabled);
+      if (!enabled) {
+        $group.addClass("collapsed");
+      }
       updateFilterSummary();
       syncMapMarkers();
+      if (!skipSearch) applySearchFilter();
+    }
+
+    function setAllGroupsEnabled(enabled) {
+      $.each(groupEnabled, function (gid) {
+        setGroupEnabled(gid, enabled, true);
+      });
       applySearchFilter();
     }
 
@@ -302,9 +328,7 @@
       var m = markers[id];
       if (!m) return;
       var gid = placeGroup[id];
-      if (!groupEnabled[gid]) {
-        setGroupEnabled(gid, true);
-      }
+      if (!groupEnabled[gid]) return;
       if ($active) $active.removeClass("active");
       $active = $("#place-" + id).addClass("active");
       $active.closest(".group").removeClass("collapsed");
@@ -350,10 +374,14 @@
 
       $.each(places, function (_, p) {
         var pid = id++;
-        var m = L.marker([p.lat, p.lng]).bindPopup(
+        var popupHtml =
           "<strong>" + $("<span>").text(p.name).html() + "</strong><br>" +
-          "<small>" + groupName + "</small>"
-        );
+          "<small>" + groupName + "</small>";
+        if (p.url) {
+          popupHtml += "<br><a href=\"" + p.url.replace(/"/g, "&quot;") +
+            "\" target=\"_blank\" rel=\"noopener noreferrer\">Open in Google Maps</a>";
+        }
+        var m = L.marker([p.lat, p.lng]).bindPopup(popupHtml);
         m.on("click", function () { showPlace(pid); });
         markersByGroup[gid].push(m);
         markers[pid] = m;
@@ -372,33 +400,27 @@
     updateFilterSummary();
 
     $("#filter-all").on("click", function () {
-      $.each(groupEnabled, function (gid) {
-        setGroupEnabled(gid, true);
-      });
+      setAllGroupsEnabled(true);
     });
 
     $("#filter-none").on("click", function () {
-      $.each(groupEnabled, function (gid) {
-        setGroupEnabled(gid, false);
-      });
+      setAllGroupsEnabled(false);
     });
 
-    $list.on("click", ".group-title", function () {
-      $(this).parent().toggleClass("collapsed");
+    $list.on("click", ".group-title", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var $group = $(this).parent();
+      if ($group.hasClass("map-off")) return;
+      $group.toggleClass("collapsed");
     });
 
     $("#search").on("input", applySearchFilter);
 
     $("#clear-filters").on("click", function () {
       $("#search").val("");
-      $.each(groupEnabled, function (gid) {
-        groupEnabled[gid] = true;
-        $("#filter-g" + gid).prop("checked", true);
-        $(".group[data-gid='" + gid + "']").removeClass("map-off");
-      });
-      updateFilterSummary();
-      syncMapMarkers();
-      applySearchFilter();
+      setAllGroupsEnabled(true);
+      $(".group").addClass("collapsed");
     });
   </script>
 </body>
