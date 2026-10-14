@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Japan Travel Plan · Cobalto.dev</title>
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" integrity="sha384-pmjIAcz2bAn0xukfxADbZIb3t8oRT9Sv0rvO+BR5Csr6Dhqq+nZs59P0pPKQJkEV" crossorigin="">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" integrity="sha384-wgw+aLYNQ7dlhK47ZPK7FRACiq7ROZwgFNg0m04avm4CaXS+Z9Y7nMu8yNjBKYC+" crossorigin="">
   <style>
     :root {
       --bg: #fafafa;
@@ -95,12 +95,33 @@
       flex: 1; min-width: 0; padding: 8px 10px; border: 1px solid var(--border);
       border-radius: 6px; font-size: 16px; background: var(--input-bg); color: var(--text);
     }
-    #clear-filters {
+    #reset-filters {
       font-size: 12px; padding: 8px 10px; border: 1px solid var(--border);
       border-radius: 6px; background: var(--btn-bg); color: var(--text);
       cursor: pointer; white-space: nowrap;
     }
-    #clear-filters:hover { background: var(--btn-hover); }
+    #reset-filters:hover { background: var(--btn-hover); }
+    .filter-chip-row {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; padding: 5px 10px;
+      border: 1px solid var(--border); border-radius: 999px;
+      background: var(--btn-bg); color: var(--text);
+      cursor: pointer; user-select: none;
+    }
+    .chip input { cursor: pointer; margin: 0; }
+    .chip:has(input:checked) {
+      background: var(--bg-active);
+      border-color: #1a73e8;
+    }
+    html.dim .chip:has(input:checked),
+    html.dark .chip:has(input:checked) { border-color: #8ab4f8; }
+    .match-count {
+      font-size: 12px; color: var(--text-muted);
+      white-space: nowrap;
+    }
     #source-filters {
       border-bottom: 1px solid var(--border-subtle);
       background: var(--bg-subtle);
@@ -160,36 +181,143 @@
     .group-title::before { content: "▾ "; }
     .group.collapsed .group-title::before { content: "▸ "; }
     .group.collapsed .group-items { display: none; }
+    .area { margin: 0 0 2px; }
+    .area-title {
+      font-weight: 600; font-size: 12px; color: var(--text);
+      padding: 5px 4px 5px 14px; cursor: pointer; user-select: none;
+    }
+    .area-title::before { content: "▾ "; }
+    .area.collapsed .area-title::before { content: "▸ "; }
+    .area.collapsed .area-items { display: none; }
+    .area.area-no-match { display: none; }
     .place {
       display: block; width: 100%; text-align: left;
-      padding: 6px 8px; border: none; background: transparent;
+      padding: 6px 8px 6px 28px; border: none; background: transparent;
       font-size: 13px; cursor: pointer; border-radius: 4px;
       color: var(--text);
     }
+    .group-items > .place { padding-left: 14px; }
     .place.search-hidden { display: none; }
     .group.group-no-match { display: none; }
     .place:hover { background: var(--bg-hover); }
     .place.active { background: var(--bg-active); font-weight: 600; }
-    .group-count { color: var(--text-muted); font-weight: 400; }
-    #map { flex: 1; min-width: 0; min-height: 0; background: #ddd; }
+    .group-count, .area-count { color: var(--text-muted); font-weight: 400; }
+    .tokusatsu-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      margin-left: 6px;
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+      vertical-align: middle;
+      letter-spacing: 0.02em;
+    }
+    /* Map chrome always uses the light palette (OSM basemap). Theme only restyles the sidebar/UI. */
+    #map {
+      flex: 1; min-width: 0; min-height: 0; background: #ddd; position: relative;
+      color: #222;
+      --bg: #fafafa;
+      --bg-subtle: #f0f0f0;
+      --bg-hover: #eee;
+      --bg-active: #d4e8ff;
+      --text: #222;
+      --text-muted: #888;
+      --text-faint: #aaa;
+      --border: #ccc;
+      --border-subtle: #ddd;
+      --input-bg: #fff;
+      --btn-bg: #fff;
+      --btn-hover: #e8e8e8;
+      --popup-bg: #fff;
+      --popup-text: #222;
+      --control-bg: #fff;
+      --control-text: #333;
+    }
+    .marker-cluster div { color: #222; }
     .leaflet-popup-content { margin: 12px 14px; min-width: 200px; }
     .popup-actions {
-      display: flex; gap: 8px; margin-top: 10px;
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;
     }
     .popup-btn {
-      flex: 1; padding: 9px 10px; min-height: 40px;
+      flex: 1 1 auto; padding: 9px 10px; min-height: 40px;
       border: 1px solid var(--border); border-radius: 6px;
       background: var(--btn-bg); color: var(--text);
       font-size: 13px; font-weight: 600; cursor: pointer;
+      text-decoration: none; text-align: center;
+      display: inline-flex; align-items: center; justify-content: center;
     }
     .popup-btn:hover { background: var(--btn-hover); }
     .popup-btn-maps { color: #1a73e8; }
     .popup-btn-overview { color: #de5833; }
-    html.dim .popup-btn-maps,
-    html.dark .popup-btn-maps { color: #8ab4f8; }
-    html.dim .popup-btn-overview,
-    html.dark .popup-btn-overview { color: #f1997b; }
+    .popup-btn-dir { color: #188038; }
+    .popup-btn-apple { color: #555; }
+    .popup-btn-copy { color: var(--text-muted); }
+    /* Selected-bar / non-map buttons may follow UI theme; map popups stay light via #map vars. */
+    html.dim #selected-bar .popup-btn-maps,
+    html.dark #selected-bar .popup-btn-maps { color: #8ab4f8; }
+    html.dim #selected-bar .popup-btn-overview,
+    html.dark #selected-bar .popup-btn-overview { color: #f1997b; }
+    html.dim #selected-bar .popup-btn-dir,
+    html.dark #selected-bar .popup-btn-dir { color: #81c995; }
+    html.dim #selected-bar .popup-btn-apple,
+    html.dark #selected-bar .popup-btn-apple { color: #c5c5c5; }
+    .popup-extra { margin-top: 8px; font-size: 12px; color: var(--text-muted); }
     .mobile-tabs { display: none; }
+    #selected-bar {
+      display: none;
+      position: fixed; left: 0; right: 0;
+      bottom: calc(49px + env(safe-area-inset-bottom, 0px));
+      z-index: 1050;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 10px 12px;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.12);
+    }
+    #app.view-map #selected-bar.has-place { display: block; }
+    @media (min-width: 768px) and (min-height: 501px) {
+      #selected-bar { display: none !important; }
+    }
+    .selected-bar-main { display: flex; align-items: flex-start; gap: 10px; }
+    .selected-bar-text { flex: 1; min-width: 0; }
+    .selected-bar-name {
+      font-size: 15px; font-weight: 600; color: var(--text);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .selected-bar-meta {
+      font-size: 12px; color: var(--text-muted); margin-top: 2px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .selected-bar-actions {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;
+    }
+    .selected-bar-actions .popup-btn {
+      flex: 1 1 30%; min-height: 40px; font-size: 13px;
+    }
+    .selected-bar-back {
+      flex-shrink: 0;
+      border: 1px solid var(--border); border-radius: 6px;
+      background: var(--btn-bg); color: var(--text);
+      font-size: 13px; font-weight: 600; padding: 8px 10px;
+      min-height: 40px; cursor: pointer;
+    }
+    .selected-bar-back:hover { background: var(--btn-hover); }
+    #locate-status {
+      position: fixed; top: 12px; left: 50%; transform: translateX(-50%);
+      z-index: 1100; display: none;
+      background: var(--control-bg); color: var(--control-text);
+      border: 1px solid var(--border); border-radius: 6px;
+      font-size: 12px; padding: 6px 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+      max-width: 90%;
+      pointer-events: none;
+    }
+    #locate-status.show { display: block; }
+    .leaflet-control-locate a {
+      font-size: 18px; line-height: 30px; text-align: center;
+      color: var(--control-text); background: var(--control-bg);
+    }
     .mobile-tab {
       flex: 1; border: none; background: var(--bg);
       color: var(--text-muted); font-size: 15px; font-weight: 600;
@@ -203,7 +331,15 @@
     }
     html.dim .mobile-tab.active,
     html.dark .mobile-tab.active { box-shadow: inset 0 -2px 0 #8ab4f8; }
-    @media (max-width: 767px) {
+    @media (min-width: 768px) and (min-height: 501px) {
+      .group-title {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background: var(--bg);
+      }
+    }
+    @media (max-width: 767px), (max-height: 500px) {
       #app {
         flex-direction: column;
         padding-bottom: calc(49px + env(safe-area-inset-bottom, 0px));
@@ -217,6 +353,7 @@
       #map { display: none; flex: 1; width: 100%; }
       #app.view-map #sidebar { display: none; }
       #app.view-map #map { display: block; }
+      #app.view-map.has-selected #map .leaflet-bottom { bottom: 88px; }
       #app.view-list #sidebar { display: flex; }
       .mobile-tabs {
         display: flex;
@@ -226,12 +363,13 @@
         padding-bottom: env(safe-area-inset-bottom, 0px);
         background: var(--bg);
       }
-      #clear-filters,
+      #reset-filters,
       .filter-actions button {
         min-height: 44px;
         padding: 10px 12px;
         font-size: 14px;
       }
+      .chip { min-height: 44px; padding: 10px 12px; font-size: 14px; }
       #source-filters summary { padding: 12px; min-height: 44px; }
       .filter-item { padding: 8px 0; font-size: 14px; }
       .filter-item input {
@@ -239,8 +377,9 @@
         margin-right: 2px;
       }
       .group-title { padding: 10px 6px; font-size: 14px; }
+      .area-title { padding: 10px 6px 10px 16px; font-size: 14px; }
       .place {
-        padding: 12px 10px;
+        padding: 12px 10px 12px 28px;
         font-size: 15px;
         line-height: 1.35;
       }
@@ -250,12 +389,64 @@
       text-decoration: none;
     }
     .leaflet-popup-content a:hover { text-decoration: underline; }
-    html.dim .leaflet-popup-content a,
-    html.dark .leaflet-popup-content a { color: #8ab4f8; }
+
+    /* Phase E: a11y focus rings */
+    :focus { outline: none; }
+    :focus-visible {
+      outline: 2px solid #1a73e8;
+      outline-offset: 2px;
+    }
+    html.dim :focus-visible,
+    html.dark :focus-visible {
+      outline-color: #8ab4f8;
+    }
+    .place:focus-visible,
+    .group-title:focus-visible,
+    .area-title:focus-visible {
+      background: var(--bg-hover);
+    }
+
+    /* Group/area headers as buttons (a11y) */
+    button.group-title,
+    button.area-title {
+      display: block;
+      width: 100%;
+      text-align: left;
+      border: none;
+      background: transparent;
+      font-family: inherit;
+      line-height: inherit;
+    }
+    button.group-title:hover,
+    button.area-title:hover { background: var(--bg-hover); }
+
+    /* Region tint swatches (list + filters) */
+    .tint-swatch {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 6px;
+      vertical-align: middle;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.25);
+      flex-shrink: 0;
+    }
+    html.dim .tint-swatch,
+    html.dark .tint-swatch {
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.35);
+    }
+    .group-title .tint-swatch { margin-right: 8px; }
+    .filter-item .tint-swatch { margin-right: 4px; }
+    .kb-focus {
+      background: var(--bg-active) !important;
+    }
   </style>
   <script>
     (function () {
       var theme = localStorage.getItem("theme");
+      if (theme !== "light" && theme !== "dim" && theme !== "dark") {
+        theme = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+      }
       if (theme === "dim" || theme === "dark") document.documentElement.classList.add(theme);
     })();
   </script>
@@ -273,8 +464,15 @@
           </select>
         </div>
         <div class="search-row">
-          <input type="search" id="search" placeholder="Search places…">
-          <button type="button" id="clear-filters">Clear</button>
+          <input type="search" id="search" placeholder="Search places…" aria-label="Search places" accesskey="s">
+          <button type="button" id="reset-filters" title="Clear search, show all regions, turn off Tokusatsu, clear place link, collapse lists (keeps theme)">Reset</button>
+        </div>
+        <div class="filter-chip-row">
+          <label class="chip">
+            <input type="checkbox" id="filter-tokusatsu" aria-label="Show only Tokusatsu filming sites">
+            <span>Tokusatsu</span>
+          </label>
+          <span id="match-count" class="match-count" hidden></span>
         </div>
       </header>
       <details id="source-filters">
@@ -293,29 +491,128 @@
       <div id="place-list"></div>
     </aside>
     <div id="map"></div>
+    <div id="locate-status" role="status" aria-live="polite"></div>
+    <div id="selected-bar" aria-live="polite">
+      <div class="selected-bar-main">
+        <div class="selected-bar-text">
+          <div class="selected-bar-name" id="selected-name"></div>
+          <div class="selected-bar-meta" id="selected-meta"></div>
+        </div>
+        <button type="button" class="selected-bar-back" id="selected-back">List</button>
+      </div>
+      <div class="selected-bar-actions">
+        <button type="button" class="popup-btn popup-btn-maps" id="selected-maps">Maps</button>
+        <button type="button" class="popup-btn popup-btn-overview" id="selected-overview">Overview</button>
+        <button type="button" class="popup-btn popup-btn-dir" id="selected-dir">Directions</button>
+      </div>
+    </div>
     <nav class="mobile-tabs" aria-label="List or map">
-      <button type="button" class="mobile-tab active" id="tab-list">List</button>
-      <button type="button" class="mobile-tab" id="tab-map">Map</button>
+      <button type="button" class="mobile-tab active" id="tab-list" aria-pressed="true">List</button>
+      <button type="button" class="mobile-tab" id="tab-map" aria-pressed="false">Map</button>
     </nav>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha384-eXVCORTRlv4FUUgS/xmOyr66XBVraen8ATNLMESp92FKXLAMiKkerixTiBvXriZr" crossorigin=""></script>
   <!-- PLACES_DATA_BEGIN -->
   PLACES_DATA_PLACEHOLDER
   <!-- PLACES_DATA_END -->
   <script>
-    var MOBILE_MQ = window.matchMedia("(max-width: 767px)");
-    var $app = $("#app");
+    var COMPACT_MQ = window.matchMedia("(max-width: 767px), (max-height: 500px)");
+    var appEl = document.getElementById("app");
+    var listEl = document.getElementById("place-list");
+    var filterListEl = document.getElementById("filter-list");
+    var searchEl = document.getElementById("search");
+    var themeSelect = document.getElementById("theme-select");
+    var filterSummaryEl = document.getElementById("filter-summary");
+    var tokusatsuEl = document.getElementById("filter-tokusatsu");
+    var matchCountEl = document.getElementById("match-count");
+    var tabList = document.getElementById("tab-list");
+    var tabMap = document.getElementById("tab-map");
+    var selectedBar = null;
+    var selectedName = null;
+    var selectedMeta = null;
+    var locateStatusEl = null;
 
-    var map = L.map("map", { tap: true }).setView([36.2, 138.25], 6);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "&copy; OpenStreetMap"
-    }).addTo(map);
+    var LS_THEME = "theme";
+    var LS_GROUPS = "jtp.groups";
+    var LS_Q = "jtp.q";
+    var LS_TOK = "jtp.tokusatsu";
+    var LS_PLACE = "jtp.place";
+
+    /* Always OSM — free, no API key. Theme (light/dim/dark) only restyles the sidebar UI. */
+    var TILE_URL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+    var TILE_ATTR = "&copy; OpenStreetMap";
+
+    var map = L.map("map", { tap: true, preferCanvas: true, maxZoom: 19 }).setView([36.2, 138.25], 6);
+    selectedBar = document.getElementById("selected-bar");
+    selectedName = document.getElementById("selected-name");
+    selectedMeta = document.getElementById("selected-meta");
+    locateStatusEl = document.getElementById("locate-status");
+    L.tileLayer(TILE_URL, { attribution: TILE_ATTR, maxZoom: 19 }).addTo(map);
+
+    var cluster = L.markerClusterGroup({
+      chunkedLoading: true,
+      chunkInterval: 50,
+      chunkDelay: 25
+    });
+    map.addLayer(cluster);
+
+    /* 9 geographic region tints — saturated fills + dark stroke; readable on OSM.
+       Tokusatsu is a badge/filter, not a 10th color. Style is fixed at build time per group. */
+    var GROUP_COLORS = {
+      Tokyo: "#e53935",
+      Kanto: "#1e88e5",
+      Chubu: "#43a047",
+      Kansai: "#fb8c00",
+      Chugoku: "#8e24aa",
+      Shikoku: "#00897b",
+      Kyushu: "#d81b60",
+      Tohoku: "#5e35b1",
+      Hokkaido: "#039be5"
+    };
+    function markerStyleForGroup(name) {
+      var fill = GROUP_COLORS[name] || "#4a9af5";
+      return {
+        radius: 7,
+        weight: 1.5,
+        color: "#1a1a1a",
+        fillColor: fill,
+        fillOpacity: 0.9,
+        opacity: 0.95
+      };
+    }
+    function tintSwatch(name) {
+      var el = document.createElement("span");
+      el.className = "tint-swatch";
+      el.style.background = GROUP_COLORS[name] || "#4a9af5";
+      el.setAttribute("aria-hidden", "true");
+      return el;
+    }
+    var MARKER_CHUNK = 100;
+    var MAP_FILTER_MS = 150;
+
+    var groups = [];
+    var markersByPid = {};
+    var placeByPid = {};
+    var placeByStableId = {};
+    var placeGid = {};
+    var groupEnabled = {};
+    var groupNameToGid = {};
+    var activePid = null;
+    var nextPid = 0;
+    var mapFilterTimer = null;
+    var persistTimer = null;
+    var listScrollTop = 0;
+    var suppressUrlWrite = false;
+    var pendingHashId = null;
+    var locateMarker = null;
+    var locateWatching = false;
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
     function isMobileLayout() {
-      return MOBILE_MQ.matches;
+      return COMPACT_MQ.matches;
     }
 
     function refreshMapSize() {
@@ -324,266 +621,1231 @@
 
     function setMobileView(view) {
       if (!isMobileLayout()) {
-        $app.removeClass("view-map view-list");
+        appEl.classList.remove("view-map", "view-list");
+        updateSelectedBar();
         return;
       }
-      $app.toggleClass("view-map", view === "map").toggleClass("view-list", view === "list");
-      $("#tab-list").toggleClass("active", view === "list");
-      $("#tab-map").toggleClass("active", view === "map");
+      if (view === "map") {
+        listScrollTop = listEl.scrollTop;
+      }
+      appEl.classList.toggle("view-map", view === "map");
+      appEl.classList.toggle("view-list", view === "list");
+      tabList.classList.toggle("active", view === "list");
+      tabMap.classList.toggle("active", view === "map");
+      tabList.setAttribute("aria-pressed", view === "list" ? "true" : "false");
+      tabMap.setAttribute("aria-pressed", view === "map" ? "true" : "false");
       if (view === "map") {
         setTimeout(refreshMapSize, 0);
         setTimeout(refreshMapSize, 200);
+      } else {
+        listEl.scrollTop = listScrollTop;
       }
+      updateSelectedBar();
     }
 
     function onLayoutChange() {
       if (isMobileLayout()) {
-        if (!$app.hasClass("view-map") && !$app.hasClass("view-list")) {
+        if (!appEl.classList.contains("view-map") && !appEl.classList.contains("view-list")) {
           setMobileView("list");
-        } else if ($app.hasClass("view-map")) {
+        } else if (appEl.classList.contains("view-map")) {
           refreshMapSize();
         }
       } else {
-        $app.removeClass("view-map view-list");
+        appEl.classList.remove("view-map", "view-list");
         refreshMapSize();
       }
+      updateSelectedBar();
     }
 
-    MOBILE_MQ.addEventListener("change", onLayoutChange);
-    $(window).on("resize orientationchange", function () {
-      onLayoutChange();
-    });
-    onLayoutChange();
+    COMPACT_MQ.addEventListener("change", onLayoutChange);
+    window.addEventListener("resize", onLayoutChange);
+    window.addEventListener("orientationchange", onLayoutChange);
 
-    $("#tab-list").on("click", function () { setMobileView("list"); });
-    $("#tab-map").on("click", function () { setMobileView("map"); });
+    tabList.addEventListener("click", function () { setMobileView("list"); });
+    tabMap.addEventListener("click", function () { setMobileView("map"); });
 
-    function setTheme(theme) {
+    function resolveInitialTheme() {
+      var saved = localStorage.getItem(LS_THEME);
+      if (saved === "light" || saved === "dim" || saved === "dark") return saved;
+      if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
+      return "light";
+    }
+
+    function setTheme(theme, opts) {
+      opts = opts || {};
       if (theme !== "dim" && theme !== "dark") theme = "light";
       document.documentElement.classList.remove("dim", "dark");
       if (theme !== "light") document.documentElement.classList.add(theme);
-      localStorage.setItem("theme", theme);
-      $("#theme-select").val(theme);
+      localStorage.setItem(LS_THEME, theme);
+      themeSelect.value = theme;
     }
 
-    setTheme(localStorage.getItem("theme") || "light");
-    $("#theme-select").on("change", function () {
+    setTheme(resolveInitialTheme());
+    themeSelect.addEventListener("change", function () {
       setTheme(this.value);
     });
 
-    var cluster = L.markerClusterGroup();
-    map.addLayer(cluster);
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
 
-    var markers = {};
-    var markersByGroup = {};
-    var placeGroup = {};
-    var placeData = {};
-    var groupEnabled = {};
-    var groupIds = {};
-    var $active = null;
+    function directionsUrl(place) {
+      var q = encodeURIComponent(place.name + "," + place.lat + "," + place.lng);
+      return "https://www.google.com/maps/dir/?api=1&destination=" + q;
+    }
+
+    function appleMapsUrl(place) {
+      return "https://maps.apple.com/?daddr=" + encodeURIComponent(place.lat + "," + place.lng) +
+        "&q=" + encodeURIComponent(place.name);
+    }
+
+    function placeShareUrl(stableId) {
+      var u = new URL(window.location.href);
+      u.hash = "p=" + encodeURIComponent(stableId);
+      return u.toString();
+    }
 
     function buildPopupHtml(place, groupName, pid) {
       var html =
-        "<strong>" + $("<span>").text(place.name).html() + "</strong><br>" +
-        "<small>" + groupName + "</small>" +
+        "<strong>" + escapeHtml(place.name) + "</strong><br>" +
+        "<small>" + escapeHtml(groupName) +
+        (place.area ? " · " + escapeHtml(place.area) : "") +
+        "</small>" +
         '<div class="popup-actions">' +
         '<button type="button" class="popup-btn popup-btn-maps popup-maps" data-pid="' + pid + '">Maps</button>' +
         '<button type="button" class="popup-btn popup-btn-overview popup-overview" data-pid="' + pid + '">Overview</button>' +
-        "</div>";
+        '<a class="popup-btn popup-btn-dir" href="' + escapeHtml(directionsUrl(place)) +
+        '" target="_blank" rel="noopener noreferrer">Directions</a>';
+      if (isIOS) {
+        html += '<a class="popup-btn popup-btn-apple" href="' + escapeHtml(appleMapsUrl(place)) +
+          '" target="_blank" rel="noopener noreferrer">Apple Maps</a>';
+      }
+      if (place.id) {
+        html += '<button type="button" class="popup-btn popup-btn-copy popup-copy" data-id="' +
+          escapeHtml(place.id) + '">Copy link</button>';
+      }
+      html += "</div>";
       return html;
     }
 
-    function getSearchQuery() {
-      return $("#search").val().toLowerCase().trim();
+    function stripAccents(s) {
+      try {
+        return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      } catch (e) {
+        return s;
+      }
     }
 
-    function placeMatchesQuery($el, q) {
-      return $el.data("name").indexOf(q) >= 0 || $el.data("group").indexOf(q) >= 0;
+    function getSearchNeedle() {
+      return stripAccents(searchEl.value.toLowerCase().trim());
     }
 
-    function syncMapMarkers() {
-      cluster.clearLayers();
-      $.each(groupEnabled, function (gid, enabled) {
-        if (!enabled || !markersByGroup[gid]) return;
-        $.each(markersByGroup[gid], function (_, m) {
-          cluster.addLayer(m);
-        });
-      });
+    function isTokusatsuOn() {
+      return !!(tokusatsuEl && tokusatsuEl.checked);
     }
 
-    function groupId($el) {
-      return Number($el.attr("data-gid"));
+    function isFiltering() {
+      return !!(getSearchNeedle() || isTokusatsuOn());
     }
 
-    function applySearchFilter() {
-      var q = getSearchQuery();
-      $(".place").each(function () {
-        var $el = $(this);
-        var gid = groupId($el.closest(".group"));
-        var hidden = q && (!groupEnabled[gid] || !placeMatchesQuery($el, q));
-        $el.toggleClass("search-hidden", hidden);
-      });
-      $(".group").each(function () {
-        var $g = $(this);
-        var gid = groupId($g);
-        if (!q) {
-          $g.removeClass("group-no-match");
+    function placeMatchesNeedle(place, needle) {
+      if (!needle) return true;
+      if (place.q) return place.q.indexOf(needle) !== -1;
+      var hay = stripAccents(((place.name || "") + " " + (place.area || "")).toLowerCase());
+      return hay.indexOf(needle) !== -1;
+    }
+
+    function placeVisible(place, needle, tokOnly) {
+      if (tokOnly && !place.tokusatsu) return false;
+      return placeMatchesNeedle(place, needle);
+    }
+
+    function countVisible(placeList, needle, tokOnly) {
+      var n = 0;
+      var i;
+      for (i = 0; i < placeList.length; i++) {
+        if (placeVisible(placeList[i], needle, tokOnly)) n++;
+      }
+      return n;
+    }
+
+    function splitAreas(places) {
+      var areas = [];
+      var byName = {};
+      var noAreaPlaces = [];
+      var i, p, name, area;
+      for (i = 0; i < places.length; i++) {
+        p = places[i];
+        name = p.area;
+        if (name == null || name === "") {
+          noAreaPlaces.push(p);
+          continue;
+        }
+        area = byName[name];
+        if (!area) {
+          area = { name: name, places: [], el: null, itemsEl: null, placesRendered: false };
+          byName[name] = area;
+          areas.push(area);
+        }
+        area.places.push(p);
+      }
+      return { areas: areas, noAreaPlaces: noAreaPlaces };
+    }
+
+    function findAreaIndex(g, place) {
+      var a, i;
+      if (!place.area) return -1;
+      for (a = 0; a < g.areas.length; a++) {
+        if (g.areas[a].name === place.area) return a;
+      }
+      for (a = 0; a < g.areas.length; a++) {
+        for (i = 0; i < g.areas[a].places.length; i++) {
+          if (g.areas[a].places[i] === place) return a;
+        }
+      }
+      return -1;
+    }
+
+    function cancelMapFilterTimer() {
+      if (mapFilterTimer) {
+        clearTimeout(mapFilterTimer);
+        mapFilterTimer = null;
+      }
+    }
+
+    function scheduleMapFilter(fit) {
+      cancelMapFilterTimer();
+      mapFilterTimer = setTimeout(function () {
+        mapFilterTimer = null;
+        applyMapFilter({ fit: fit });
+        schedulePersist();
+      }, MAP_FILTER_MS);
+    }
+
+    function syncVisibleMarkers(g, wanted) {
+      var current = g.visibleMarkers || [];
+      var i, same, toRemove, toAdd, currentSet, wantedSet;
+      if (current.length === wanted.length) {
+        same = true;
+        for (i = 0; i < current.length; i++) {
+          if (current[i] !== wanted[i]) {
+            same = false;
+            break;
+          }
+        }
+        if (same) {
+          g.visibleMarkers = wanted;
+          g.onMap = wanted.length > 0;
           return;
         }
+      }
+      currentSet = new Set(current);
+      wantedSet = new Set(wanted);
+      toRemove = [];
+      toAdd = [];
+      for (i = 0; i < current.length; i++) {
+        if (!wantedSet.has(current[i])) toRemove.push(current[i]);
+      }
+      for (i = 0; i < wanted.length; i++) {
+        if (!currentSet.has(wanted[i])) toAdd.push(wanted[i]);
+      }
+      if (toRemove.length) cluster.removeLayers(toRemove);
+      if (toAdd.length) cluster.addLayers(toAdd);
+      g.visibleMarkers = wanted;
+      g.onMap = wanted.length > 0;
+    }
+
+    function desiredMarkersForGroup(gid) {
+      var g = groups[gid];
+      var needle, tokOnly, wanted, i, p, m;
+      if (!g || !g.markersReady || !groupEnabled[gid]) return [];
+      needle = getSearchNeedle();
+      tokOnly = isTokusatsuOn();
+      if (!needle && !tokOnly) return g.markers;
+      wanted = [];
+      for (i = 0; i < g.places.length; i++) {
+        p = g.places[i];
+        if (placeVisible(p, needle, tokOnly)) {
+          m = markersByPid[p.pid];
+          if (m) wanted.push(m);
+        }
+      }
+      return wanted;
+    }
+
+    function countEnabledGroups() {
+      var n = 0, gid;
+      for (gid = 0; gid < groups.length; gid++) {
+        if (groupEnabled[gid]) n++;
+      }
+      return n;
+    }
+
+    function enabledGroupBoundsUnion() {
+      var dataBounds = (window.PLACES_DATA && window.PLACES_DATA.bounds) || {};
+      var bounds = null;
+      var gid, g, b, bb;
+      for (gid = 0; gid < groups.length; gid++) {
+        if (!groupEnabled[gid]) continue;
+        g = groups[gid];
+        b = dataBounds[g.name];
+        if (!b || b.length < 4) continue;
+        bb = L.latLngBounds(L.latLng(b[0], b[1]), L.latLng(b[2], b[3]));
+        if (!bounds) bounds = bb;
+        else bounds.extend(bb);
+      }
+      return bounds;
+    }
+
+    /* Skip jumpy Japan-wide fit when nearly all regions are on or the union spans the country.
+       Still fit for small sets (1–3 regions) or when search/Tokusatsu filtering is active. */
+    function shouldFitEnabledBounds() {
+      var enabled = countEnabledGroups();
+      var bounds, latSpan, lngSpan;
+      if (enabled === 0) return false;
+      if (enabled <= 3) return true;
+      if (enabled >= 8) return false;
+      bounds = enabledGroupBoundsUnion();
+      if (!bounds || !bounds.isValid()) return false;
+      latSpan = bounds.getNorth() - bounds.getSouth();
+      lngSpan = bounds.getEast() - bounds.getWest();
+      /* Japan ~22° lat × ~23° lng; skip when union is country-scale */
+      if (latSpan > 12 || lngSpan > 14) return false;
+      return true;
+    }
+
+    function fitToEnabledGroupBounds() {
+      var bounds;
+      if (!shouldFitEnabledBounds()) return;
+      bounds = enabledGroupBoundsUnion();
+      if (bounds && bounds.isValid()) {
+        try {
+          map.stop();
+          map.fitBounds(bounds, { padding: [36, 36], maxZoom: 12, animate: false });
+        } catch (e) {}
+      }
+    }
+
+    function fitToMatchLatLngs(latlngs) {
+      if (!latlngs.length) return;
+      try {
+        map.stop();
+        map.fitBounds(latlngs, { padding: [36, 36], maxZoom: 14, animate: false });
+      } catch (e) {}
+    }
+
+    function applyMapFilter(opts) {
+      opts = opts || {};
+      var needle = getSearchNeedle();
+      var tokOnly = isTokusatsuOn();
+      var filtering = !!(needle || tokOnly);
+      var latlngs = [];
+      var gid, g, i, p;
+      for (gid = 0; gid < groups.length; gid++) {
+        g = groups[gid];
+        if (!g.markersReady) continue;
+        syncVisibleMarkers(g, desiredMarkersForGroup(gid));
+        if (opts.fit && filtering && groupEnabled[gid]) {
+          for (i = 0; i < g.places.length; i++) {
+            p = g.places[i];
+            if (placeVisible(p, needle, tokOnly)) {
+              latlngs.push([p.lat, p.lng]);
+            }
+          }
+        }
+      }
+      if (opts.fit) {
+        if (filtering) fitToMatchLatLngs(latlngs);
+        else fitToEnabledGroupBounds();
+      }
+    }
+
+    function makePlaceButton(place) {
+      var btn = document.createElement("button");
+      var badge;
+      btn.type = "button";
+      btn.className = "place";
+      btn.id = "place-" + place.pid;
+      btn.dataset.pid = String(place.pid);
+      btn.appendChild(document.createTextNode(place.name));
+      if (place.tokusatsu) {
+        badge = document.createElement("span");
+        badge.className = "tokusatsu-badge";
+        badge.textContent = "Tokusatsu";
+        btn.appendChild(badge);
+      }
+      return btn;
+    }
+
+    function clearGroupBody(gid) {
+      var g = groups[gid];
+      var a;
+      g.itemsEl.innerHTML = "";
+      g.bodyRendered = false;
+      for (a = 0; a < g.areas.length; a++) {
+        g.areas[a].el = null;
+        g.areas[a].itemsEl = null;
+        g.areas[a].placesRendered = false;
+      }
+    }
+
+    function renderAreaPlaces(gid, aid, needle, tokOnly) {
+      var g = groups[gid];
+      var area = g.areas[aid];
+      var frag = document.createDocumentFragment();
+      var i, p;
+      if (needle === undefined) needle = getSearchNeedle();
+      if (tokOnly === undefined) tokOnly = isTokusatsuOn();
+      if (!area.itemsEl) return;
+      for (i = 0; i < area.places.length; i++) {
+        p = area.places[i];
+        if (placeVisible(p, needle, tokOnly)) frag.appendChild(makePlaceButton(p));
+      }
+      area.itemsEl.innerHTML = "";
+      area.itemsEl.appendChild(frag);
+      area.placesRendered = true;
+    }
+
+    function renderGroupBody(gid) {
+      var g = groups[gid];
+      var needle = getSearchNeedle();
+      var tokOnly = isTokusatsuOn();
+      var expandedAreas = {};
+      var frag = document.createDocumentFragment();
+      var i, p, a, area, vis, areaEl, title, countSpan, items, shouldExpand;
+      if (g.bodyRendered) {
+        for (a = 0; a < g.areas.length; a++) {
+          area = g.areas[a];
+          if (area.el && !area.el.classList.contains("collapsed")) {
+            expandedAreas[area.name] = true;
+          }
+        }
+      }
+      for (i = 0; i < g.noAreaPlaces.length; i++) {
+        p = g.noAreaPlaces[i];
+        if (placeVisible(p, needle, tokOnly)) frag.appendChild(makePlaceButton(p));
+      }
+      for (a = 0; a < g.areas.length; a++) {
+        area = g.areas[a];
+        vis = countVisible(area.places, needle, tokOnly);
+        if ((needle || tokOnly) && vis === 0) {
+          area.el = null;
+          area.itemsEl = null;
+          area.placesRendered = false;
+          continue;
+        }
+        shouldExpand = !!needle || !!expandedAreas[area.name];
+        areaEl = document.createElement("div");
+        areaEl.className = shouldExpand ? "area" : "area collapsed";
+        areaEl.dataset.gid = String(gid);
+        areaEl.dataset.aid = String(a);
+        title = document.createElement("button");
+        title.type = "button";
+        title.className = "area-title";
+        title.setAttribute("aria-expanded", shouldExpand ? "true" : "false");
+        title.appendChild(document.createTextNode(area.name + " "));
+        countSpan = document.createElement("span");
+        countSpan.className = "area-count";
+        countSpan.textContent = "(" + vis + ")";
+        title.appendChild(countSpan);
+        items = document.createElement("div");
+        items.className = "area-items";
+        areaEl.appendChild(title);
+        areaEl.appendChild(items);
+        frag.appendChild(areaEl);
+        area.el = areaEl;
+        area.itemsEl = items;
+        area.placesRendered = false;
+        if (shouldExpand) renderAreaPlaces(gid, a, needle, tokOnly);
+      }
+      g.itemsEl.innerHTML = "";
+      g.itemsEl.appendChild(frag);
+      g.bodyRendered = true;
+      if (activePid != null && placeGid[activePid] === gid) {
+        var activeEl = document.getElementById("place-" + activePid);
+        if (activeEl) activeEl.classList.add("active");
+      }
+    }
+
+    function ensureGroupBody(gid) {
+      var g = groups[gid];
+      if (!g || g.el.classList.contains("collapsed") || !groupEnabled[gid]) return;
+      renderGroupBody(gid);
+    }
+
+    function updateMatchCount(show, n) {
+      if (!matchCountEl) return;
+      if (!show) {
+        matchCountEl.hidden = true;
+        matchCountEl.textContent = "";
+        return;
+      }
+      matchCountEl.hidden = false;
+      matchCountEl.textContent = n === 1 ? "1 match" : (n + " matches");
+    }
+
+
+    function setGroupCollapsed(gid, collapsed) {
+      var g = groups[gid];
+      var title;
+      if (!g || !g.el) return;
+      g.el.classList.toggle("collapsed", collapsed);
+      title = g.el.querySelector(":scope > .group-title");
+      if (title) title.setAttribute("aria-expanded", collapsed ? "false" : "true");
+    }
+
+    function applyListFilter() {
+      var needle = getSearchNeedle();
+      var tokOnly = isTokusatsuOn();
+      var matchTotal = 0;
+      var gid, g, vis;
+      for (gid = 0; gid < groups.length; gid++) {
+        g = groups[gid];
+        vis = countVisible(g.places, needle, tokOnly);
+        if (groupEnabled[gid]) matchTotal += vis;
+        g.countEl.textContent = "(" + vis + ")";
+
         if (!groupEnabled[gid]) {
-          $g.addClass("group-no-match").removeClass("collapsed");
-          return;
+          setGroupCollapsed(gid, true);
+          if (needle) g.el.classList.add("group-no-match");
+          else g.el.classList.remove("group-no-match");
+          clearGroupBody(gid);
+          continue;
         }
-        var matches = $g.find(".place:not(.search-hidden)").length;
-        if (matches > 0) {
-          $g.removeClass("group-no-match collapsed");
+
+        if (needle) {
+          if (vis > 0) {
+            g.el.classList.remove("group-no-match");
+            setGroupCollapsed(gid, false);
+            renderGroupBody(gid);
+          } else {
+            g.el.classList.add("group-no-match");
+            clearGroupBody(gid);
+          }
+        } else if (tokOnly && vis === 0) {
+          g.el.classList.add("group-no-match");
+          clearGroupBody(gid);
         } else {
-          $g.addClass("group-no-match");
+          g.el.classList.remove("group-no-match");
+          if (g.el.classList.contains("collapsed")) clearGroupBody(gid);
+          else renderGroupBody(gid);
         }
-      });
+      }
+      updateMatchCount(!!(needle || tokOnly), matchTotal);
     }
 
     function updateFilterSummary() {
-      var total = 0, active = 0;
-      $.each(groupEnabled, function (_, enabled) {
-        total++;
-        if (enabled) active++;
-      });
+      var total = groups.length;
+      var active = 0;
+      var gid;
+      for (gid = 0; gid < groups.length; gid++) {
+        if (groupEnabled[gid]) active++;
+      }
       var text = active + "/" + total + " sources";
       if (active === 0) text = "none selected";
       else if (active === total) text = "all " + total + " sources";
-      $("#filter-summary").text(text);
+      if (isTokusatsuOn()) text += " · Tokusatsu";
+      filterSummaryEl.textContent = text;
     }
 
-    function setGroupEnabled(gid, enabled, skipSearch) {
+    function enabledGroupNames() {
+      var names = [];
+      var gid;
+      for (gid = 0; gid < groups.length; gid++) {
+        if (groupEnabled[gid]) names.push(groups[gid].name);
+      }
+      return names;
+    }
+
+    function writeUrlState() {
+      if (suppressUrlWrite) return;
+      var params = new URLSearchParams();
+      var names = enabledGroupNames();
+      var q = searchEl.value.trim();
+      var allOn = names.length === groups.length;
+      if (!allOn && names.length) params.set("g", names.join(","));
+      if (q) params.set("q", q);
+      if (isTokusatsuOn()) params.set("t", "1");
+      var qs = params.toString();
+      var hash = "";
+      if (activePid != null && placeByPid[activePid] && placeByPid[activePid].id) {
+        hash = "p=" + placeByPid[activePid].id;
+      }
+      var next = window.location.pathname + (qs ? "?" + qs : "") + (hash ? "#" + hash : "");
+      var cur = window.location.pathname + window.location.search + window.location.hash;
+      if (next !== cur) {
+        history.replaceState(null, "", next);
+      }
+    }
+
+    function persistState() {
+      try {
+        localStorage.setItem(LS_GROUPS, JSON.stringify(enabledGroupNames()));
+        localStorage.setItem(LS_Q, searchEl.value);
+        localStorage.setItem(LS_TOK, isTokusatsuOn() ? "1" : "0");
+        if (activePid != null && placeByPid[activePid] && placeByPid[activePid].id) {
+          localStorage.setItem(LS_PLACE, placeByPid[activePid].id);
+        }
+      } catch (e) {}
+      writeUrlState();
+    }
+
+    function schedulePersist() {
+      if (persistTimer) clearTimeout(persistTimer);
+      persistTimer = setTimeout(function () {
+        persistTimer = null;
+        persistState();
+      }, 80);
+    }
+
+    function setGroupEnabled(gid, enabled, skipRefresh) {
       gid = Number(gid);
       groupEnabled[gid] = enabled;
-      document.getElementById("filter-g" + gid).checked = enabled;
-      var $group = $(".group[data-gid='" + gid + "']");
-      $group.toggleClass("map-off", !enabled);
+      var cb = document.getElementById("filter-g" + gid);
+      if (cb) cb.checked = enabled;
+      var g = groups[gid];
+      g.el.classList.toggle("map-off", !enabled);
       if (!enabled) {
-        $group.addClass("collapsed");
+        setGroupCollapsed(gid, true);
+        clearGroupBody(gid);
       }
       updateFilterSummary();
-      syncMapMarkers();
-      if (!skipSearch) applySearchFilter();
+      if (!skipRefresh) {
+        applyListFilter();
+        applyMapFilter({ fit: true });
+        schedulePersist();
+      }
     }
 
     function setAllGroupsEnabled(enabled) {
-      $.each(groupEnabled, function (gid) {
+      var gid;
+      for (gid = 0; gid < groups.length; gid++) {
         setGroupEnabled(gid, enabled, true);
-      });
-      applySearchFilter();
+      }
+      applyListFilter();
+      applyMapFilter({ fit: true });
+      schedulePersist();
     }
 
-    function showPlace(id) {
-      var m = markers[id];
-      if (!m) return;
-      var gid = placeGroup[id];
-      if (!groupEnabled[gid]) return;
-      if ($active) $active.removeClass("active");
-      $active = $("#place-" + id).addClass("active");
-      $active.closest(".group").removeClass("collapsed");
+    function updateSelectedBar() {
+      var place, g, meta, show;
+      place = activePid != null ? placeByPid[activePid] : null;
+      show = !!(place && isMobileLayout() && appEl.classList.contains("view-map"));
+      if (!selectedBar) return;
+      selectedBar.classList.toggle("has-place", show);
+      appEl.classList.toggle("has-selected", show);
+      if (!show || !place) return;
+      g = groups[placeGid[activePid]];
+      selectedName.textContent = place.name;
+      meta = [];
+      if (place.area) meta.push(place.area);
+      if (g) meta.push(g.name);
+      selectedMeta.textContent = meta.join(" · ");
+    }
+
+    function showPlace(id, opts) {
+      opts = opts || {};
+      id = Number(id);
+      var m = markersByPid[id];
+      var place = placeByPid[id];
+      var gid = placeGid[id];
+      var g, aid, area;
+      if (!place || gid == null) return;
+
+      if (!groupEnabled[gid]) {
+        if (opts.enableGroup) {
+          setGroupEnabled(gid, true, true);
+          applyListFilter();
+          applyMapFilter({ fit: false });
+        } else {
+          return;
+        }
+      }
+
+      if (!m) {
+        // markers still loading — retry shortly
+        if (opts.fromHash || opts.fromRestore) {
+          setTimeout(function () { showPlace(id, opts); }, 120);
+        }
+        return;
+      }
+
+      if (activePid != null) {
+        var prev = document.getElementById("place-" + activePid);
+        if (prev) prev.classList.remove("active");
+      }
+      activePid = id;
+
+      g = groups[gid];
+      g.el.classList.remove("group-no-match");
+      setGroupCollapsed(gid, false);
+      ensureGroupBody(gid);
+      if (place) {
+        aid = findAreaIndex(g, place);
+        if (aid >= 0) {
+          area = g.areas[aid];
+          if (area.el) {
+            area.el.classList.remove("collapsed");
+            var areaBtn = area.el.querySelector(".area-title");
+            if (areaBtn) areaBtn.setAttribute("aria-expanded", "true");
+            if (!area.placesRendered) renderAreaPlaces(gid, aid);
+          }
+        }
+      }
+      var activeEl = document.getElementById("place-" + id);
+      if (activeEl) activeEl.classList.add("active");
+
       if (isMobileLayout()) setMobileView("map");
+      else updateSelectedBar();
+
       cluster.zoomToShowLayer(m, function () {
         refreshMapSize();
         m.openPopup();
       });
+      schedulePersist();
     }
 
-    var $list = $("#place-list");
-    var $filters = $("#filter-list");
+    function showPlaceByStableId(stableId, opts) {
+      opts = opts || {};
+      var place = placeByStableId[stableId];
+      if (!place) return false;
+      opts.enableGroup = true;
+      showPlace(place.pid, opts);
+      return true;
+    }
+
+    function buildMarkersChunked(onDone) {
+      var gid = 0;
+      var index = 0;
+
+      function finishGroup(g) {
+        g.markersReady = true;
+        syncVisibleMarkers(g, desiredMarkersForGroup(g.gid));
+      }
+
+      function step() {
+        if (gid >= groups.length) {
+          if (onDone) onDone();
+          return;
+        }
+        var g = groups[gid];
+        var places = g.places;
+        var end = Math.min(index + MARKER_CHUNK, places.length);
+        var i, place, marker;
+
+        for (i = index; i < end; i++) {
+          place = places[i];
+          marker = L.circleMarker([place.lat, place.lng], markerStyleForGroup(g.name));
+          marker.bindPopup(buildPopupHtml(place, g.name, place.pid));
+          (function (pid) {
+            marker.on("click", function () { showPlace(pid); });
+          })(place.pid);
+          g.markers.push(marker);
+          markersByPid[place.pid] = marker;
+        }
+        index = end;
+
+        if (index >= places.length) {
+          finishGroup(g);
+          gid++;
+          index = 0;
+        }
+
+        if (gid < groups.length) {
+          requestAnimationFrame(step);
+        } else if (onDone) {
+          onDone();
+        }
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    function resetFilters() {
+      var gid;
+      cancelMapFilterTimer();
+      searchEl.value = "";
+      tokusatsuEl.checked = false;
+      for (gid = 0; gid < groups.length; gid++) {
+        setGroupEnabled(gid, true, true);
+        setGroupCollapsed(gid, true);
+        groups[gid].el.classList.remove("group-no-match");
+        clearGroupBody(gid);
+      }
+      if (activePid != null) {
+        var prev = document.getElementById("place-" + activePid);
+        if (prev) prev.classList.remove("active");
+      }
+      activePid = null;
+      updateSelectedBar();
+      try {
+        localStorage.removeItem(LS_Q);
+        localStorage.removeItem(LS_TOK);
+        localStorage.removeItem(LS_PLACE);
+        localStorage.setItem(LS_GROUPS, JSON.stringify(enabledGroupNames()));
+      } catch (e) {}
+      suppressUrlWrite = true;
+      history.replaceState(null, "", window.location.pathname);
+      suppressUrlWrite = false;
+      applyListFilter();
+      applyMapFilter({ fit: true });
+      updateFilterSummary();
+    }
+
+    function showLocateStatus(msg) {
+      if (!locateStatusEl) return;
+      if (!msg) {
+        locateStatusEl.classList.remove("show");
+        locateStatusEl.textContent = "";
+        return;
+      }
+      locateStatusEl.textContent = msg;
+      locateStatusEl.classList.add("show");
+      clearTimeout(showLocateStatus._t);
+      showLocateStatus._t = setTimeout(function () {
+        locateStatusEl.classList.remove("show");
+      }, 3200);
+    }
+
+    function setupLocateControl() {
+      var LocateControl = L.Control.extend({
+        options: { position: "topleft" },
+        onAdd: function () {
+          var div = L.DomUtil.create("div", "leaflet-bar leaflet-control leaflet-control-locate");
+          var a = L.DomUtil.create("a", "", div);
+          a.href = "#";
+          a.title = "Locate me";
+          a.setAttribute("role", "button");
+          a.setAttribute("aria-label", "Locate me");
+          a.innerHTML = "◎";
+          L.DomEvent.on(a, "click", L.DomEvent.stop)
+            .on(a, "click", function () {
+              showLocateStatus("Locating…");
+              map.locate({ setView: true, maxZoom: 14, enableHighAccuracy: true, watch: false });
+            });
+          return div;
+        }
+      });
+      map.addControl(new LocateControl());
+
+      map.on("locationfound", function (e) {
+        if (locateMarker) {
+          locateMarker.setLatLng(e.latlng);
+        } else {
+          locateMarker = L.circleMarker(e.latlng, {
+            radius: 8,
+            color: "#d93025",
+            fillColor: "#ea4335",
+            fillOpacity: 0.7,
+            weight: 2
+          }).addTo(map);
+        }
+        showLocateStatus("Location found");
+      });
+      map.on("locationerror", function () {
+        showLocateStatus("Location unavailable");
+      });
+    }
+
+    function parseUrlState() {
+      var params = new URLSearchParams(window.location.search);
+      var hash = (window.location.hash || "").replace(/^#/, "");
+      var state = { fromUrl: false, groups: null, q: null, tok: null, placeId: null };
+      if (params.has("g") || params.has("q") || params.has("t") || hash.indexOf("p=") === 0) {
+        state.fromUrl = true;
+      }
+      if (params.has("g")) {
+        state.groups = params.get("g").split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+      }
+      if (params.has("q")) state.q = params.get("q");
+      if (params.has("t")) state.tok = params.get("t") === "1" || params.get("t") === "true";
+      if (hash.indexOf("p=") === 0) {
+        state.placeId = decodeURIComponent(hash.slice(2));
+      }
+      return state;
+    }
+
+    function loadPersistedState() {
+      var state = { groups: null, q: null, tok: null, placeId: null };
+      try {
+        var g = localStorage.getItem(LS_GROUPS);
+        if (g) state.groups = JSON.parse(g);
+        state.q = localStorage.getItem(LS_Q);
+        var t = localStorage.getItem(LS_TOK);
+        if (t != null) state.tok = t === "1";
+        state.placeId = localStorage.getItem(LS_PLACE);
+      } catch (e) {}
+      return state;
+    }
+
+    function applyBootState(urlState, lsState) {
+      var useUrl = urlState.fromUrl;
+      var groupsSpec = useUrl ? urlState.groups : lsState.groups;
+      var q = useUrl ? (urlState.q != null ? urlState.q : "") : (lsState.q != null ? lsState.q : "");
+      var tok = useUrl ? !!urlState.tok : !!lsState.tok;
+      var placeId = useUrl ? urlState.placeId : null;
+      // last place from LS only when not opening a shared hash (hash handled separately)
+      if (!placeId && !useUrl) placeId = lsState.placeId;
+
+      if (groupsSpec && groupsSpec.length) {
+        var want = {};
+        var i, name, gid;
+        for (i = 0; i < groupsSpec.length; i++) want[groupsSpec[i]] = true;
+        for (gid = 0; gid < groups.length; gid++) {
+          setGroupEnabled(gid, !!want[groups[gid].name], true);
+        }
+      }
+
+      searchEl.value = q || "";
+      tokusatsuEl.checked = !!tok;
+      updateFilterSummary();
+      applyListFilter();
+      // fit after markers ready
+      pendingHashId = placeId || null;
+    }
+
     var data = window.PLACES_DATA;
     if (!data || !data.order) {
-      $list.html("<p style='padding:12px;color:#c00'>Place data failed to load. Run <code>python3 app/build-places.py</code>.</p>");
+      listEl.innerHTML = "<p style='padding:12px;color:#c00'>Place data failed to load. Run <code>python3 app/build-places.py</code>.</p>";
+    } else {
+      var order = data.order;
+      var gid, groupName, places, i, place, g, split, label, checkbox, span, countSpan, title, items;
+      var urlState = parseUrlState();
+      var lsState = loadPersistedState();
+
+      for (gid = 0; gid < order.length; gid++) {
+        groupName = order[gid];
+        places = data.groups[groupName] || [];
+        groupEnabled[gid] = true;
+        groupNameToGid[groupName] = gid;
+
+        g = {
+          gid: gid,
+          name: groupName,
+          places: [],
+          areas: [],
+          noAreaPlaces: [],
+          markers: [],
+          visibleMarkers: [],
+          markersReady: false,
+          onMap: false,
+          bodyRendered: false,
+          el: null,
+          itemsEl: null,
+          countEl: null
+        };
+
+        for (i = 0; i < places.length; i++) {
+          place = places[i];
+          place = {
+            pid: nextPid++,
+            name: place.name,
+            lat: place.lat,
+            lng: place.lng,
+            url: place.url,
+            overviewUrl: place.overviewUrl,
+            q: place.q,
+            area: place.area,
+            id: place.id,
+            tokusatsu: place.tokusatsu,
+            tokusatsuArea: place.tokusatsuArea
+          };
+          g.places.push(place);
+          placeByPid[place.pid] = place;
+          placeGid[place.pid] = gid;
+          if (place.id) placeByStableId[place.id] = place;
+        }
+
+        split = splitAreas(g.places);
+        g.areas = split.areas;
+        g.noAreaPlaces = split.noAreaPlaces;
+
+        label = document.createElement("label");
+        label.className = "filter-item";
+        checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = true;
+        checkbox.id = "filter-g" + gid;
+        checkbox.setAttribute("aria-label", "Show " + groupName + " on map");
+        (function (groupId) {
+          checkbox.addEventListener("change", function () {
+            setGroupEnabled(groupId, this.checked);
+          });
+        })(gid);
+        span = document.createElement("span");
+        span.appendChild(tintSwatch(groupName));
+        span.appendChild(document.createTextNode(groupName + " "));
+        countSpan = document.createElement("span");
+        countSpan.className = "filter-count";
+        countSpan.textContent = "(" + g.places.length + ")";
+        span.appendChild(countSpan);
+        label.appendChild(checkbox);
+        label.appendChild(span);
+        filterListEl.appendChild(label);
+
+        g.el = document.createElement("div");
+        g.el.className = "group collapsed";
+        g.el.dataset.gid = String(gid);
+        title = document.createElement("button");
+        title.type = "button";
+        title.className = "group-title";
+        title.setAttribute("aria-expanded", "false");
+        title.appendChild(tintSwatch(groupName));
+        title.appendChild(document.createTextNode(groupName + " "));
+        countSpan = document.createElement("span");
+        countSpan.className = "group-count";
+        countSpan.textContent = "(" + g.places.length + ")";
+        g.countEl = countSpan;
+        title.appendChild(countSpan);
+        items = document.createElement("div");
+        items.className = "group-items";
+        g.itemsEl = items;
+        g.el.appendChild(title);
+        g.el.appendChild(items);
+        listEl.appendChild(g.el);
+
+        groups.push(g);
+      }
+
+      applyBootState(urlState, lsState);
+      setupLocateControl();
+      onLayoutChange();
+
+      buildMarkersChunked(function () {
+        applyMapFilter({ fit: isFiltering() || !!(urlState.groups && urlState.groups.length) });
+        if (pendingHashId) {
+          showPlaceByStableId(pendingHashId, { fromHash: !!urlState.placeId, fromRestore: !urlState.placeId });
+          pendingHashId = null;
+        }
+        schedulePersist();
+      });
     }
 
-    var id = 0;
-    $.each(data && data.order || [], function (gid, groupName) {
-      var places = data.groups[groupName];
-      groupIds[gid] = groupName;
-      markersByGroup[gid] = [];
-      groupEnabled[gid] = true;
-
-      $("<label class='filter-item'>")
-        .append(
-          $("<input type='checkbox' checked>").attr("id", "filter-g" + gid).on("change", function () {
-            setGroupEnabled(gid, this.checked);
-          })
-        )
-        .append(
-          $("<span>").html(
-            $("<span>").text(groupName).html() +
-            ' <span class="filter-count">(' + places.length + ")</span>"
-          )
-        )
-        .appendTo($filters);
-
-      var $group = $("<div class='group collapsed'>").attr("data-gid", gid).appendTo($list);
-      $group.append(
-        "<div class='group-title'>" + groupName +
-        " <span class='group-count'>(" + places.length + ")</span></div>"
-      );
-      var $items = $("<div class='group-items'>").appendTo($group);
-
-      $.each(places, function (_, p) {
-        var pid = id++;
-        placeData[pid] = p;
-        var popupHtml = buildPopupHtml(p, groupName, pid);
-        var m = L.marker([p.lat, p.lng]).bindPopup(popupHtml);
-        m.on("click", function () { showPlace(pid); });
-        markersByGroup[gid].push(m);
-        markers[pid] = m;
-        placeGroup[pid] = gid;
-
-        $("<button class='place' id='place-" + pid + "'>")
-          .text(p.name)
-          .data("name", p.name.toLowerCase())
-          .data("group", groupName.toLowerCase())
-          .on("click", function () { showPlace(pid); })
-          .appendTo($items);
-      });
-    });
-
-    syncMapMarkers();
-    updateFilterSummary();
-
-    $("#filter-all").on("click", function () {
+    document.getElementById("filter-all").addEventListener("click", function () {
       setAllGroupsEnabled(true);
     });
-
-    $("#filter-none").on("click", function () {
+    document.getElementById("filter-none").addEventListener("click", function () {
       setAllGroupsEnabled(false);
     });
 
-    $list.on("click", ".group-title", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var $group = $(this).parent();
-      if ($group.hasClass("map-off")) return;
-      $group.toggleClass("collapsed");
+    listEl.addEventListener("click", function (e) {
+      var areaTitle = e.target.closest(".area-title");
+      var titleEl, groupEl, gid, willExpand, areaEl, aid;
+      if (areaTitle && listEl.contains(areaTitle)) {
+        e.preventDefault();
+        areaEl = areaTitle.parentElement;
+        groupEl = areaEl.closest(".group");
+        if (!groupEl || groupEl.classList.contains("map-off")) return;
+        gid = Number(areaEl.dataset.gid);
+        aid = Number(areaEl.dataset.aid);
+        willExpand = areaEl.classList.contains("collapsed");
+        areaEl.classList.toggle("collapsed");
+        areaTitle.setAttribute("aria-expanded", willExpand ? "true" : "false");
+        if (willExpand) renderAreaPlaces(gid, aid);
+        else {
+          groups[gid].areas[aid].itemsEl.innerHTML = "";
+          groups[gid].areas[aid].placesRendered = false;
+        }
+        return;
+      }
+
+      titleEl = e.target.closest(".group-title");
+      if (titleEl && listEl.contains(titleEl)) {
+        e.preventDefault();
+        groupEl = titleEl.parentElement;
+        if (groupEl.classList.contains("map-off")) return;
+        gid = Number(groupEl.dataset.gid);
+        willExpand = groupEl.classList.contains("collapsed");
+        setGroupCollapsed(gid, !willExpand);
+        if (willExpand) ensureGroupBody(gid);
+        else clearGroupBody(gid);
+        return;
+      }
+
+      var placeEl = e.target.closest(".place");
+      if (placeEl && listEl.contains(placeEl)) {
+        e.preventDefault();
+        showPlace(placeEl.dataset.pid);
+      }
     });
 
-    $("#search").on("input", applySearchFilter);
-
-    $("#clear-filters").on("click", function () {
-      $("#search").val("");
-      setAllGroupsEnabled(true);
-      $(".group").addClass("collapsed");
+    searchEl.addEventListener("input", function () {
+      applyListFilter();
+      scheduleMapFilter(isFiltering());
+      schedulePersist();
     });
 
-    $(document).on("click", ".popup-maps", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var p = placeData[Number($(this).data("pid"))];
-      if (p && p.url) window.open(p.url, "_blank", "noopener,noreferrer");
+    tokusatsuEl.addEventListener("change", function () {
+      cancelMapFilterTimer();
+      applyListFilter();
+      updateFilterSummary();
+      applyMapFilter({ fit: true });
+      schedulePersist();
     });
 
-    $(document).on("click", ".popup-overview", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var p = placeData[Number($(this).data("pid"))];
-      if (p && p.overviewUrl) window.open(p.overviewUrl, "_blank", "noopener,noreferrer");
+    document.getElementById("reset-filters").addEventListener("click", resetFilters);
+
+    function isTypingTarget(el) {
+      if (!el || el === document.body) return false;
+      var tag = (el.tagName || "").toUpperCase();
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return true;
+      if (el.isContentEditable) return true;
+      return false;
+    }
+
+
+    function getNavigableListItems() {
+      var nodes = listEl.querySelectorAll(".group-title, .area-title, .place");
+      var out = [];
+      var i, el, group;
+      for (i = 0; i < nodes.length; i++) {
+        el = nodes[i];
+        group = el.closest(".group");
+        if (!group || group.classList.contains("group-no-match")) continue;
+        if (group.classList.contains("map-off") && el.classList.contains("group-title")) {
+          /* still allow focusing muted headers? skip — cannot expand */
+          continue;
+        }
+        if (group.classList.contains("map-off")) continue;
+        if (!el.getClientRects().length) continue;
+        out.push(el);
+      }
+      return out;
+    }
+
+    document.addEventListener("keydown", function (e) {
+      var items, idx, next, el, placeEl;
+      if (e.key === "/" && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        if (!isTypingTarget(e.target)) {
+          e.preventDefault();
+          searchEl.focus();
+          searchEl.select();
+        }
+        return;
+      }
+
+      if (e.key === "Escape") {
+        if (e.target === searchEl) {
+          searchEl.blur();
+          e.preventDefault();
+        }
+        return;
+      }
+
+      /* Do not steal keys from the search box (except Escape above) */
+      if (e.target === searchEl || (isTypingTarget(e.target) && e.target !== listEl)) {
+        return;
+      }
+
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        items = getNavigableListItems();
+        if (!items.length) return;
+        e.preventDefault();
+        idx = items.indexOf(document.activeElement);
+        if (idx < 0 && activePid != null) {
+          placeEl = document.getElementById("place-" + activePid);
+          idx = items.indexOf(placeEl);
+        }
+        if (e.key === "ArrowDown") {
+          next = idx < 0 ? 0 : Math.min(items.length - 1, idx + 1);
+        } else {
+          next = idx < 0 ? 0 : Math.max(0, idx - 1);
+        }
+        items[next].focus();
+        try { items[next].scrollIntoView({ block: "nearest" }); } catch (err) {}
+        return;
+      }
+
+      if (e.key === "Enter" && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        el = document.activeElement;
+        if (el && el.classList.contains("place")) {
+          /* native button activation will also fire click; ensure showPlace */
+          e.preventDefault();
+          showPlace(el.dataset.pid);
+          return;
+        }
+        if (el && (el.classList.contains("group-title") || el.classList.contains("area-title"))) {
+          /* let the button's click / our delegated handler run via .click() */
+          e.preventDefault();
+          el.click();
+          return;
+        }
+        if (activePid != null && (!el || el === document.body || !listEl.contains(el))) {
+          e.preventDefault();
+          showPlace(activePid);
+        }
+      }
+    });
+
+
+
+    (function bindSelectedBar() {
+      var back = document.getElementById("selected-back");
+      var maps = document.getElementById("selected-maps");
+      var overview = document.getElementById("selected-overview");
+      var dir = document.getElementById("selected-dir");
+      if (back) back.addEventListener("click", function () { setMobileView("list"); });
+      if (maps) maps.addEventListener("click", function () {
+        var p = activePid != null ? placeByPid[activePid] : null;
+        if (p && p.url) window.open(p.url, "_blank", "noopener,noreferrer");
+      });
+      if (overview) overview.addEventListener("click", function () {
+        var p = activePid != null ? placeByPid[activePid] : null;
+        if (p && p.overviewUrl) window.open(p.overviewUrl, "_blank", "noopener,noreferrer");
+      });
+      if (dir) dir.addEventListener("click", function () {
+        var p = activePid != null ? placeByPid[activePid] : null;
+        if (p) window.open(directionsUrl(p), "_blank", "noopener,noreferrer");
+      });
+    })();
+
+    document.addEventListener("click", function (e) {
+      var mapsBtn = e.target.closest(".popup-maps");
+      var p, copyBtn, id;
+      if (mapsBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        p = placeByPid[Number(mapsBtn.getAttribute("data-pid"))];
+        if (p && p.url) window.open(p.url, "_blank", "noopener,noreferrer");
+        return;
+      }
+      var overviewBtn = e.target.closest(".popup-overview");
+      if (overviewBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        p = placeByPid[Number(overviewBtn.getAttribute("data-pid"))];
+        if (p && p.overviewUrl) window.open(p.overviewUrl, "_blank", "noopener,noreferrer");
+        return;
+      }
+      copyBtn = e.target.closest(".popup-copy");
+      if (copyBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        id = copyBtn.getAttribute("data-id");
+        if (!id) return;
+        var url = placeShareUrl(id);
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(function () {
+            copyBtn.textContent = "Copied";
+            setTimeout(function () { copyBtn.textContent = "Copy link"; }, 1500);
+          }).catch(function () {
+            window.prompt("Copy link:", url);
+          });
+        } else {
+          window.prompt("Copy link:", url);
+        }
+      }
+    });
+
+    window.addEventListener("hashchange", function () {
+      var hash = (window.location.hash || "").replace(/^#/, "");
+      if (hash.indexOf("p=") === 0) {
+        showPlaceByStableId(decodeURIComponent(hash.slice(2)), { fromHash: true });
+      }
     });
   </script>
 </body>

@@ -1,5 +1,6 @@
 """Normalize place names to: Romaji (Original) when Japanese script is present."""
 import re
+import unicodedata
 from urllib.parse import quote_plus
 
 import pykakasi
@@ -12,12 +13,31 @@ LATIN_RE = re.compile(r"[A-Za-z]")
 EXTENDED_LATIN_RE = re.compile(r"[^\x00-\x7F]")
 
 
-def _has_japanese(text: str) -> bool:
+def has_japanese(text: str) -> bool:
     return bool(JP_RE.search(text))
 
 
-def _has_extended_latin(text: str) -> bool:
+def _has_japanese(text: str) -> bool:
+    return has_japanese(text)
+
+
+def fold_for_search(text: str) -> str:
+    """Lowercase, strip accents, keep ASCII + Japanese for substring search haystacks."""
+    if not text:
+        return ""
+    text = unicodedata.normalize("NFKD", text)
+    text = "".join(ch for ch in text if not unicodedata.combining(ch))
+    text = text.casefold()
+    text = re.sub(r"[^a-z0-9\u3040-\u30ff\u4e00-\u9fff\s]+", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def has_extended_latin(text: str) -> bool:
     return bool(EXTENDED_LATIN_RE.search(text))
+
+
+def _has_extended_latin(text: str) -> bool:
+    return has_extended_latin(text)
 
 
 def _clean_formatting(text: str) -> str:

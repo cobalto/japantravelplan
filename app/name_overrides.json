@@ -1,0 +1,45 @@
+{
+  "byName": {
+    "Torre de Tóquio": {
+      "name": "Tokyo Tower (東京タワー)",
+      "aliases": ["Torre de Tóquio", "Tokyo Tower"]
+    },
+    "Museu Ghibli": {
+      "name": "Ghibli Museum (三鷹の森ジブリ美術館)",
+      "aliases": ["Museu Ghibli", "Ghibli Museum"]
+    },
+    "Museu de Arte de Mori": {
+      "name": "Mori Art Museum (森美術館)",
+      "aliases": ["Museu de Arte de Mori", "Mori Art Museum"]
+    },
+    "Centro Nacional de Arte de Tóquio": {
+      "name": "The National Art Center, Tokyo (国立新美術館)",
+      "aliases": ["Centro Nacional de Arte de Tóquio", "National Art Center"]
+    },
+    "Cemitério de Aoyama": {
+      "name": "Aoyama Cemetery (青山霊園)",
+      "aliases": ["Cemitério de Aoyama", "Aoyama Cemetery"]
+    },
+    "Zoológico de Ueno": {
+      "name": "Ueno Zoo (恩賜上野動物園)",
+      "aliases": ["Zoológico de Ueno", "Ueno Zoo"]
+    },
+    "Palácio Akasaka": {
+      "name": "Akasaka Palace (迎賓館赤坂離宮)",
+      "aliases": ["Palácio Akasaka", "Akasaka Palace"]
+    },
+    "Aquário de Shinagawa": {
+      "name": "Shinagawa Aquarium (しながわ水族館)",
+      "aliases": ["Aquário de Shinagawa", "Shinagawa Aquarium"]
+    },
+    "Rua de Comércio Nakamise": {
+      "name": "Nakamise-dori (仲見世通り)",
+      "aliases": ["Rua de Comércio Nakamise", "Nakamise"]
+    },
+    "Estátua do Godzilla": {
+      "name": "Godzilla Statue (ゴジラ像)",
+      "aliases": ["Estátua do Godzilla", "Godzilla Statue"]
+    }
+  },
+  "byCoord": {}
+}

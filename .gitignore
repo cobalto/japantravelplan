@@ -21,3 +21,6 @@ env/
 # Local env
 .env
 .env.*
+
+# Generated build report (stdout is the source of truth in CI logs)
+app/build-report.txt
