@@ -547,16 +547,48 @@
     var LS_OTAKU = "jtp.otaku";
     var LS_PLACE = "jtp.place";
 
-    /* Always OSM — free, no API key. Theme (light/dim/dark) only restyles the sidebar UI. */
-    var TILE_URL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-    var TILE_ATTR = "&copy; OpenStreetMap";
+    /* Base map tiles — all settings live here.
+       OSM is free with no API key, but its usage policy blocks (HTTP 403 "Blocked tiles")
+       requests without a Referer, e.g. when index.html is opened as a local file:// page.
+       So: OSM on the real site, Esri World Street Map (keyless) as the fallback (local files, or
+       after repeated OSM errors). Theme (light/dim/dark) only restyles the sidebar UI. */
+    var TILES = {
+      osm: {
+        url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      },
+      fallback: {
+        url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+        attribution: "Tiles &copy; Esri &mdash; Esri, HERE, Garmin, OpenStreetMap contributors, GIS user community"
+      },
+      maxErrorsBeforeFallback: 6
+    };
 
     var map = L.map("map", { tap: true, preferCanvas: true, maxZoom: 19 }).setView([36.2, 138.25], 6);
     selectedBar = document.getElementById("selected-bar");
     selectedName = document.getElementById("selected-name");
     selectedMeta = document.getElementById("selected-meta");
     locateStatusEl = document.getElementById("locate-status");
-    L.tileLayer(TILE_URL, { attribution: TILE_ATTR, maxZoom: 19 }).addTo(map);
+    (function addBaseLayer() {
+      function make(cfg) {
+        return L.tileLayer(cfg.url, {
+          attribution: cfg.attribution,
+          subdomains: cfg.subdomains || "abc",
+          maxZoom: 19,
+          referrerPolicy: "strict-origin-when-cross-origin"
+        });
+      }
+      var useFallback = location.protocol === "file:";
+      var layer = make(useFallback ? TILES.fallback : TILES.osm).addTo(map);
+      if (useFallback) return;
+      var errors = 0;
+      layer.on("tileerror", function () {
+        if (++errors !== TILES.maxErrorsBeforeFallback) return;
+        map.removeLayer(layer);
+        make(TILES.fallback).addTo(map);
+      });
+      layer.on("tileload", function () { errors = 0; });
+    })();
 
     var cluster = L.markerClusterGroup({
       chunkedLoading: true,
