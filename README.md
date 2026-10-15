@@ -21,7 +21,6 @@ Hosted at **[cobalto.dev/japantravelplan](https://cobalto.dev/japantravelplan)**
 | `app/normalize_names.py` | Normalizes place and group names and builds Google Maps URLs during the build. |
 | `app/places.js` | Reference copy of the place data (not loaded by the app). |
 | `AGENTS.md` | Guide for LLM agents working in this repo (build rules, UI behavior, pitfalls). |
-| `PLAN.md` | Phased plan: build-time data, light runtime, desktop/mobile UX. |
 
 ## Using the map
 
