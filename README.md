@@ -134,3 +134,10 @@ Group names in the app are simplified (e.g. `[1] Kanto - 脚下照顧` → `Kant
 ## GitHub Pages
 
 Publish the **root** of this repository (not `/app`). Served at `https://cobalto.dev/japantravelplan/`.
+## Otaku trip sheet
+
+Places from `Japan_Trip_Trump_Cards.xlsx` show with an **Otaku** chip/badge (URL `?o=1`). After the sheet changes, run:
+
+```bash
+app/sync_otaku_sheet.sh /path/to/Japan_Trip_Trump_Cards.xlsx
+```

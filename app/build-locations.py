@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate Locations/*.md from KML/*.kml (skips Tokusatsu.md)."""
+"""Regenerate Locations/*.md from KML/*.kml (skips Tokusatsu.md, Otaku.md and Manual.md)."""
 from pathlib import Path
 
 from parse_places import load_overrides, parse_kml_file
@@ -33,7 +33,7 @@ def main():
     overrides = load_overrides(OVERRIDES)
 
     for old in LOC_DIR.glob("*.md"):
-        if old.name == "Tokusatsu.md":
+        if old.name in ("Tokusatsu.md", "Otaku.md", "Manual.md"):
             continue
         old.unlink()
 
@@ -45,7 +45,7 @@ def main():
         total += len(places)
         print(f"  {out.name}: {len(places)} places")
 
-    print(f"Wrote {total} places to {LOC_DIR} (Tokusatsu.md untouched)")
+    print(f"Wrote {total} places to {LOC_DIR} (Tokusatsu.md, Otaku.md and Manual.md untouched)")
 
 
 if __name__ == "__main__":

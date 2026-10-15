@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate /index.html with inlined place data from KML/*.kml and Locations/Tokusatsu.md.
+"""Regenerate /index.html with inlined place data from KML/*.kml Locations/Tokusatsu.md and Locations/Otaku.md.
 
 Offline. Does not call geocoders. Optional enrich cache is applied only via name_overrides.json.
 """
@@ -20,7 +20,7 @@ REPORT = APP / "build-report.txt"
 
 
 def main():
-    payload, report = build_from_dirs(KML_DIR, LOC_DIR / "Tokusatsu.md", OVERRIDES)
+    payload, report = build_from_dirs(KML_DIR, LOC_DIR / "Tokusatsu.md", OVERRIDES, LOC_DIR / "Otaku.md", LOC_DIR / "Manual.md")
 
     pretty = json.dumps(payload, ensure_ascii=False, indent=2)
     compact = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))

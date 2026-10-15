@@ -264,6 +264,7 @@
     html.dim #selected-bar .popup-btn-apple,
     html.dark #selected-bar .popup-btn-apple { color: #c5c5c5; }
     .popup-extra { margin-top: 8px; font-size: 12px; color: var(--text-muted); }
+    .popup-otaku { max-width: 320px; max-height: 180px; overflow-y: auto; line-height: 1.35; }
     .mobile-tabs { display: none; }
     #selected-bar {
       display: none;
@@ -465,12 +466,16 @@
         </div>
         <div class="search-row">
           <input type="search" id="search" placeholder="Search places…" aria-label="Search places" accesskey="s">
-          <button type="button" id="reset-filters" title="Clear search, show all regions, turn off Tokusatsu, clear place link, collapse lists (keeps theme)">Reset</button>
+          <button type="button" id="reset-filters" title="Clear search, show all regions, turn off Tokusatsu and Otaku, clear place link, collapse lists (keeps theme)">Reset</button>
         </div>
         <div class="filter-chip-row">
           <label class="chip">
             <input type="checkbox" id="filter-tokusatsu" aria-label="Show only Tokusatsu filming sites">
             <span>Tokusatsu</span>
+          </label>
+          <label class="chip">
+            <input type="checkbox" id="filter-otaku" aria-label="Show only places from the Otaku trip sheet">
+            <span>Otaku</span>
           </label>
           <span id="match-count" class="match-count" hidden></span>
         </div>
@@ -526,6 +531,7 @@
     var themeSelect = document.getElementById("theme-select");
     var filterSummaryEl = document.getElementById("filter-summary");
     var tokusatsuEl = document.getElementById("filter-tokusatsu");
+    var otakuEl = document.getElementById("filter-otaku");
     var matchCountEl = document.getElementById("match-count");
     var tabList = document.getElementById("tab-list");
     var tabMap = document.getElementById("tab-map");
@@ -538,6 +544,7 @@
     var LS_GROUPS = "jtp.groups";
     var LS_Q = "jtp.q";
     var LS_TOK = "jtp.tokusatsu";
+    var LS_OTAKU = "jtp.otaku";
     var LS_PLACE = "jtp.place";
 
     /* Always OSM — free, no API key. Theme (light/dim/dark) only restyles the sidebar UI. */
@@ -729,6 +736,10 @@
           escapeHtml(place.id) + '">Copy link</button>';
       }
       html += "</div>";
+      if (place.otakuNotes) {
+        html += '<div class="popup-extra popup-otaku"><strong>Otaku sheet</strong><br>' +
+          escapeHtml(place.otakuNotes).replace(/\n/g, "<br>") + "</div>";
+      }
       return html;
     }
 
@@ -748,8 +759,16 @@
       return !!(tokusatsuEl && tokusatsuEl.checked);
     }
 
+    function isOtakuOn() {
+      return !!(otakuEl && otakuEl.checked);
+    }
+
+    function isTagFilterOn() {
+      return isTokusatsuOn() || isOtakuOn();
+    }
+
     function isFiltering() {
-      return !!(getSearchNeedle() || isTokusatsuOn());
+      return !!(getSearchNeedle() || isTokusatsuOn() || isOtakuOn());
     }
 
     function placeMatchesNeedle(place, needle) {
@@ -760,7 +779,9 @@
     }
 
     function placeVisible(place, needle, tokOnly) {
-      if (tokOnly && !place.tokusatsu) return false;
+      // tokOnly = "a tag chip is on"; each chip narrows independently (AND).
+      if (tokOnly && isTokusatsuOn() && !place.tokusatsu) return false;
+      if (isOtakuOn() && !place.otaku) return false;
       return placeMatchesNeedle(place, needle);
     }
 
@@ -864,7 +885,7 @@
       var needle, tokOnly, wanted, i, p, m;
       if (!g || !g.markersReady || !groupEnabled[gid]) return [];
       needle = getSearchNeedle();
-      tokOnly = isTokusatsuOn();
+      tokOnly = isTagFilterOn();
       if (!needle && !tokOnly) return g.markers;
       wanted = [];
       for (i = 0; i < g.places.length; i++) {
@@ -941,7 +962,7 @@
     function applyMapFilter(opts) {
       opts = opts || {};
       var needle = getSearchNeedle();
-      var tokOnly = isTokusatsuOn();
+      var tokOnly = isTagFilterOn();
       var filtering = !!(needle || tokOnly);
       var latlngs = [];
       var gid, g, i, p;
@@ -978,6 +999,12 @@
         badge.textContent = "Tokusatsu";
         btn.appendChild(badge);
       }
+      if (place.otaku) {
+        badge = document.createElement("span");
+        badge.className = "tokusatsu-badge otaku-badge";
+        badge.textContent = "Otaku";
+        btn.appendChild(badge);
+      }
       return btn;
     }
 
@@ -999,7 +1026,7 @@
       var frag = document.createDocumentFragment();
       var i, p;
       if (needle === undefined) needle = getSearchNeedle();
-      if (tokOnly === undefined) tokOnly = isTokusatsuOn();
+      if (tokOnly === undefined) tokOnly = isTagFilterOn();
       if (!area.itemsEl) return;
       for (i = 0; i < area.places.length; i++) {
         p = area.places[i];
@@ -1013,7 +1040,7 @@
     function renderGroupBody(gid) {
       var g = groups[gid];
       var needle = getSearchNeedle();
-      var tokOnly = isTokusatsuOn();
+      var tokOnly = isTagFilterOn();
       var expandedAreas = {};
       var frag = document.createDocumentFragment();
       var i, p, a, area, vis, areaEl, title, countSpan, items, shouldExpand;
@@ -1100,7 +1127,7 @@
 
     function applyListFilter() {
       var needle = getSearchNeedle();
-      var tokOnly = isTokusatsuOn();
+      var tokOnly = isTagFilterOn();
       var matchTotal = 0;
       var gid, g, vis;
       for (gid = 0; gid < groups.length; gid++) {
@@ -1149,6 +1176,7 @@
       if (active === 0) text = "none selected";
       else if (active === total) text = "all " + total + " sources";
       if (isTokusatsuOn()) text += " · Tokusatsu";
+      if (isOtakuOn()) text += " · Otaku";
       filterSummaryEl.textContent = text;
     }
 
@@ -1170,6 +1198,7 @@
       if (!allOn && names.length) params.set("g", names.join(","));
       if (q) params.set("q", q);
       if (isTokusatsuOn()) params.set("t", "1");
+      if (isOtakuOn()) params.set("o", "1");
       var qs = params.toString();
       var hash = "";
       if (activePid != null && placeByPid[activePid] && placeByPid[activePid].id) {
@@ -1187,6 +1216,7 @@
         localStorage.setItem(LS_GROUPS, JSON.stringify(enabledGroupNames()));
         localStorage.setItem(LS_Q, searchEl.value);
         localStorage.setItem(LS_TOK, isTokusatsuOn() ? "1" : "0");
+        localStorage.setItem(LS_OTAKU, isOtakuOn() ? "1" : "0");
         if (activePid != null && placeByPid[activePid] && placeByPid[activePid].id) {
           localStorage.setItem(LS_PLACE, placeByPid[activePid].id);
         }
@@ -1370,6 +1400,7 @@
       cancelMapFilterTimer();
       searchEl.value = "";
       tokusatsuEl.checked = false;
+      otakuEl.checked = false;
       for (gid = 0; gid < groups.length; gid++) {
         setGroupEnabled(gid, true, true);
         setGroupCollapsed(gid, true);
@@ -1454,8 +1485,8 @@
     function parseUrlState() {
       var params = new URLSearchParams(window.location.search);
       var hash = (window.location.hash || "").replace(/^#/, "");
-      var state = { fromUrl: false, groups: null, q: null, tok: null, placeId: null };
-      if (params.has("g") || params.has("q") || params.has("t") || hash.indexOf("p=") === 0) {
+      var state = { fromUrl: false, groups: null, q: null, tok: null, otaku: null, placeId: null };
+      if (params.has("g") || params.has("q") || params.has("t") || params.has("o") || hash.indexOf("p=") === 0) {
         state.fromUrl = true;
       }
       if (params.has("g")) {
@@ -1463,6 +1494,7 @@
       }
       if (params.has("q")) state.q = params.get("q");
       if (params.has("t")) state.tok = params.get("t") === "1" || params.get("t") === "true";
+      if (params.has("o")) state.otaku = params.get("o") === "1" || params.get("o") === "true";
       if (hash.indexOf("p=") === 0) {
         state.placeId = decodeURIComponent(hash.slice(2));
       }
@@ -1470,13 +1502,15 @@
     }
 
     function loadPersistedState() {
-      var state = { groups: null, q: null, tok: null, placeId: null };
+      var state = { groups: null, q: null, tok: null, otaku: null, placeId: null };
       try {
         var g = localStorage.getItem(LS_GROUPS);
         if (g) state.groups = JSON.parse(g);
         state.q = localStorage.getItem(LS_Q);
         var t = localStorage.getItem(LS_TOK);
         if (t != null) state.tok = t === "1";
+        var o = localStorage.getItem(LS_OTAKU);
+        if (o != null) state.otaku = o === "1";
         state.placeId = localStorage.getItem(LS_PLACE);
       } catch (e) {}
       return state;
@@ -1487,6 +1521,7 @@
       var groupsSpec = useUrl ? urlState.groups : lsState.groups;
       var q = useUrl ? (urlState.q != null ? urlState.q : "") : (lsState.q != null ? lsState.q : "");
       var tok = useUrl ? !!urlState.tok : !!lsState.tok;
+      var otaku = useUrl ? !!urlState.otaku : !!lsState.otaku;
       var placeId = useUrl ? urlState.placeId : null;
       // last place from LS only when not opening a shared hash (hash handled separately)
       if (!placeId && !useUrl) placeId = lsState.placeId;
@@ -1502,6 +1537,7 @@
 
       searchEl.value = q || "";
       tokusatsuEl.checked = !!tok;
+      otakuEl.checked = !!otaku;
       updateFilterSummary();
       applyListFilter();
       // fit after markers ready
@@ -1552,7 +1588,9 @@
             area: place.area,
             id: place.id,
             tokusatsu: place.tokusatsu,
-            tokusatsuArea: place.tokusatsuArea
+            tokusatsuArea: place.tokusatsuArea,
+            otaku: place.otaku,
+            otakuNotes: place.otakuNotes
           };
           g.places.push(place);
           placeByPid[place.pid] = place;
@@ -1676,6 +1714,14 @@
     searchEl.addEventListener("input", function () {
       applyListFilter();
       scheduleMapFilter(isFiltering());
+      schedulePersist();
+    });
+
+    otakuEl.addEventListener("change", function () {
+      cancelMapFilterTimer();
+      applyListFilter();
+      updateFilterSummary();
+      applyMapFilter({ fit: true });
       schedulePersist();
     });
 

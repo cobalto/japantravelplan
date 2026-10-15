@@ -845,8 +845,10 @@ window.PLACES_DATA = {
         "lng": 139.7657232,
         "url": "https://www.google.com/maps/search/?api=1&query=Yanaka+Ginza,35.7276934,139.7657232",
         "overviewUrl": "https://www.google.com/search?q=Yanaka+Ginza%2C+Tokyo%2C+Japan",
-        "q": "yanaka ginza tokyo ota",
-        "area": "Ōta"
+        "q": "yanaka ginza tokyo ota shopping street 谷中きんさ otaku",
+        "area": "Ōta",
+        "otaku": true,
+        "otakuNotes": "Address: 東京都台東区谷中3丁目 周辺 (association: 谷中3-9-15) / around 3-chome Yanaka, Taito-ku, Tokyo\nCard: Yanaka / Nezu Showa walk · Food/culture: Showa streets, temples, kissaten · When: Anytime · avoid Dec 31–Jan 3 if you only want quiet Showa (hatsumode spillover) · Pace: Slow · From Meguro: 35–50 min · How: Yamanote to Nippori or Ueno\nLinks: https://www.google.com/maps/search/?api=1&query=%E8%B0%B7%E4%B8%AD%E3%81%8E%E3%82%93%E3%81%96%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8F%B0%E6%9D%B1%E5%8C%BA%E8%B0%B7%E4%B8%AD3%E4%B8%81%E7%9B%AE"
       },
       {
         "id": "ec0e16c9753d",
@@ -1485,8 +1487,10 @@ window.PLACES_DATA = {
         "lng": 139.7761383,
         "url": "https://www.google.com/maps/search/?api=1&query=The+Gundam+Base+Tokyo,35.6254768,139.7761383",
         "overviewUrl": "https://www.google.com/search?q=The+Gundam+Base+Tokyo%2C+Tokyo%2C+Japan",
-        "q": "the gundam base tokyo ota",
-        "area": "Ōta"
+        "q": "the gundam base tokyo ota divercity plaza タイハーシティ東京 otaku",
+        "area": "Ōta",
+        "otaku": true,
+        "otakuNotes": "Card: Gundam Base Tokyo (DiverCity Odaiba) · Hook: Gunpla, life-size Gundam · Food/culture: DiverCity food court · When: Anytime · New Year may use entry lottery · Booking: Possible entry lottery busy days · Pace: Slow · From Meguro: 40–55 min · How: Rinkai / Yurikamome to Odaiba · Notes: Optional; skip if Comiket-fatigued"
       },
       {
         "id": "8a71f08000cd",
@@ -1979,8 +1983,10 @@ window.PLACES_DATA = {
         "lng": 139.7080937,
         "url": "https://www.google.com/maps/search/?api=1&query=Ry%C5%ABsenji+Temple,35.6286232,139.7080937",
         "overviewUrl": "https://www.google.com/search?q=Ry%C5%ABsenji+Temple%2C+Tokyo%2C+Japan",
-        "q": "ryusenji temple tokyo meguro",
-        "area": "Meguro"
+        "q": "ryusenji temple tokyo meguro fudoson 目黒不動尊 otaku",
+        "area": "Meguro",
+        "otaku": true,
+        "otakuNotes": "Card: Hatsumode — Meguro Fudoson or Hikawa · Food/culture: Local temple New Year · When: LIMITED: Dec 31 night – Jan 3 (New Year window) · Pace: Slow · From Meguro: 10–25 min walk · How: Walk from Meguro Heights · Notes: Walkable from HQ; quieter than Meiji / Hikawa = 上目黒氷川神社 (Ohashi); fields cover Hikawa, not Meguro Fudoson.\nLocked anchor “Hatsumode temple”: Want · When: Dec 31–Jan 3 · Meguro Fudoson/Hikawa or Meiji Jingu\nLinks: https://www.google.com/maps/search/?api=1&query=%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%9B%AE%E9%BB%92%E5%8C%BA%E5%A4%A7%E6%A9%8B2-16-21"
       },
       {
         "id": "24018139bb8a",
@@ -2329,8 +2335,10 @@ window.PLACES_DATA = {
         "lng": 139.6202039,
         "url": "https://www.google.com/maps/search/?api=1&query=Kinuta+Park,35.6305007,139.6202039",
         "overviewUrl": "https://www.google.com/search?q=Kinuta+Park%2C+Tokyo%2C+Japan",
-        "q": "kinuta park tokyo setagaya",
-        "area": "Setagaya"
+        "q": "kinuta park tokyo setagaya 砧公園 otaku",
+        "area": "Setagaya",
+        "otaku": true,
+        "otakuNotes": "Card: Setagaya — Kinuta Park + Soshigaya-Okura Ultraman + Toho/Godzilla Store · Hook: Ultraman Street vibes, classic Ultra locations, Toho exterior/store · Food/culture: Kinuta picnic; Sangenjaya food on way back · When: Anytime dry day · avoid Dec 29–Jan 3 if combining with Comiket fatigue · Pace: Slow · From Meguro: 30–50 min · How: Tokyu Den-en-toshi / Odakyu local · Notes: Analog tokusatsu walk, not a museum day"
       },
       {
         "id": "1c54076f1cbd",
@@ -2619,8 +2627,10 @@ window.PLACES_DATA = {
         "lng": 139.5125434,
         "url": "https://www.google.com/maps/search/?api=1&query=Edo-Tokyo+Open+Air+Architectural+Museum,35.7155722,139.5125434",
         "overviewUrl": "https://www.google.com/search?q=Edo-Tokyo+Open+Air+Architectural+Museum%2C+Tokyo%2C+Japan",
-        "q": "edo tokyo open air architectural museum setagaya",
-        "area": "Setagaya"
+        "q": "edo tokyo open air architectural museum setagaya 江戸東京たてもの園 otaku",
+        "area": "Setagaya",
+        "otaku": true,
+        "otakuNotes": "Card: Edo-Tokyo Open-Air Architectural Museum (Koganei) · Food/culture: Showa/Edo relocated houses; outdoor museum · When: LIMITED: closed Mondays + NY holidays · Booking: ¥400 · Pace: Half-slow · From Meguro: 50–70 min · How: Chuo Line to Musashi-Koganei → Seibu bus · Notes: Architecture + Showa oversupply"
       },
       {
         "id": "7af1241aa78b",
@@ -2629,8 +2639,10 @@ window.PLACES_DATA = {
         "lng": 139.7300767,
         "url": "https://www.google.com/maps/search/?api=1&query=Roppongi+Hills,35.6602384,139.7300767",
         "overviewUrl": "https://www.google.com/search?q=Roppongi+Hills%2C+Tokyo%2C+Japan",
-        "q": "roppongi hills tokyo minato",
-        "area": "Minato"
+        "q": "roppongi hills tokyo minato keyakizaka street けやき坂 otaku",
+        "area": "Minato",
+        "otaku": true,
+        "otakuNotes": "Card: Roppongi Hills Keyakizaka Illumination · Food/culture: Free Keyakizaka lights · When: CONFIRMED LIMITED: 2026-11-05 → 2026-12-25 · lights ~17:00–22:00 JST · Dec 25 = LAST night (arrival) · Booking: Free (street) · Pace: Slow · From Meguro: 15–25 min · How: Hibiya / Oedo to Roppongi · Notes: Only shot on arrival evening if flight allows; ends Christmas\nLocked anchor “Roppongi Hills Keyakizaka”: CONFIRMED — last night = arrival · When: 2026-11-05 → 2026-12-25 (lights ~17:00–22:00 JST) · Dec 25 is final night; free street walk · https://www.mori.co.jp/press/release/260930_1/\nLinks: https://www.mori.co.jp/press/release/260930_1/"
       },
       {
         "id": "821f085530c8",
@@ -3239,8 +3251,10 @@ window.PLACES_DATA = {
         "lng": 139.713487,
         "url": "https://www.google.com/maps/search/?api=1&query=Yebisu+Garden+Place,35.642145,139.713487",
         "overviewUrl": "https://www.google.com/search?q=Yebisu+Garden+Place%2C+Tokyo%2C+Japan",
-        "q": "yebisu garden place tokyo shibuya",
-        "area": "Shibuya"
+        "q": "yebisu garden place tokyo shibuya 恵比寿カーテンフレイス otaku",
+        "area": "Shibuya",
+        "otaku": true,
+        "otakuNotes": "Card: Yebisu Garden Place Illumination / Baccarat · Food/culture: Free area lights; Baccarat chandelier display · When: LIMITED: Baccarat pattern ends ~mid-Jan · Christmas tree/market to Dec 25 · area lights longer · Booking: Free · Pace: Slow · From Meguro: 8–15 min · How: 1 stop Yamanote Meguro → Ebisu walk · Notes: Closest illumination to HQ"
       },
       {
         "id": "71cb13662121",
@@ -3489,8 +3503,10 @@ window.PLACES_DATA = {
         "lng": 139.6988778,
         "url": "https://www.google.com/maps/search/?api=1&query=SHIBUYA+PARCO,35.6620166,139.6988778",
         "overviewUrl": "https://www.google.com/search?q=SHIBUYA+PARCO%2C+Tokyo%2C+Japan",
-        "q": "shibuya parco tokyo",
-        "area": "Shibuya"
+        "q": "shibuya parco tokyo nintendo ニンテントートウキョウ otaku",
+        "area": "Shibuya",
+        "otaku": true,
+        "otakuNotes": "Card: Shibuya — Nintendo TOKYO (PARCO) · Hook: Nintendo TOKYO official store · Food/culture: PARCO / Shibuya food · When: Anytime except EXPECTED Jan 1 closed · hit Dec 27–28 if you care · Booking: None · store hours follow PARCO · Pace: Slow · From Meguro: 20–30 min · How: Yamanote to Shibuya · Notes: Not the Uji museum — just the shop"
       },
       {
         "id": "bce7e781ab9a",
@@ -3719,8 +3735,10 @@ window.PLACES_DATA = {
         "lng": 139.7634091,
         "url": "https://www.google.com/maps/search/?api=1&query=Hamarikyu+Gardens,35.6596559,139.7634091",
         "overviewUrl": "https://www.google.com/search?q=Hamarikyu+Gardens%2C+Tokyo%2C+Japan",
-        "q": "hamarikyu gardens tokyo shibuya",
-        "area": "Shibuya"
+        "q": "hamarikyu gardens tokyo shibuya 浜離宮恩賜庭園 otaku",
+        "area": "Shibuya",
+        "otaku": true,
+        "otakuNotes": "Card: Hamarikyu Gardens + Nakajima-no-Ochaya matcha · Food/culture: Garden + matcha/sweet at Nakajima-no-Ochaya · When: LIMITED closures: CLOSED Dec 29–Jan 1 · often open Jan 2–3 · Booking: Garden ¥300 + matcha ~¥850 · Pace: Slow · From Meguro: 25–35 min · How: Yamanote to Shimbashi / Tsukiji area walk or Toei Oedo · Notes: Tokyo matcha without Kansai"
       },
       {
         "id": "a0305b63583b",
@@ -3799,8 +3817,10 @@ window.PLACES_DATA = {
         "lng": 139.7019117,
         "url": "https://www.google.com/maps/search/?api=1&query=Godzilla+Head,35.6950521,139.7019117",
         "overviewUrl": "https://www.google.com/search?q=Godzilla+Head%2C+Tokyo%2C+Japan",
-        "q": "godzilla head tokyo shibuya",
-        "area": "Shibuya"
+        "q": "godzilla head tokyo shibuya gracery hotel shinjuku ホテルクレイスリー新宿 otaku",
+        "area": "Shibuya",
+        "otaku": true,
+        "otakuNotes": "Add-on of card “Shinjuku — SE Cafe & Shop + Godzilla Store + Head” · Hook: NieR menu + goods (SE Cafe); Godzilla Store Marui Annex; Gracery Godzilla Head · Food/culture: Ginza/Shinbashi kissaten if you continue east; Kabukicho photo only · When: Anytime · best Dec 27–28 · confirm Jan 1 hours (may shorten/close) · Booking: SE Cafe: reserve; shop walk-in · Pace: Slow · From Meguro: 20–30 min · How: Yamanote to Shinjuku · Notes: Core NieR hit for the trip"
       },
       {
         "id": "1524de01c10e",
@@ -5353,6 +5373,16 @@ window.PLACES_DATA = {
         "area": "Edogawa"
       },
       {
+        "id": "81cd87890eb0",
+        "name": "asatte (asatteのジェラート)",
+        "lat": 35.727264,
+        "lng": 139.765808,
+        "url": "https://www.google.com/maps/search/?api=1&query=asatte%E3%81%AE%E3%82%B8%E3%82%A7%E3%83%A9%E3%83%BC%E3%83%88,35.727264,139.765808",
+        "overviewUrl": "https://www.google.com/search?q=asatte%2C+Tokyo%2C+Japan",
+        "q": "asatte asatteのシェラート tokyo ota のシェラート",
+        "area": "Ōta"
+      },
+      {
         "id": "9fb4ac780ef3",
         "name": "Funado Bridge / Funado Riverside Park (Itabashi)",
         "lat": 35.791359,
@@ -5515,10 +5545,12 @@ window.PLACES_DATA = {
         "lng": 139.527,
         "url": "https://www.google.com/maps/search/?api=1&query=Ajinomoto+Stadium+%28Chofu%29,35.665,139.527",
         "overviewUrl": "https://www.google.com/search?q=Ajinomoto+Stadium+%28Chofu%29%2C+Tokyo%2C+Japan",
-        "q": "ajinomoto stadium chofu tokyo tokusatsu kamen rider sentai staples",
+        "q": "ajinomoto stadium chofu tokyo 味の素スタシアム tokusatsu kamen rider sentai staples otaku",
         "area": "Chofu",
         "tokusatsu": true,
-        "tokusatsuArea": "TOKYO — Kamen Rider & Sentai staples"
+        "tokusatsuArea": "TOKYO — Kamen Rider & Sentai staples",
+        "otaku": true,
+        "otakuNotes": "Card: Chofu — Ajinomoto Stadium area (tokusatsu B) · Hook: Stadium exteriors used in tokusatsu · Food/culture: Chofu station food · When: Anytime · empty stadium days are fine for exteriors · Booking: None for exteriors · Pace: Half-slow · From Meguro: 45–60 min · How: Keio Line to Tobitakyu / Chofu · Notes: Only if nearby already; thin alone"
       },
       {
         "id": "f91db4096b26",
@@ -5551,10 +5583,12 @@ window.PLACES_DATA = {
         "lng": 139.608,
         "url": "https://www.google.com/maps/search/?api=1&query=Soshigaya-Okura+Station+area+%28Setagaya%29+%E2%80%94+%22Ultraman+Street%22,35.643,139.608",
         "overviewUrl": "https://www.google.com/search?q=Soshigaya-Okura+Station+area+%28Setagaya%29+%E2%80%94+%22Ultraman+Street%22%2C+Tokyo%2C+Japan",
-        "q": "soshigaya okura station area setagaya ultraman street tokyo tokusatsu",
+        "q": "soshigaya okura station area setagaya ultraman street tokyo 祖師ヶ谷大蔵 tokusatsu otaku",
         "area": "Setagaya",
         "tokusatsu": true,
-        "tokusatsuArea": "TOKYO — Ultraman"
+        "tokusatsuArea": "TOKYO — Ultraman",
+        "otaku": true,
+        "otakuNotes": "Add-on of card “Setagaya — Kinuta Park + Soshigaya-Okura Ultraman + Toho/Godzilla Store” · Hook: Ultraman Street vibes, classic Ultra locations, Toho exterior/store · Food/culture: Kinuta picnic; Sangenjaya food on way back · When: Anytime dry day · avoid Dec 29–Jan 3 if combining with Comiket fatigue · Pace: Slow · From Meguro: 30–50 min · How: Tokyu Den-en-toshi / Odakyu local · Notes: Analog tokusatsu walk, not a museum day"
       },
       {
         "id": "8cb4c2fd1c2f",
@@ -5711,6 +5745,318 @@ window.PLACES_DATA = {
         "area": "Nerima",
         "tokusatsu": true,
         "tokusatsuArea": "TOKYO — Toei (Sentai / Rider base)"
+      },
+      {
+        "id": "1c813e818d1d",
+        "name": "Akihabara Electric Town (秋葉原電気街)",
+        "lat": 35.69716,
+        "lng": 139.775159,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E7%A7%8B%E8%91%89%E5%8E%9F%E9%9B%BB%E6%B0%97%E8%A1%97,35.69716,139.775159",
+        "overviewUrl": "https://www.google.com/search?q=%E7%A7%8B%E8%91%89%E5%8E%9F%E9%9B%BB%E6%B0%97%E8%A1%97%2C+Tokyo%2C+Japan",
+        "q": "akihabara electric town 秋葉原電気街 tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Akihabara (Mandarake / Animate / Gamers / Suruga-ya) · Hook: Macross kits, tokusatsu soft vinyl, Comiket leftovers, plamo · Food/culture: Electric Town; Kanda Myojin nearby for hatsumode · When: Anytime when open · LIMITED: Jan 1 Animate fukubukuro morning (that day only) · Booking: None (shops); Animate Jan 1 queues · Pace: Slow · From Meguro: 25–40 min · How: Yamanote or Rinkai→JR to Akihabara · Notes: Laundry-friendly; can cut short anytime\nLocked anchor “Jan 1 Animate fukubukuro”: Optional ritual · When: Jan 1 · Akihabara or Ikebukuro"
+      },
+      {
+        "id": "182a2e6ecf40",
+        "name": "Nakano Broadway (中野ブロードウェイ)",
+        "lat": 35.709263,
+        "lng": 139.665786,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%AD%E9%87%8E%E3%83%96%E3%83%AD%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A4,35.709263,139.665786",
+        "overviewUrl": "https://www.google.com/search?q=%E4%B8%AD%E9%87%8E%E3%83%96%E3%83%AD%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A4%2C+Tokyo%2C+Japan",
+        "q": "nakano broadway 中野フロートウェイ tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Nakano Broadway (Mandarake HQ) · Hook: Collectors, figures, used goods dump · Food/culture: Broadway maze; cheap eats in building · When: Anytime · check New Year hours Dec 31–Jan 3 · Pace: Slow · From Meguro: 35–50 min · How: Yamanote→Nakano (Chuo/Sobu) walk · Notes: Good half-day; dense indoor if rain"
+      },
+      {
+        "id": "053699338a3d",
+        "name": "Square Enix Cafe & Shop Shinjuku (スクウェア・エニックス カフェ)",
+        "lat": 35.689802,
+        "lng": 139.702002,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%B9%E3%82%AF%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%BB%E3%82%A8%E3%83%8B%E3%83%83%E3%82%AF%E3%82%B9+%E3%82%AB%E3%83%95%E3%82%A7,35.689802,139.702002",
+        "overviewUrl": "https://www.google.com/search?q=%E3%82%B9%E3%82%AF%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%BB%E3%82%A8%E3%83%8B%E3%83%83%E3%82%AF%E3%82%B9+%E3%82%AB%E3%83%95%E3%82%A7%2C+Tokyo%2C+Japan",
+        "q": "square enix cafe shop shinjuku スクウェア・エニックス カフェ tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Shinjuku — SE Cafe & Shop + Godzilla Store + Head · Hook: NieR menu + goods (SE Cafe); Godzilla Store Marui Annex; Gracery Godzilla Head · Food/culture: Ginza/Shinbashi kissaten if you continue east; Kabukicho photo only · When: Anytime · best Dec 27–28 · confirm Jan 1 hours (may shorten/close) · Booking: SE Cafe: reserve; shop walk-in · Pace: Slow · From Meguro: 20–30 min · How: Yamanote to Shinjuku · Notes: Core NieR hit for the trip\nLocked anchor “SE Cafe Shinjuku NieR”: Hard NieR hit · When: Dec 27–28 best · Reserve cafe"
+      },
+      {
+        "id": "b2a3075a3d03",
+        "name": "Godzilla Store Tokyo (Shinjuku Marui Annex) (ゴジラ・ストア)",
+        "lat": 35.690136,
+        "lng": 139.70598,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%B4%E3%82%B8%E3%83%A9%E3%83%BB%E3%82%B9%E3%83%88%E3%82%A2,35.690136,139.70598",
+        "overviewUrl": "https://www.google.com/search?q=%E3%82%B4%E3%82%B8%E3%83%A9%E3%83%BB%E3%82%B9%E3%83%88%E3%82%A2%2C+Tokyo%2C+Japan",
+        "q": "godzilla store tokyo shinjuku marui annex コシラ・ストア otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Add-on of card “Shinjuku — SE Cafe & Shop + Godzilla Store + Head” · Hook: NieR menu + goods (SE Cafe); Godzilla Store Marui Annex; Gracery Godzilla Head · Food/culture: Ginza/Shinbashi kissaten if you continue east; Kabukicho photo only · When: Anytime · best Dec 27–28 · confirm Jan 1 hours (may shorten/close) · Booking: SE Cafe: reserve; shop walk-in · Pace: Slow · From Meguro: 20–30 min · How: Yamanote to Shinjuku · Notes: Core NieR hit for the trip"
+      },
+      {
+        "id": "80ff239b79e7",
+        "name": "Toho Studios (東宝スタジオ)",
+        "lat": 35.635649,
+        "lng": 139.605057,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E5%AE%9D%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA,35.635649,139.605057",
+        "overviewUrl": "https://www.google.com/search?q=%E6%9D%B1%E5%AE%9D%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA%2C+Tokyo%2C+Japan",
+        "q": "toho studios 東宝スタシオ tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Add-on of card “Setagaya — Kinuta Park + Soshigaya-Okura Ultraman + Toho/Godzilla Store” · Hook: Ultraman Street vibes, classic Ultra locations, Toho exterior/store · Food/culture: Kinuta picnic; Sangenjaya food on way back · When: Anytime dry day · avoid Dec 29–Jan 3 if combining with Comiket fatigue · Pace: Slow · From Meguro: 30–50 min · How: Tokyu Den-en-toshi / Odakyu local · Notes: Analog tokusatsu walk, not a museum day"
+      },
+      {
+        "id": "a31ecf339046",
+        "name": "Tokyo Big Sight (東京ビッグサイト)",
+        "lat": 35.632053,
+        "lng": 139.797805,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E3%83%93%E3%83%83%E3%82%B0%E3%82%B5%E3%82%A4%E3%83%88,35.632053,139.797805",
+        "overviewUrl": "https://www.google.com/search?q=%E6%9D%B1%E4%BA%AC%E3%83%93%E3%83%83%E3%82%B0%E3%82%B5%E3%82%A4%E3%83%88%2C+Tokyo%2C+Japan",
+        "q": "tokyo big sight 東京ヒックサイト otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Odaiba / Ariake (Big Sight area) · Hook: C109; Gundam Base; Odaiba tokusatsu film spots · Food/culture: Odaiba seafood; DiverCity · When: LIMITED: C109 Dec 29–31 2026 (pick ONE day) · otherwise optional anytime · Booking: C109 wristband (1 day TBD) · Pace: Slow · From Meguro: 40–55 min · How: Rinkai to Kokusai-Tenjijo or Yurikamome · Notes: Comiket week = this is the job\nLocked anchor “C109 Comic Market”: 1 day only (TBD) · When: Dec 29–31 2026 · Pick day after Nov 6 genre map; tickets from Portugal"
+      },
+      {
+        "id": "088fadef0211",
+        "name": "Shimokitazawa (下北沢)",
+        "lat": 35.661266,
+        "lng": 139.666921,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%8B%E5%8C%97%E6%B2%A2,35.661266,139.666921",
+        "overviewUrl": "https://www.google.com/search?q=%E4%B8%8B%E5%8C%97%E6%B2%A2%2C+Tokyo%2C+Japan",
+        "q": "shimokitazawa 下北沢 tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Shimokitazawa kissaten pocket · Hook: Light otaku thrift/vinyl optional · Food/culture: Old-school coffee; indie streets · When: Anytime · Pace: Slow · From Meguro: 15–25 min · How: Tokyu Den-en-toshi or Odakyu to Shimokitazawa · Notes: Rest day trump card from HQ"
+      },
+      {
+        "id": "fa865cd6b7b3",
+        "name": "Kami-Meguro Hikawa Shrine (Hikawa-jinja, Ohashi) (上目黒氷川神社)",
+        "lat": 35.652496,
+        "lng": 139.688141,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%9B%AE%E9%BB%92%E5%8C%BA%E5%A4%A7%E6%A9%8B2-16-21",
+        "overviewUrl": "https://www.google.com/search?q=%E4%B8%8A%E7%9B%AE%E9%BB%92%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE%2C+Tokyo%2C+Japan",
+        "q": "kami meguro hikawa shrine jinja ohashi 上目黒氷川神社 tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Address: 〒153-0044 東京都目黒区大橋2-16-21 / 2-16-21 Ohashi, Meguro-ku, Tokyo 153-0044\nAdd-on of card “Hatsumode — Meguro Fudoson or Hikawa” · Food/culture: Local temple New Year · When: LIMITED: Dec 31 night – Jan 3 (New Year window) · Pace: Slow · From Meguro: 10–25 min walk · How: Walk from Meguro Heights · Notes: Walkable from HQ; quieter than Meiji / Hikawa = 上目黒氷川神社 (Ohashi); fields cover Hikawa, not Meguro Fudoson.\nLocked anchor “Hatsumode temple”: Want · When: Dec 31–Jan 3 · Meguro Fudoson/Hikawa or Meiji Jingu\nLinks: https://www.google.com/maps/search/?api=1&query=%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%9B%AE%E9%BB%92%E5%8C%BA%E5%A4%A7%E6%A9%8B2-16-21"
+      },
+      {
+        "id": "90e39cae0012",
+        "name": "Meiji Jingu (Meiji Shrine) (明治神宮)",
+        "lat": 35.669868,
+        "lng": 139.702255,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E4%BB%A3%E3%80%85%E6%9C%A8%E7%A5%9E%E5%9C%92%E7%94%BA1-1",
+        "overviewUrl": "https://www.google.com/search?q=%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE%2C+Tokyo%2C+Japan",
+        "q": "meiji jingu shrine 明治神宮 tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Address: 〒151-8557 東京都渋谷区代々木神園町1-1 / 1-1 Yoyogi-Kamizonocho, Shibuya-ku, Tokyo 151-8557\nCard: Hatsumode — Meiji Jingu · Food/culture: Big crowded hatsumode · When: CRITICAL LIMITED: peaks Dec 31 night–Jan 3 · quieter dawn / late afternoon or Jan 4+ · Pace: Slow · From Meguro: 25–40 min · How: Yamanote to Harajuku · Notes: Already on deck vibe — keep as dated hatsumode card / Meiji Jingu Gyoen (明治神宮御苑, inner garden) is inside shrine grounds but separately ticketed (fee ~¥500); keep as separate entry.\nLocked anchor “Hatsumode temple”: Want · When: Dec 31–Jan 3 · Meguro Fudoson/Hikawa or Meiji Jingu\nLinks: https://www.google.com/maps/search/?api=1&query=%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E4%BB%A3%E3%80%85%E6%9C%A8%E7%A5%9E%E5%9C%92%E7%94%BA1-1"
+      },
+      {
+        "id": "05bc1c2235ef",
+        "name": "Kagurazaka (神楽坂)",
+        "lat": 35.70392,
+        "lng": 139.734228,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E6%A5%BD%E5%9D%82,35.70392,139.734228",
+        "overviewUrl": "https://www.google.com/search?q=%E7%A5%9E%E6%A5%BD%E5%9D%82%2C+Tokyo%2C+Japan",
+        "q": "kagurazaka 神楽坂 tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Kagurazaka kissaten / French pocket · Food/culture: Kissaten + French/Japanese alley food · When: Anytime · Pace: Slow · From Meguro: 30–45 min · How: Yamanote to Iidabashi → walk · Notes: Walkable pocket from Iidabashi"
+      },
+      {
+        "id": "c04493ef9802",
+        "name": "Jiyugaoka (自由が丘)",
+        "lat": 35.607828,
+        "lng": 139.668547,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E8%87%AA%E7%94%B1%E3%81%8C%E4%B8%98,35.607828,139.668547",
+        "overviewUrl": "https://www.google.com/search?q=%E8%87%AA%E7%94%B1%E3%81%8C%E4%B8%98%2C+Tokyo%2C+Japan",
+        "q": "jiyugaoka 自由か丘 tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Jiyugaoka cafe street · Food/culture: Cafe street; soft local afternoon · When: Anytime · Pace: Slow · From Meguro: 15–25 min · How: Toyoko Line from Naka-Meguro / Meguro area · Notes: Very close to HQ"
+      },
+      {
+        "id": "ab3dfbc65084",
+        "name": "Animate Ikebukuro Main Store (アニメイト池袋本店)",
+        "lat": 35.730337,
+        "lng": 139.715246,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E6%B1%A0%E8%A2%8B%E6%9C%AC%E5%BA%97,35.730337,139.715246",
+        "overviewUrl": "https://www.google.com/search?q=%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E6%B1%A0%E8%A2%8B%E6%9C%AC%E5%BA%97%2C+Tokyo%2C+Japan",
+        "q": "animate ikebukuro main store アニメイト池袋本店 tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Ikebukuro — Animate flagship / Otome Road / Mandarake · Hook: Animate HQ, figures, BL/otome shops, Mandarake · Food/culture: Sunshine City if open; food in station · When: Anytime · LIMITED: Jan 1 Animate fukubukuro (that morning) · Booking: None / Jan 1 queue · Pace: Slow · From Meguro: 35–50 min · How: Yamanote to Ikebukuro · Notes: Alt to Akiba for fukubukuro\nLocked anchor “Jan 1 Animate fukubukuro”: Optional ritual · When: Jan 1 · Akihabara or Ikebukuro"
+      },
+      {
+        "id": "0f9e8c10710f",
+        "name": "Otome Road (乙女ロード)",
+        "lat": 35.730545,
+        "lng": 139.717906,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E4%B9%99%E5%A5%B3%E3%83%AD%E3%83%BC%E3%83%89,35.730545,139.717906",
+        "overviewUrl": "https://www.google.com/search?q=%E4%B9%99%E5%A5%B3%E3%83%AD%E3%83%BC%E3%83%89%2C+Tokyo%2C+Japan",
+        "q": "otome road 乙女ロート tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Add-on of card “Ikebukuro — Animate flagship / Otome Road / Mandarake” · Hook: Animate HQ, figures, BL/otome shops, Mandarake · Food/culture: Sunshine City if open; food in station · When: Anytime · LIMITED: Jan 1 Animate fukubukuro (that morning) · Booking: None / Jan 1 queue · Pace: Slow · From Meguro: 35–50 min · How: Yamanote to Ikebukuro · Notes: Alt to Akiba for fukubukuro"
+      },
+      {
+        "id": "328ccb602de8",
+        "name": "Toei Tokyo Studio (東映東京撮影所)",
+        "lat": 35.753662,
+        "lng": 139.594723,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E6%98%A0%E6%9D%B1%E4%BA%AC%E6%92%AE%E5%BD%B1%E6%89%80,35.753662,139.594723",
+        "overviewUrl": "https://www.google.com/search?q=%E6%9D%B1%E6%98%A0%E6%9D%B1%E4%BA%AC%E6%92%AE%E5%BD%B1%E6%89%80%2C+Tokyo%2C+Japan",
+        "q": "toei tokyo studio 東映東京撮影所 otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Oizumi-Gakuen — Toei Tokyo Studio area + parks · Hook: Toei Tokyo Studio exterior / Sentai-Rider filming neighborhood; Oizumi parks · Food/culture: Local lunch near station · When: Anytime after Comiket week · Booking: No public studio tour assumed · Pace: Slow · From Meguro: 50–70 min · How: Seibu Ikebukuro Line to Oizumi-gakuen · Notes: Exterior pilgrimage, not a theme park"
+      },
+      {
+        "id": "4edd45438864",
+        "name": "Yellow Submarine Akihabara Main Store ★MINT (イエローサブマリン秋葉原本店★ミント)",
+        "lat": 35.697674,
+        "lng": 139.771881,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%A4%E3%82%A8%E3%83%AD%E3%83%BC%E3%82%B5%E3%83%96%E3%83%9E%E3%83%AA%E3%83%B3%E7%A7%8B%E8%91%89%E5%8E%9F%E6%9C%AC%E5%BA%97%E2%98%85%E3%83%9F%E3%83%B3%E3%83%88%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E5%A4%96%E7%A5%9E%E7%94%B01-15-16%20%E3%83%A9%E3%82%B8%E3%82%AA%E4%BC%9A%E9%A4%A86F",
+        "overviewUrl": "https://www.google.com/search?q=%E3%82%A4%E3%82%A8%E3%83%AD%E3%83%BC%E3%82%B5%E3%83%96%E3%83%9E%E3%83%AA%E3%83%B3%E7%A7%8B%E8%91%89%E5%8E%9F%E6%9C%AC%E5%BA%97%E3%83%9F%E3%83%B3%E3%83%88%2C+Tokyo%2C+Japan",
+        "q": "yellow submarine akihabara main store mint イエローサフマリン秋葉原本店 ミント tokyo otaku イエローサフマリン秋葉原本店ミント",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Address: 〒101-0021 東京都千代田区外神田1-15-16 秋葉原ラジオ会館6F / Akihabara Radio Kaikan 6F, 1-15-16 Sotokanda, Chiyoda-ku, Tokyo 101-0021\nCard: Yellow Submarine / Hobby shops Akiba deep dive · Hook: Macross / Hasegawa / Bandai Spirits kits deep stock · Food/culture: Combine with Suruga-ya · When: Anytime open · Pace: Slow · From Meguro: 25–40 min · How: Same as Akihabara · Notes: Subset of Akiba — use when hunting kits only / Old Akihabara Scale Shop CLOSED 3 Dec 2023; kits now at Main Store ★MINT.\nLinks: https://www.google.com/maps/search/?api=1&query=%E3%82%A4%E3%82%A8%E3%83%AD%E3%83%BC%E3%82%B5%E3%83%96%E3%83%9E%E3%83%AA%E3%83%B3%E7%A7%8B%E8%91%89%E5%8E%9F%E6%9C%AC%E5%BA%97%E2%98%85%E3%83%9F%E3%83%B3%E3%83%88%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E5%A4%96%E7%A5%9E%E7%94%B01-15-16%20%E3%83%A9%E3%82%B8%E3%82%AA%E4%BC%9A%E9%A4%A86F"
+      },
+      {
+        "id": "fdef3a0a6040",
+        "name": "Tokyo Midtown (東京ミッドタウン)",
+        "lat": 35.665841,
+        "lng": 139.730923,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%83%E3%83%89%E3%82%BF%E3%82%A6%E3%83%B3,35.665841,139.730923",
+        "overviewUrl": "https://www.google.com/search?q=%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%83%E3%83%89%E3%82%BF%E3%82%A6%E3%83%B3%2C+Tokyo%2C+Japan",
+        "q": "tokyo midtown 東京ミットタウン otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Tokyo Midtown — Path of Light + Ice Rink · Food/culture: Free Path of Light; ice rink ~¥2,000 · When: LIMITED: Christmas garden often ends Dec 25 · Path of Light pattern into Feb · rink CLOSED Jan 1 (25–26 pattern) · 26–27 Path details TBA · Booking: Rink ticket on site / app; lights free · Pace: Slow · From Meguro: 15–25 min · How: Hibiya / Oedo to Roppongi · short hop from Meguro · Notes: Evening trump card near Roppongi"
+      },
+      {
+        "id": "812273a27a22",
+        "name": "Marunouchi Naka-dori (丸の内仲通り)",
+        "lat": 35.680027,
+        "lng": 139.762849,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%B8%E3%81%AE%E5%86%85%E4%BB%B2%E9%80%9A%E3%82%8A,35.680027,139.762849",
+        "overviewUrl": "https://www.google.com/search?q=%E4%B8%B8%E3%81%AE%E5%86%85%E4%BB%B2%E9%80%9A%E3%82%8A%2C+Tokyo%2C+Japan",
+        "q": "marunouchi naka dori 丸の内仲通り tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Marunouchi Illumination · Food/culture: Free street illuminations; station area food · When: CONFIRMED: 2026-11-12 → 2027-02-14 · Booking: Free · Pace: Slow · From Meguro: 20–30 min · How: Yamanote Meguro → Tokyo · Notes: Easy anytime-evening during season\nLocked anchor “Marunouchi Illumination”: Season confirmed · When: 2026-11-12 → 2027-02-14 · Marunouchi Naka-dori · confirm hours on marunouchi.com"
+      },
+      {
+        "id": "969e3268649e",
+        "name": "Tokyo Midtown Hibiya (Hibiya Magic Time Illumination) (東京ミッドタウン日比谷)",
+        "lat": 35.674088,
+        "lng": 139.759552,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%83%E3%83%89%E3%82%BF%E3%82%A6%E3%83%B3%E6%97%A5%E6%AF%94%E8%B0%B7%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E6%9C%89%E6%A5%BD%E7%94%BA1-1-2",
+        "overviewUrl": "https://www.google.com/search?q=%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%83%E3%83%89%E3%82%BF%E3%82%A6%E3%83%B3%E6%97%A5%E6%AF%94%E8%B0%B7%2C+Tokyo%2C+Japan",
+        "q": "tokyo midtown hibiya magic time illumination 東京ミットタウン日比谷 otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Address: 〒100-0006 東京都千代田区有楽町1-1-2 / 1-1-2 Yurakucho, Chiyoda-ku, Tokyo 100-0006\nCard: Hibiya Magic Time Illumination · Hook: Pairs with Godzilla / Hibiya Square day · Food/culture: Free lights; Christmas plaza bits often to Dec 25 · When: LIMITED: pattern mid-Nov → late Feb · Christmas plaza bits often end Dec 25 · Booking: Free · Pace: Slow · From Meguro: 20–30 min · How: Yamanote / Hibiya to Hibiya or Kasumigaseki · Notes: Stack with Ginza/Godzilla slow day / Hibiya Godzilla Square is a DIFFERENT place: 日比谷ゴジラスクエア, 東京都千代田区有楽町1-2-2 (Hibiya Chanter), across the street.\nLinks: https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%83%E3%83%89%E3%82%BF%E3%82%A6%E3%83%B3%E6%97%A5%E6%AF%94%E8%B0%B7%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E6%9C%89%E6%A5%BD%E7%94%BA1-1-2"
+      },
+      {
+        "id": "d130fdda042f",
+        "name": "Shibamata Taishakuten (柴又帝釈天)",
+        "lat": 35.758447,
+        "lng": 139.878767,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E6%9F%B4%E5%8F%88%E5%B8%9D%E9%87%88%E5%A4%A9,35.758447,139.878767",
+        "overviewUrl": "https://www.google.com/search?q=%E6%9F%B4%E5%8F%88%E5%B8%9D%E9%87%88%E5%A4%A9%2C+Tokyo%2C+Japan",
+        "q": "shibamata taishakuten 柴又帝釈天 tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Shibamata — Taishakuten + Showa + Cafe Sepia · Food/culture: Showa street, Taishakuten temple, Cafe Sepia · When: Anytime · shops quieter Dec 31–Jan 3 · Booking: Temple/grounds free–donation; cafe as needed · Pace: Slow · From Meguro: 55–75 min · How: Joban / Tobu to Shibamata (via Kita-Senju) · Notes: Showa densest single pocket"
+      },
+      {
+        "id": "e0a033a16578",
+        "name": "Ippodo Tea Aoyama Store (一保堂茶舗 青山店)",
+        "lat": 35.662777,
+        "lng": 139.717621,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E4%BF%9D%E5%A0%82%E8%8C%B6%E8%88%97%20%E9%9D%92%E5%B1%B1%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E5%8D%97%E9%9D%92%E5%B1%B14-23-6",
+        "overviewUrl": "https://www.google.com/search?q=%E4%B8%80%E4%BF%9D%E5%A0%82%E8%8C%B6%E8%88%97+%E9%9D%92%E5%B1%B1%E5%BA%97%2C+Tokyo%2C+Japan",
+        "q": "ippodo tea aoyama store 一保堂茶舗 青山店 tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Address: 〒107-0062 東京都港区南青山4-23-6 2F / 2F, 4-23-6 Minami-Aoyama, Minato-ku, Tokyo 107-0062\nCard: Ippodo Tea Aoyama — mini workshop · Food/culture: Tea workshop / tasting · When: LIMITED: Tue–Fri only · Mon closed · NY holidays TBD · reserve ahead · Booking: ¥3,850 · TableCheck reserve · Pace: Slow · From Meguro: 20–30 min · How: Ginza Line to Omotesando / Gaienmae · Notes: Bookable skill day; not walk-up / Aoyama store opened 29 Aug 2025 (former Marunouchi store closed 15 Jan 2025).\nLinks: https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E4%BF%9D%E5%A0%82%E8%8C%B6%E8%88%97%20%E9%9D%92%E5%B1%B1%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E5%8D%97%E9%9D%92%E5%B1%B14-23-6"
+      },
+      {
+        "id": "a58db24161db",
+        "name": "Nezu Museum (根津美術館)",
+        "lat": 35.662243,
+        "lng": 139.717255,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E6%A0%B9%E6%B4%A5%E7%BE%8E%E8%A1%93%E9%A4%A8,35.662243,139.717255",
+        "overviewUrl": "https://www.google.com/search?q=%E6%A0%B9%E6%B4%A5%E7%BE%8E%E8%A1%93%E9%A4%A8%2C+Tokyo%2C+Japan",
+        "q": "nezu museum 根津美術館 tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Nezu Museum + garden · Food/culture: Museum + Japanese garden calm · When: LIMITED: closed Mondays + NY holidays (~Dec 31–Jan 4 typical) · Booking: Museum admission · Pace: Slow · From Meguro: 20–30 min · How: Ginza / Hanzomon to Omotesando · Notes: Quiet culture trump near Omotesando"
+      },
+      {
+        "id": "020e4397e57d",
+        "name": "Jimbocho Book Town (神保町)",
+        "lat": 35.695008,
+        "lng": 139.758269,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E4%BF%9D%E7%94%BA,35.695008,139.758269",
+        "overviewUrl": "https://www.google.com/search?q=%E7%A5%9E%E4%BF%9D%E7%94%BA%2C+Tokyo%2C+Japan",
+        "q": "jimbocho book town 神保町 tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Jimbocho — books + kissaten · Food/culture: Used book district + old kissaten · When: Anytime · some shops closed NY week · Pace: Slow · From Meguro: 30–40 min · How: Hanzomon / Mita / Shinjuku Line to Jimbocho · Notes: Rainy-day indoor trump"
+      },
+      {
+        "id": "74e43a8f6ff1",
+        "name": "Inokashira Park (井の頭恩賜公園)",
+        "lat": 35.69891,
+        "lng": 139.578699,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%95%E3%81%AE%E9%A0%AD%E6%81%A9%E8%B3%9C%E5%85%AC%E5%9C%92,35.69891,139.578699",
+        "overviewUrl": "https://www.google.com/search?q=%E4%BA%95%E3%81%AE%E9%A0%AD%E6%81%A9%E8%B3%9C%E5%85%AC%E5%9C%92%2C+Tokyo%2C+Japan",
+        "q": "inokashira park 井の頭恩賜公園 tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Kichijoji — Inokashira + Harmonica Yokocho · Hook: Skip Ghibli Museum unless lottery won · Food/culture: Park walk + Harmonica alley food/drink · When: Anytime · park nice winter daylight · Booking: None for park/alley · Pace: Slow · From Meguro: 35–50 min · How: Chuo Line to Kichijoji · Notes: Do NOT plan Ghibli walk-up"
+      },
+      {
+        "id": "4a7b2fb1831c",
+        "name": "Harmonica Yokocho (ハモニカ横丁)",
+        "lat": 35.703754,
+        "lng": 139.579323,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%8F%E3%83%A2%E3%83%8B%E3%82%AB%E6%A8%AA%E4%B8%81,35.703754,139.579323",
+        "overviewUrl": "https://www.google.com/search?q=%E3%83%8F%E3%83%A2%E3%83%8B%E3%82%AB%E6%A8%AA%E4%B8%81%2C+Tokyo%2C+Japan",
+        "q": "harmonica yokocho ハモニカ横丁 tokyo otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Add-on of card “Kichijoji — Inokashira + Harmonica Yokocho” · Hook: Skip Ghibli Museum unless lottery won · Food/culture: Park walk + Harmonica alley food/drink · When: Anytime · park nice winter daylight · Booking: None for park/alley · Pace: Slow · From Meguro: 35–50 min · How: Chuo Line to Kichijoji · Notes: Do NOT plan Ghibli walk-up"
+      },
+      {
+        "id": "7d7871e289ae",
+        "name": "Tokyo National Museum — Hyokeikan (東京国立博物館 表慶館)",
+        "lat": 35.718609,
+        "lng": 139.775243,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E5%9B%BD%E7%AB%8B%E5%8D%9A%E7%89%A9%E9%A4%A8+%E8%A1%A8%E6%85%B6%E9%A4%A8,35.718609,139.775243",
+        "overviewUrl": "https://www.google.com/search?q=%E6%9D%B1%E4%BA%AC%E5%9B%BD%E7%AB%8B%E5%8D%9A%E7%89%A9%E9%A4%A8+%E8%A1%A8%E6%85%B6%E9%A4%A8%2C+Tokyo%2C+Japan",
+        "q": "tokyo national museum hyokeikan 東京国立博物館 表慶館 otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: FF 40th Exhibition — Neverending Journeys (Tokyo National Museum Hyokeikan) · Hook: Final Fantasy 40th anniversary exhibition; SE / FF history + museum collab · Food/culture: Ueno Park; stack with Yanaka/Nezu if energy · When: LIMITED: 2027-01-08 → 2027-04-04 · closed most Mondays (+ Jan 12) · hours 9:30–17:00 (Fri/Sat often to 20:00) · fits trip after Jan 8 · Booking: Period 1 (Jan 8–Feb 5) early tickets on sale now · SE app / asoview / 7-Ticket / JRE MALL · https://www.square-enix.com/ff40th/exhibition/en/ · Pace: Slow · From Meguro: 30–45 min · How: Yamanote Meguro → Ueno → walk to Tokyo National Museum · Notes: Strong SE hit with NieR cafe — not the same day required\nLocked anchor “FF 40th Exhibition (Hyokeikan)”: Tickets on sale (Period 1) · When: 2027-01-08 → 2027-04-04 · Ueno; https://www.square-enix.com/ff40th/exhibition/en/\nLinks: https://www.square-enix.com/ff40th/exhibition/en/"
+      },
+      {
+        "id": "82975726837a",
+        "name": "Tokyo Dome City Prism Hall (プリズムホール)",
+        "lat": 35.704412,
+        "lng": 139.753263,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%97%E3%83%AA%E3%82%BA%E3%83%A0%E3%83%9B%E3%83%BC%E3%83%AB,35.704412,139.753263",
+        "overviewUrl": "https://www.google.com/search?q=%E3%83%97%E3%83%AA%E3%82%BA%E3%83%A0%E3%83%9B%E3%83%BC%E3%83%AB%2C+Tokyo%2C+Japan",
+        "q": "tokyo dome city prism hall フリスムホール otaku",
+        "area": "Tokyo",
+        "otaku": true,
+        "otakuNotes": "Card: Ultra Heroes EXPO 2027 New Year Festival — Tokyo Dome City Prism Hall · Hook: Ultraman live stage (Theo / Hikariishi Ibuki) · Ultra Shot · Ultraman Department · Food/culture: Tokyo Dome City area food; not same day as Comiket if tired · When: LIMITED: 2026-12-25 → 2027-01-03 · shows 10/12/14/16:00 (Dec 28 & 30: no 16:00) · best Dec 27–28 or Jan 2–3 after C109 day picked · Dec 25–26 = arrival · Booking: TI prior Oct 1 10:00 JST · Premium+Std Oct 2 · general Oct 3 10:00 JST Lawson Ticket / Asoview · adult ¥3600 / finale ¥6600 · https://www.ultra-expo.com/prism2027/ · Pace: Slow · From Meguro: 35–50 min · How: Yamanote / Metro toward Korakuen / Kasuga · Tokyo Dome City Prism Hall · Notes: Week-1 tokusatsu lock candidate — pick one show after Comiket day is known\nLocked anchor “Ultra Heroes EXPO 2027 New Year”: Announced — tickets from Oct 1–3 · When: 2026-12-25 → 2027-01-03 · Prism Hall; https://www.ultra-expo.com/prism2027/\nLinks: https://www.ultra-expo.com/prism2027/"
       }
     ],
     "Kanto": [
@@ -6293,8 +6639,10 @@ window.PLACES_DATA = {
         "lng": 139.4733987,
         "url": "https://www.google.com/maps/search/?api=1&query=Parque+Memorial+de+Avia%C3%A7%C3%A3o+de+Tokorozawa,35.7979631,139.4733987",
         "overviewUrl": "https://www.google.com/search?q=Parque+Memorial+de+Avia%C3%A7%C3%A3o+de+Tokorozawa%2C+Kanto%2C+Japan",
-        "q": "parque memorial de aviacao tokorozawa kanto nikko",
-        "area": "Nikko"
+        "q": "parque memorial de aviacao tokorozawa kanto nikko aviation park 所沢航空記念公園 otaku",
+        "area": "Nikko",
+        "otaku": true,
+        "otakuNotes": "Card: Tokorozawa Aviation Memorial Park + MUSE · Hook: Aviation park; tokusatsu-adjacent open spaces · Food/culture: Park walk + local sweets · When: After Jan 4 · Booking: Park free / museum fees vary · Pace: Half-slow · From Meguro: 70–90 min · How: Seibu to Tokorozawa · Notes: Optional Saitama oversupply near Omiya mood"
       },
       {
         "id": "bc25ee3cfdd5",
@@ -6793,8 +7141,10 @@ window.PLACES_DATA = {
         "lng": 139.6179197,
         "url": "https://www.google.com/maps/search/?api=1&query=The+Railway+Museum,35.9214247,139.6179197",
         "overviewUrl": "https://www.google.com/search?q=The+Railway+Museum%2C+Kanto%2C+Japan",
-        "q": "the railway museum kanto nikko",
-        "area": "Nikko"
+        "q": "the railway museum kanto nikko omiya 鉄道博物館 otaku",
+        "area": "Nikko",
+        "otaku": true,
+        "otakuNotes": "Card: Omiya Railway Museum (Saitama) · Hook: Train museum (your lock) · Food/culture: Omiya park + kissaten after · When: After Jan 4 preferred (NY museum hours risky) · closed days check site · Booking: Timed entry sometimes — check site · Pace: Half-slow · From Meguro: 50–70 min · How: Saikyo or Shonan-Shinjuku to Omiya → New Shuttle to Tetsudo-Hakubutsukan · Notes: Worth the hop; easy back to Meguro\nLocked anchor “Omiya Railway Museum”: Obligatory-ish · When: After Jan 4 · Saitama half-slow"
       },
       {
         "id": "400018fdad41",
@@ -6948,13 +7298,15 @@ window.PLACES_DATA = {
       },
       {
         "id": "67c4cc831f65",
-        "name": "Kurazukuri no Machinami / Warehouse District",
+        "name": "Kawagoe Ichibangai (川越一番街)",
         "lat": 35.9231413,
         "lng": 139.4828819,
-        "url": "https://www.google.com/maps/search/?api=1&query=Kurazukuri+no+Machinami+%2F+Warehouse+District,35.9231413,139.4828819",
-        "overviewUrl": "https://www.google.com/search?q=Kurazukuri+no+Machinami+%2F+Warehouse+District%2C+Kanto%2C+Japan",
-        "q": "kurazukuri no machinami warehouse district kanto outras cidades atracoes",
-        "area": "Outras cidades/atrações"
+        "url": "https://www.google.com/maps/search/?api=1&query=%E5%B7%9D%E8%B6%8A%E4%B8%80%E7%95%AA%E8%A1%97,35.9231413,139.4828819",
+        "overviewUrl": "https://www.google.com/search?q=%E5%B7%9D%E8%B6%8A%E4%B8%80%E7%95%AA%E8%A1%97%2C+Kanto%2C+Japan",
+        "q": "kawagoe ichibangai 川越一番街 kurazukuri no machinami warehouse district kanto outras cidades atracoes 蔵造りの町並み street otaku",
+        "area": "Outras cidades/atrações",
+        "otaku": true,
+        "otakuNotes": "Address: 埼玉県川越市幸町 周辺 / around Saiwai-cho, Kawagoe, Saitama (street, no single number)\nCard: Kawagoe Koedo · Food/culture: Showa warehouse streets + sweets · When: After Jan 4 preferred · Pace: Half-slow · From Meguro: 70–90 min · How: Saikyo to Omiya → Tobu/JR to Kawagoe (or direct Tobu from Ikebukuro)\nLinks: https://www.google.com/maps/search/?api=1&query=%E5%B7%9D%E8%B6%8A%E4%B8%80%E7%95%AA%E8%A1%97%20%E8%94%B5%E9%80%A0%E3%82%8A%E3%81%AE%E7%94%BA%E4%B8%A6%E3%81%BF%20%E5%9F%BC%E7%8E%89%E7%9C%8C%E5%B7%9D%E8%B6%8A%E5%B8%82%E5%B9%B8%E7%94%BA"
       },
       {
         "id": "6e78859b20df",
@@ -7463,8 +7815,10 @@ window.PLACES_DATA = {
         "lng": 139.8247452,
         "url": "https://www.google.com/maps/search/?api=1&query=Oya+History+Museum+-+Subterranean+Cave,36.5999889,139.8247452",
         "overviewUrl": "https://www.google.com/search?q=Oya+History+Museum+-+Subterranean+Cave%2C+Kanto%2C+Japan",
-        "q": "oya history museum subterranean cave kanto outras cidades atracoes",
-        "area": "Outras cidades/atrações"
+        "q": "oya history museum subterranean cave kanto outras cidades atracoes 大谷資料館 otaku",
+        "area": "Outras cidades/atrações",
+        "otaku": true,
+        "otakuNotes": "Add-on of card “Bandai Museum (Omocha-no-machi, Mibu, Tochigi)” · Hook: Life-size Gundam bust, Edison inventions, ~45,000-item Bandai/Showa toy collection · Food/culture: Utsunomiya gyoza dinner near JR station (Minmin main shop, or multi-shop gyoza hall in station) · When: Open 10:00–16:30 (last entry 16:00); closed Wednesdays + Dec 28 2026–Jan 3 2027 (reopens Jan 4); occasional ad-hoc closures · Booking: Walk-up, adult ¥1,000 · Pace: Hot · From Meguro: ~2 h · How: Out: JR to Utsunomiya, transfer to Tobu Utsunomiya (~1.5 km, walk to see the neighborhood or bus), Tobu line to Omocha-no-machi (~10 min walk). Back: Tobu to Tobu Utsunomiya, walk to JR side for gyoza, JR home · Notes: Trump card, not a plan. / Nearby add-ons: (1) Oya History Museum 大谷資料館, a huge underground stone quarry used as a tokusatsu location (Kamen Rider Decade's Dai-Shocker base, Den-O, Ghost&Drive movie, Ultraman Tiga, GARO). / Bus ~30 min from JR Utsunomiya; Dec–Mar 9:30–16:30, closed Tue + Dec 26–Jan 3; bring a jacket. / (2) Mibu Toy Museum 壬生町おもちゃ博物館 (roadside station), closed Mon + Dec 28–Jan 2; not walkable from the station, check access. / Best days: Bandai+Oya Mon/Thu–Sun; all three Thu–Sun. / Realistic: Bandai + gyoza, or Bandai morning + Oya afternoon is tight in winter. / Packed order (JTG): Tobu early to Bandai 10:00, walk across town + lunch, bus to Oya ~13:00 (last entry 16:00), bus back to JR Utsunomiya, gyoza, train home"
       },
       {
         "id": "27fc2fbcae33",
@@ -7953,8 +8307,10 @@ window.PLACES_DATA = {
         "lng": 139.6460909,
         "url": "https://www.google.com/maps/search/?api=1&query=Chinatown+de+Yokohama,35.4434459,139.6460909",
         "overviewUrl": "https://www.google.com/search?q=Chinatown+de+Yokohama%2C+Kanto%2C+Japan",
-        "q": "chinatown de yokohama kanto outras cidades atracoes",
-        "area": "Outras cidades/atrações"
+        "q": "chinatown de yokohama kanto outras cidades atracoes 横浜中華街 otaku",
+        "area": "Outras cidades/atrações",
+        "otaku": true,
+        "otakuNotes": "Add-on of card “Yokohama — Business Park / Port / Chinatown” · Hook: Tokusatsu film spots (Business Park, Port Symbol) · Food/culture: Chinatown or Cup Noodles Museum · When: Anytime · Booking: Cup Noodles: ticket · Pace: Half-slow · From Meguro: 45–70 min · How: Toyoko to Yokohama or JR Negishi · Notes: City day, not a pilgrimage alone"
       },
       {
         "id": "34a1a1730501",
@@ -8373,8 +8729,10 @@ window.PLACES_DATA = {
         "lng": 139.4795955,
         "url": "https://www.google.com/maps/search/?api=1&query=Enoshima+Shrine+%28Hetsunomiya%29,35.3003664,139.4795955",
         "overviewUrl": "https://www.google.com/search?q=Enoshima+Shrine+%28Hetsunomiya%29%2C+Kanto%2C+Japan",
-        "q": "enoshima shrine hetsunomiya kanto",
-        "area": "Enoshima"
+        "q": "enoshima shrine hetsunomiya kanto 江の島 otaku",
+        "area": "Enoshima",
+        "otaku": true,
+        "otakuNotes": "Add-on of card “Kamakura + Enoshima” · Hook: Cape Inamura (Shin Godzilla) + Enoshima kaiju/Rider B · Food/culture: Temples + sea · When: Anytime · weather day · winter evenings early dark · Booking: Temple fees small · Pace: Half-slow · From Meguro: 70–90 min · How: JR Yokosuka or Shonan-Shinjuku → Kamakura; Enoden to Enoshima · Notes: Weather trump card"
       },
       {
         "id": "02b37b701150",
@@ -8745,8 +9103,10 @@ window.PLACES_DATA = {
         "lng": 139.3930267,
         "url": "https://www.google.com/maps/search/?api=1&query=Sagamihara+City+Museum,35.5593639,139.3930267",
         "overviewUrl": "https://www.google.com/search?q=Sagamihara+City+Museum%2C+Kanto%2C+Japan",
-        "q": "sagamihara city museum kanto",
-        "area": "Sagamihara"
+        "q": "sagamihara city museum kanto 相模原市立博物館 otaku",
+        "area": "Sagamihara",
+        "otaku": true,
+        "otakuNotes": "Add-on of card “Sagamihara — JAXA ISAS + City Museum (Tsuburaya)” · Hook: Quieter JAXA science hall; Tsuburaya city museum nearby · Food/culture: Local lunch · When: MUST candidate (tokusatsu angle) · after Jan 4 · BOTH closed Mon + NY (City Museum Dec 28–Jan 3) · earliest Tue Jan 5+ · not during Kansai block · Booking: ISAS hall FREE no solo booking · City Museum walk-up (planetarium optional paid) · https://www.isas.jaxa.jp/visit/ · https://sagamiharacitymuseum.jp/ · Pace: Half-slow · From Meguro: 70–90 min · How: JR Yokohama Line to Fuchinobe · Notes: Best single day if you want JAXA + Tsuburaya/tokusatsu flavor · Fuchinobe · do one not both JAXA days unless obsessed\nLocked anchor “JAXA Sagamihara ISAS + Sagamihara City Museum (Tsuburaya)”: MUST candidate — tokusatsu-flavored JAXA day · When: After Jan 4 · closed Mondays + Dec 28–Jan 3 · earliest Tue Jan 5+ · avoid Kansai block · ISAS 宇宙科学探査交流棟 FREE no booking (solo) · City Museum next door = Tsuburaya/tokusatsu angle · do ONE full JAXA day (Sagamihara OR Tsukuba) unless obsessed · https://www.isas.jaxa.jp/visit/\nLinks: https://www.isas.jaxa.jp/visit/ https://sagamiharacitymuseum.jp/"
       },
       {
         "id": "72acd730e11c",
@@ -9367,10 +9727,12 @@ window.PLACES_DATA = {
         "lng": 140.034,
         "url": "https://www.google.com/maps/search/?api=1&query=Makuhari+Messe+%28Chiba%29,35.648,140.034",
         "overviewUrl": "https://www.google.com/search?q=Makuhari+Messe+%28Chiba%29%2C+Kanto%2C+Japan",
-        "q": "makuhari messe chiba kanto tokusatsu",
+        "q": "makuhari messe chiba kanto 幕張メッセ tokusatsu otaku",
         "area": "Chiba",
         "tokusatsu": true,
-        "tokusatsuArea": "CHIBA"
+        "tokusatsuArea": "CHIBA",
+        "otaku": true,
+        "otakuNotes": "Card: Wonder Festival 2027 Winter (Makuhari) · Hook: Garage kit / Ultraman collab WF · Food/culture: Messe food courts · When: OUTSIDE TRIP: Feb 13–14 2027 only — FYI card · Booking: WF ticket · Pace: Hot · From Meguro: 60–80 min · How: Keiyo Line to Kaihin-Makuhari · Notes: Outside Dec–Jan window; note only"
       },
       {
         "id": "f5ee7251eba4",
@@ -9407,6 +9769,162 @@ window.PLACES_DATA = {
         "area": "Gunma",
         "tokusatsu": true,
         "tokusatsuArea": "GUNMA"
+      },
+      {
+        "id": "1f63c30add90",
+        "name": "JAXA Tsukuba Space Center — Space Dome (筑波宇宙センター)",
+        "lat": 36.068126,
+        "lng": 140.126778,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E7%AD%91%E6%B3%A2%E5%AE%87%E5%AE%99%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC,36.068126,140.126778",
+        "overviewUrl": "https://www.google.com/search?q=%E7%AD%91%E6%B3%A2%E5%AE%87%E5%AE%99%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%2C+Kanto%2C+Japan",
+        "q": "jaxa tsukuba space center dome 筑波宇宙センター kanto ibaraki otaku",
+        "area": "Ibaraki",
+        "otaku": true,
+        "otakuNotes": "Card: Tsukuba JAXA Space Dome · Hook: JAXA Space Dome; optional paid facility tour (book) · Food/culture: Science-town lunch · When: MUST after Jan 4 · CLOSED Dec 29–Jan 3 · do NOT stack on Kansai ~Jan 4–10 weekday block · Booking: Space Dome FREE no reservation · optional paid guided tour https://tksc-spacedome.revn.jp/ (book ahead; EN tour Thu 11:30) · https://visit-tsukuba.jaxa.jp/ · Pace: Half-slow · From Meguro: 80–100 min · How: Tsukuba Express from Akihabara (TX) · Notes: Primary big JAXA expo · TX from Akihabara · pick Tsukuba OR Sagamihara as your one must unless you want both\nLocked anchor “JAXA Tsukuba Space Dome”: MUST — at least one JAXA expo · When: After Jan 4 (closed Dec 29–Jan 3) · avoid Kansai ~Jan 4–10 block · Space Dome / Planet Cube / Rocket Square FREE, no reservation · optional paid guided tour book at https://tksc-spacedome.revn.jp/ · English tour Thu 11:30 · check opening calendar\nLinks: https://tksc-spacedome.revn.jp/ https://visit-tsukuba.jaxa.jp/"
+      },
+      {
+        "id": "33520a5efc9a",
+        "name": "Yokohama Business Park (横浜ビジネスパーク)",
+        "lat": 35.454124,
+        "lng": 139.598064,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E6%A8%AA%E6%B5%9C%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF,35.454124,139.598064",
+        "overviewUrl": "https://www.google.com/search?q=%E6%A8%AA%E6%B5%9C%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF%2C+Kanto%2C+Japan",
+        "q": "yokohama business park 横浜ヒシネスハーク kanto kanagawa otaku",
+        "area": "Kanagawa",
+        "otaku": true,
+        "otakuNotes": "Card: Yokohama — Business Park / Port / Chinatown · Hook: Tokusatsu film spots (Business Park, Port Symbol) · Food/culture: Chinatown or Cup Noodles Museum · When: Anytime · Booking: Cup Noodles: ticket · Pace: Half-slow · From Meguro: 45–70 min · How: Toyoko to Yokohama or JR Negishi · Notes: City day, not a pilgrimage alone"
+      },
+      {
+        "id": "a76bba0c257b",
+        "name": "Cape Inamuragasaki (稲村ヶ崎)",
+        "lat": 35.301696,
+        "lng": 139.525462,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E7%A8%B2%E6%9D%91%E3%83%B6%E5%B4%8E,35.301696,139.525462",
+        "overviewUrl": "https://www.google.com/search?q=%E7%A8%B2%E6%9D%91%E3%83%B6%E5%B4%8E%2C+Kanto%2C+Japan",
+        "q": "cape inamuragasaki 稲村ヶ崎 kanto kanagawa otaku",
+        "area": "Kanagawa",
+        "otaku": true,
+        "otakuNotes": "Card: Kamakura + Enoshima · Hook: Cape Inamura (Shin Godzilla) + Enoshima kaiju/Rider B · Food/culture: Temples + sea · When: Anytime · weather day · winter evenings early dark · Booking: Temple fees small · Pace: Half-slow · From Meguro: 70–90 min · How: JR Yokosuka or Shonan-Shinjuku → Kamakura; Enoden to Enoshima · Notes: Weather trump card"
+      },
+      {
+        "id": "f3c43e940fa0",
+        "name": "JAXA Sagamihara Campus (ISAS) (宇宙科学研究所)",
+        "lat": 35.558298,
+        "lng": 139.394492,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E5%AE%87%E5%AE%99%E7%A7%91%E5%AD%A6%E7%A0%94%E7%A9%B6%E6%89%80,35.558298,139.394492",
+        "overviewUrl": "https://www.google.com/search?q=%E5%AE%87%E5%AE%99%E7%A7%91%E5%AD%A6%E7%A0%94%E7%A9%B6%E6%89%80%2C+Kanto%2C+Japan",
+        "q": "jaxa sagamihara campus isas 宇宙科学研究所 kanto kanagawa otaku",
+        "area": "Kanagawa",
+        "otaku": true,
+        "otakuNotes": "Card: Sagamihara — JAXA ISAS + City Museum (Tsuburaya) · Hook: Quieter JAXA science hall; Tsuburaya city museum nearby · Food/culture: Local lunch · When: MUST candidate (tokusatsu angle) · after Jan 4 · BOTH closed Mon + NY (City Museum Dec 28–Jan 3) · earliest Tue Jan 5+ · not during Kansai block · Booking: ISAS hall FREE no solo booking · City Museum walk-up (planetarium optional paid) · https://www.isas.jaxa.jp/visit/ · https://sagamiharacitymuseum.jp/ · Pace: Half-slow · From Meguro: 70–90 min · How: JR Yokohama Line to Fuchinobe · Notes: Best single day if you want JAXA + Tsuburaya/tokusatsu flavor · Fuchinobe · do one not both JAXA days unless obsessed\nLocked anchor “JAXA Sagamihara ISAS + Sagamihara City Museum (Tsuburaya)”: MUST candidate — tokusatsu-flavored JAXA day · When: After Jan 4 · closed Mondays + Dec 28–Jan 3 · earliest Tue Jan 5+ · avoid Kansai block · ISAS 宇宙科学探査交流棟 FREE no booking (solo) · City Museum next door = Tsuburaya/tokusatsu angle · do ONE full JAXA day (Sagamihara OR Tsukuba) unless obsessed · https://www.isas.jaxa.jp/visit/\nLinks: https://www.isas.jaxa.jp/visit/ https://sagamiharacitymuseum.jp/"
+      },
+      {
+        "id": "a6f8439226ff",
+        "name": "Sagamiko MORI MORI (formerly Sagamiko Pleasure Forest) – Sagamiko Illumillion (さがみ湖MORI MORI（さがみ湖イルミリオン）)",
+        "lat": 35.60717,
+        "lng": 139.205704,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%95%E3%81%8C%E3%81%BF%E6%B9%96MORI%20MORI%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%9B%B8%E6%A8%A1%E5%8E%9F%E5%B8%82%E7%B7%91%E5%8C%BA%E8%8B%A5%E6%9F%B31634",
+        "overviewUrl": "https://www.google.com/search?q=%E3%81%95%E3%81%8C%E3%81%BF%E6%B9%96+%E3%81%95%E3%81%8C%E3%81%BF%E6%B9%96%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%AA%E3%82%AA%E3%83%B3%2C+Kanto%2C+Japan",
+        "q": "sagamiko mori formerly pleasure forest illumillion さかみ湖mori さかみ湖イルミリオン kanto kanagawa otaku さかみ湖",
+        "area": "Kanagawa",
+        "otaku": true,
+        "otakuNotes": "Address: 〒252-0175 神奈川県相模原市緑区若柳1634 / 1634 Wakayanagi, Midori-ku, Sagamihara, Kanagawa 252-0175\nCard: Sagamiko Illumillion (さがみ湖イルミリオン) · Hook: Lights park (you really like this) · Food/culture: Weekday: Showa Sagamiko town day → lights from ~16:00 → back Meguro night · When: LIMITED SEASON: ~2026-11-14 → 2027-05-09 · prefer weekday AFTER Jan 7 (avoid Xmas/NY crowds) · leave park ~19:30–20:00 for bus · check mid-Jan closed days when posted · Booking: Walk-up ~¥2,000–2,400 · no advance required typical · Pace: Half-slow · From Meguro: 1h45–2h15 · How: Yamanote to Shinjuku → JR Chuo to Sagamiko → Kanachu bus to park · Notes: Trump card NOT calendar lock · illuminations ~16:00\nLocked anchor “Sagamiko Illumillion”: Loves it — trump card · When: ~2026-11-14 → 2027-05-09 · Prefer weekday after Jan 7; lights ~16:00; leave ~19:30–20:00 for bus\nLinks: https://www.google.com/maps/search/?api=1&query=%E3%81%95%E3%81%8C%E3%81%BF%E6%B9%96MORI%20MORI%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%9B%B8%E6%A8%A1%E5%8E%9F%E5%B8%82%E7%B7%91%E5%8C%BA%E8%8B%A5%E6%9F%B31634"
+      },
+      {
+        "id": "1e6f0ca88a0a",
+        "name": "Kodomo no Kuni (こどもの国)",
+        "lat": 35.558135,
+        "lng": 139.486543,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD,35.558135,139.486543",
+        "overviewUrl": "https://www.google.com/search?q=%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD%2C+Kanto%2C+Japan",
+        "q": "kodomo no kuni こともの国 kanto kanagawa otaku",
+        "area": "Kanagawa",
+        "otaku": true,
+        "otakuNotes": "Card: Kodomonokuni (Yokohama) — Goranger locations · Hook: Classic Sentai location park · Food/culture: Family park vibe — only if you want that energy · When: Anytime · winter hours shorter · Booking: Park admission · Pace: Half-slow · From Meguro: 60–80 min · How: Tokyu Den-en-toshi / Kodomonokuni Line · Notes: B-tier tokusatsu; skip if low energy"
+      },
+      {
+        "id": "4eca6b51fbe3",
+        "name": "Yomiuriland (よみうりランド)",
+        "lat": 35.625246,
+        "lng": 139.518798,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%88%E3%81%BF%E3%81%86%E3%82%8A%E3%83%A9%E3%83%B3%E3%83%89,35.625246,139.518798",
+        "overviewUrl": "https://www.google.com/search?q=%E3%82%88%E3%81%BF%E3%81%86%E3%82%8A%E3%83%A9%E3%83%B3%E3%83%89%2C+Kanto%2C+Japan",
+        "q": "yomiuriland よみうりラント kanto tokyo kanagawa otaku",
+        "area": "Tokyo/Kanagawa",
+        "otaku": true,
+        "otakuNotes": "Card: Yomiuriland Jewellumination · Food/culture: Big theme-park lights; food inside · When: CONFIRMED LIMITED: 2026-10-29 → 2027-04-04 · Booking: Admission ~¥1,800+ · Pace: Half-slow · From Meguro: 55–75 min · How: Odakyu to Yomiuri-Land / Keio + gondola or bus · Notes: Oversupply lights day; not calendar lock\nLocked anchor “Yomiuriland Jewellumination”: Season confirmed · When: 2026-10-29 → 2027-04-04 · Half-slow lights trump"
+      },
+      {
+        "id": "0d8f923af278",
+        "name": "Ashikaga Flower Park (あしかがフラワーパーク)",
+        "lat": 36.315158,
+        "lng": 139.518393,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%82%E3%81%97%E3%81%8B%E3%81%8C%E3%83%95%E3%83%A9%E3%83%AF%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF,36.315158,139.518393",
+        "overviewUrl": "https://www.google.com/search?q=%E3%81%82%E3%81%97%E3%81%8B%E3%81%8C%E3%83%95%E3%83%A9%E3%83%AF%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF%2C+Kanto%2C+Japan",
+        "q": "ashikaga flower park あしかかフラワーハーク kanto tochigi otaku",
+        "area": "Tochigi",
+        "otaku": true,
+        "otakuNotes": "Card: Ashikaga Flower Park — Flower Fantasy · Food/culture: Night illuminations + winter flowers · When: LIMITED: pattern mid-Oct → mid-Feb · prior years CLOSED Dec 31 · confirm 26–27 end so Jan 25 still OK · Booking: Night ~¥1,400 · Pace: Half-slow · From Meguro: 90–120 min · How: All-JR via Utsunomiya / Tobu as needed to Ashikaga Flower Park · Notes: Longer half-slow / light Hot; check end date"
+      },
+      {
+        "id": "2a69f213ca5b",
+        "name": "Sawara Old Town (佐原の町並み)",
+        "lat": 35.894531,
+        "lng": 140.494052,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E4%BD%90%E5%8E%9F%E3%81%AE%E7%94%BA%E4%B8%A6%E3%81%BF,35.894531,140.494052",
+        "overviewUrl": "https://www.google.com/search?q=%E4%BD%90%E5%8E%9F%E3%81%AE%E7%94%BA%E4%B8%A6%E3%81%BF%2C+Kanto%2C+Japan",
+        "q": "sawara old town 佐原の町並み kanto chiba otaku",
+        "area": "Chiba",
+        "otaku": true,
+        "otakuNotes": "Card: Sawara Little Edo · Food/culture: Canal Little Edo streets · When: After Jan 4 preferred · winter quiet · Pace: Half-slow · From Meguro: 90–110 min · How: JR to Sawara (via Narita / Kashima Line area) · Notes: Optional oversupply; long half-slow"
+      },
+      {
+        "id": "033a84895e2a",
+        "name": "Yokohama Arena (横浜アリーナ)",
+        "lat": 35.512273,
+        "lng": 139.620192,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E6%A8%AA%E6%B5%9C%E3%82%A2%E3%83%AA%E3%83%BC%E3%83%8A,35.512273,139.620192",
+        "overviewUrl": "https://www.google.com/search?q=%E6%A8%AA%E6%B5%9C%E3%82%A2%E3%83%AA%E3%83%BC%E3%83%8A%2C+Kanto%2C+Japan",
+        "q": "yokohama arena 横浜アリーナ kanto kanagawa otaku",
+        "area": "Kanagawa",
+        "otaku": true,
+        "otakuNotes": "Card: Super Hero Festival 2027 (超英雄祭) — Yokohama Arena · Hook: Sentai + Project R.E.D. (Jan 20) · Kamen Rider 55th (Jan 21) live show · Food/culture: Shin-Yokohama Ramen Museum nearby · When: LIMITED: Wed Jan 20 or Thu Jan 21 2027 only · evening (open 17:30, start 18:30) · Booking: Presale open until Oct 5 2026 23:59 JST (15:59 PT) · general sale Nov 15 · 1 day ¥12,000 · https://w.pia.jp/t/eiyusai2027/ · Pace: Half-slow · From Meguro: 45–60 min · How: Toyoko / JR to Shin-Yokohama → walk · Notes: Evening event; back in Meguro the same night\nLinks: https://w.pia.jp/t/eiyusai2027/"
+      },
+      {
+        "id": "e8b98d833256",
+        "name": "Omiya Sonic City (大宮ソニックシティ)",
+        "lat": 35.905577,
+        "lng": 139.619563,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E5%AE%AE%E3%82%BD%E3%83%8B%E3%83%83%E3%82%AF%E3%82%B7%E3%83%86%E3%82%A3,35.905577,139.619563",
+        "overviewUrl": "https://www.google.com/search?q=%E5%A4%A7%E5%AE%AE%E3%82%BD%E3%83%8B%E3%83%83%E3%82%AF%E3%82%B7%E3%83%86%E3%82%A3%2C+Kanto%2C+Japan",
+        "q": "omiya sonic city 大宮ソニックシティ kanto saitama otaku",
+        "area": "Saitama",
+        "otaku": true,
+        "otakuNotes": "Card: Kamen Rider Super Live 2027 — Omiya Sonic City · Hook: Kamen Rider stage show · Food/culture: Pair with the Omiya Railway Museum the same day · When: LIMITED: Sat Jan 16 2027 only · Booking: Presale Oct 2 11:00 JST · general sale Oct 16 · https://ridershow.com/place-index.html · Pace: Half-slow · From Meguro: 50–70 min · How: Saikyo / Shonan-Shinjuku to Omiya · Notes: Railway Museum and this show make one Omiya day\nLinks: https://ridershow.com/place-index.html"
+      },
+      {
+        "id": "62d74946f3dd",
+        "name": "Bandai Museum (バンダイミュージアム)",
+        "lat": 36.465429,
+        "lng": 139.83835,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%90%E3%83%B3%E3%83%80%E3%82%A4%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0,36.465429,139.83835",
+        "overviewUrl": "https://www.google.com/search?q=%E3%83%90%E3%83%B3%E3%83%80%E3%82%A4%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0%2C+Kanto%2C+Japan",
+        "q": "bandai museum ハンタイミューシアム kanto tochigi otaku",
+        "area": "Tochigi",
+        "otaku": true,
+        "otakuNotes": "Card: Bandai Museum (Omocha-no-machi, Mibu, Tochigi) · Hook: Life-size Gundam bust, Edison inventions, ~45,000-item Bandai/Showa toy collection · Food/culture: Utsunomiya gyoza dinner near JR station (Minmin main shop, or multi-shop gyoza hall in station) · When: Open 10:00–16:30 (last entry 16:00); closed Wednesdays + Dec 28 2026–Jan 3 2027 (reopens Jan 4); occasional ad-hoc closures · Booking: Walk-up, adult ¥1,000 · Pace: Hot · From Meguro: ~2 h · How: Out: JR to Utsunomiya, transfer to Tobu Utsunomiya (~1.5 km, walk to see the neighborhood or bus), Tobu line to Omocha-no-machi (~10 min walk). Back: Tobu to Tobu Utsunomiya, walk to JR side for gyoza, JR home · Notes: Trump card, not a plan. / Nearby add-ons: (1) Oya History Museum 大谷資料館, a huge underground stone quarry used as a tokusatsu location (Kamen Rider Decade's Dai-Shocker base, Den-O, Ghost&Drive movie, Ultraman Tiga, GARO). / Bus ~30 min from JR Utsunomiya; Dec–Mar 9:30–16:30, closed Tue + Dec 26–Jan 3; bring a jacket. / (2) Mibu Toy Museum 壬生町おもちゃ博物館 (roadside station), closed Mon + Dec 28–Jan 2; not walkable from the station, check access. / Best days: Bandai+Oya Mon/Thu–Sun; all three Thu–Sun. / Realistic: Bandai + gyoza, or Bandai morning + Oya afternoon is tight in winter. / Packed order (JTG): Tobu early to Bandai 10:00, walk across town + lunch, bus to Oya ~13:00 (last entry 16:00), bus back to JR Utsunomiya, gyoza, train home"
+      },
+      {
+        "id": "e67df94526aa",
+        "name": "Mibu Toy Museum (壬生町おもちゃ博物館)",
+        "lat": 36.463828,
+        "lng": 139.808967,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E5%A3%AC%E7%94%9F%E7%94%BA%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83%E5%8D%9A%E7%89%A9%E9%A4%A8,36.463828,139.808967",
+        "overviewUrl": "https://www.google.com/search?q=%E5%A3%AC%E7%94%9F%E7%94%BA%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83%E5%8D%9A%E7%89%A9%E9%A4%A8%2C+Kanto%2C+Japan",
+        "q": "mibu toy museum 壬生町おもちゃ博物館 kanto tochigi otaku",
+        "area": "Tochigi",
+        "otaku": true,
+        "otakuNotes": "Add-on of card “Bandai Museum (Omocha-no-machi, Mibu, Tochigi)” · Hook: Life-size Gundam bust, Edison inventions, ~45,000-item Bandai/Showa toy collection · Food/culture: Utsunomiya gyoza dinner near JR station (Minmin main shop, or multi-shop gyoza hall in station) · When: Open 10:00–16:30 (last entry 16:00); closed Wednesdays + Dec 28 2026–Jan 3 2027 (reopens Jan 4); occasional ad-hoc closures · Booking: Walk-up, adult ¥1,000 · Pace: Hot · From Meguro: ~2 h · How: Out: JR to Utsunomiya, transfer to Tobu Utsunomiya (~1.5 km, walk to see the neighborhood or bus), Tobu line to Omocha-no-machi (~10 min walk). Back: Tobu to Tobu Utsunomiya, walk to JR side for gyoza, JR home · Notes: Trump card, not a plan. / Nearby add-ons: (1) Oya History Museum 大谷資料館, a huge underground stone quarry used as a tokusatsu location (Kamen Rider Decade's Dai-Shocker base, Den-O, Ghost&Drive movie, Ultraman Tiga, GARO). / Bus ~30 min from JR Utsunomiya; Dec–Mar 9:30–16:30, closed Tue + Dec 26–Jan 3; bring a jacket. / (2) Mibu Toy Museum 壬生町おもちゃ博物館 (roadside station), closed Mon + Dec 28–Jan 2; not walkable from the station, check access. / Best days: Bandai+Oya Mon/Thu–Sun; all three Thu–Sun. / Realistic: Bandai + gyoza, or Bandai morning + Oya afternoon is tight in winter. / Packed order (JTG): Tobu early to Bandai 10:00, walk across town + lunch, bus to Oya ~13:00 (last entry 16:00), bus back to JR Utsunomiya, gyoza, train home"
       }
     ],
     "Chubu": [
@@ -12101,6 +12619,54 @@ window.PLACES_DATA = {
         "area": "Shizuoka",
         "tokusatsu": true,
         "tokusatsuArea": "SHIZUOKA"
+      },
+      {
+        "id": "2294b4665d69",
+        "name": "SCMaglev and Railway Park (リニア・鉄道館)",
+        "lat": 35.048873,
+        "lng": 136.851206,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%AA%E3%83%8B%E3%82%A2%E3%83%BB%E9%89%84%E9%81%93%E9%A4%A8,35.048873,136.851206",
+        "overviewUrl": "https://www.google.com/search?q=%E3%83%AA%E3%83%8B%E3%82%A2%E3%83%BB%E9%89%84%E9%81%93%E9%A4%A8%2C+Chubu%2C+Japan",
+        "q": "scmaglev and railway park リニア・鉄道館 chubu otaku",
+        "area": "Chubu",
+        "otaku": true,
+        "otakuNotes": "Card: Nagoya — SCMaglev & Railway Park + Osu · Hook: SCMaglev & Railway Park (trains); Osu shopping · Food/culture: Miso katsu / hitsumabushi · When: After Jan 4 · stack with Kasugai if Jan 10 · Booking: Railway Park ticket · Pace: Hot · From Meguro: 1.5–2 h · How: Tokaido Shinkansen to Nagoya · Notes: Yes — not empty; easy access · optional stack: Nabana no Sato lights (not Jan 6–7)"
+      },
+      {
+        "id": "9b033aea2190",
+        "name": "Osu Shopping District (Osu Kannon, Nagoya)",
+        "lat": 35.161404,
+        "lng": 136.898096,
+        "url": "https://www.google.com/maps/search/?api=1&query=Osu+Kannon%2C+Nagoya,35.161404,136.898096",
+        "overviewUrl": "https://www.google.com/search?q=Osu+Kannon%2C+Nagoya%2C+Chubu%2C+Japan",
+        "q": "osu shopping district kannon nagoya chubu otaku",
+        "area": "Chubu",
+        "otaku": true,
+        "otakuNotes": "Add-on of card “Nagoya — SCMaglev & Railway Park + Osu” · Hook: SCMaglev & Railway Park (trains); Osu shopping · Food/culture: Miso katsu / hitsumabushi · When: After Jan 4 · stack with Kasugai if Jan 10 · Booking: Railway Park ticket · Pace: Hot · From Meguro: 1.5–2 h · How: Tokaido Shinkansen to Nagoya · Notes: Yes — not empty; easy access · optional stack: Nabana no Sato lights (not Jan 6–7)"
+      },
+      {
+        "id": "3c052a35c74d",
+        "name": "Kasugai Civic Hall (venue of Ultra Heroes THE LIVE in Aichi Kasugai) (春日井市民会館)",
+        "lat": 35.247383,
+        "lng": 136.972458,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E6%98%A5%E6%97%A5%E4%BA%95%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8%20%E6%84%9B%E7%9F%A5%E7%9C%8C%E6%98%A5%E6%97%A5%E4%BA%95%E5%B8%82%E9%B3%A5%E5%B1%85%E6%9D%BE%E7%94%BA5-44",
+        "overviewUrl": "https://www.google.com/search?q=%E6%98%A5%E6%97%A5%E4%BA%95%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8%2C+Chubu%2C+Japan",
+        "q": "kasugai civic hall venue of ultra heroes the live in aichi 春日井市民会館 chubu otaku",
+        "area": "Aichi",
+        "otaku": true,
+        "otakuNotes": "Address: 〒486-0844 愛知県春日井市鳥居松町5-44 / 5-44 Toriimatsu-cho, Kasugai, Aichi 486-0844\nCard: Kasugai — Ultra Heroes THE LIVE · Hook: Ultraman live stage show (11:00 or 15:00) · Food/culture: Stack with Nagoya SCMaglev / Osu / miso katsu · When: LIMITED: Sun 10 Jan 2027 ONLY (11:00 or 15:00 show) · Booking: S seats sold out for both shows (as of Sep 26) · general ¥4,000 still on sale · https://www.kasugai-bunka.jp/archives/49660 · Pace: Hot · From Meguro: ~2 h (via Nagoya) · How: Shinkansen to Nagoya → JR Chuo to Kasugai · Notes: https://www.ultra-ai.com/kasugai_the_live/ — not Tokyo New Year Expo\nLocked anchor “Ultra Heroes THE LIVE Kasugai”: Tickets on sale · When: Sun 10 Jan 2027 · Pair with Nagoya; https://www.ultra-ai.com/kasugai_the_live/\nLinks: https://www.kasugai-bunka.jp/archives/49660 https://www.ultra-ai.com/kasugai_the_live/ https://www.google.com/maps/search/?api=1&query=%E6%98%A5%E6%97%A5%E4%BA%95%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8%20%E6%84%9B%E7%9F%A5%E7%9C%8C%E6%98%A5%E6%97%A5%E4%BA%95%E5%B8%82%E9%B3%A5%E5%B1%85%E6%9D%BE%E7%94%BA5-44"
+      },
+      {
+        "id": "32e3f1a3cb5c",
+        "name": "Bandai Hobby Center (バンダイホビーセンター)",
+        "lat": 34.989357,
+        "lng": 138.411598,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%90%E3%83%B3%E3%83%80%E3%82%A4%E3%83%9B%E3%83%93%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC,34.989357,138.411598",
+        "overviewUrl": "https://www.google.com/search?q=%E3%83%90%E3%83%B3%E3%83%80%E3%82%A4%E3%83%9B%E3%83%93%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%2C+Chubu%2C+Japan",
+        "q": "bandai hobby center ハンタイホヒーセンター chubu shizuoka otaku",
+        "area": "Shizuoka",
+        "otaku": true,
+        "otakuNotes": "Card: Bandai Hobby Center (Shizuoka) — if Shinkansen already stops · Hook: Gunpla factory visitor (check reservation rules) · Food/culture: Shizuoka station food · When: After Jan 4 · only if already on Tokaido hop · Booking: Often needs reservation — check site · Pace: Hot · From Meguro: ~1.5–2 h · How: Tokaido Shinkansen to Shizuoka / Higashi-Shizuoka area · Notes: Piggyback only; not a solo reason from Meguro unless you care hard"
       }
     ],
     "Kansai": [
@@ -12131,8 +12697,10 @@ window.PLACES_DATA = {
         "lng": 135.7649016,
         "url": "https://www.google.com/maps/search/?api=1&query=Mercado+Nishiki,35.005008,135.7649016",
         "overviewUrl": "https://www.google.com/search?q=Mercado+Nishiki%2C+Kansai%2C+Japan",
-        "q": "mercado nishiki kansai kyoto",
-        "area": "Kyoto"
+        "q": "mercado nishiki kansai kyoto market 錦市場 otaku",
+        "area": "Kyoto",
+        "otaku": true,
+        "otakuNotes": "Card: Kyoto — Nishiki Market snack pass · Food/culture: Snack market pass; stack with Uji Nintendo day · When: After Jan 4 · same day as Uji/Nintendo OK · Pace: Hot · From Meguro: Same Kansai swing · How: From Kyoto station / subway to Shijo · Notes: Same-day food filler, not its own trip"
       },
       {
         "id": "a7cb2b9fb2d9",
@@ -12761,8 +13329,10 @@ window.PLACES_DATA = {
         "lng": 135.7078299,
         "url": "https://www.google.com/maps/search/?api=1&query=Toei+Kyoto+Studio+Park,35.0162956,135.7078299",
         "overviewUrl": "https://www.google.com/search?q=Toei+Kyoto+Studio+Park%2C+Kansai%2C+Japan",
-        "q": "toei kyoto studio park kansai",
-        "area": "Kyoto"
+        "q": "toei kyoto studio park kansai uzumasa eigamura 東映太秦映画村 otaku",
+        "area": "Kyoto",
+        "otaku": true,
+        "otakuNotes": "Card: Kyoto — Toei Uzumasa Kyoto Village (太秦映画村) Sentai/Kamen Rider History · Hook: Toei Studio Park (Sentai/jidaigeki sets) · Food/culture: Higashiyama / Gion if energy · When: MUST — own weekday in ~Jan 4–10 Kansai stay · check closed days · Booking: Walk-up ticket at Studio Park · own day (do NOT stack on Nintendo) · Pace: Hot · From Meguro: Same Kansai swing · How: From Kyoto station buses/local · Notes: NEW MUST from Travel Guide · Sentai/Rider History · separate day from Uji Nintendo · Kyoto hotel nights then back to Meguro\nLocked anchor “Toei Uzumasa Kyoto Village (太秦映画村)”: NEW MUST — own day · When: Weekday in ~Jan 4–10 Kansai stay · Sentai / Kamen Rider History · walk-up · NOT stacked on Nintendo day · sleep Kyoto nights then back to Meguro"
       },
       {
         "id": "6e07d8bca6d9",
@@ -13181,8 +13751,10 @@ window.PLACES_DATA = {
         "lng": 135.1805729,
         "url": "https://www.google.com/maps/search/?api=1&query=Kobe+Harborland,34.6788063,135.1805729",
         "overviewUrl": "https://www.google.com/search?q=Kobe+Harborland%2C+Kansai%2C+Japan",
-        "q": "kobe harborland kansai kyoto",
-        "area": "Kyoto"
+        "q": "kobe harborland kansai kyoto 神戸ハーハーラント otaku",
+        "area": "Kyoto",
+        "otaku": true,
+        "otakuNotes": "Card: Kobe (harbor / beef / bakery) · Hook: Thin pure otaku · Food/culture: Harbor, Kobe beef, bakery street · When: Only if already Kansai · after Jan 4 · Pace: Hot · From Meguro: 3–3.5 h from Tokyo; ~30 min from Osaka · How: Only as Kansai side-hop (JR Kobe Line) · Notes: KEEP only piggyback; not own Shinkansen from Meguro"
       },
       {
         "id": "8559202f9e45",
@@ -14421,8 +14993,10 @@ window.PLACES_DATA = {
         "lng": 135.784166,
         "url": "https://www.google.com/maps/search/?api=1&query=Nintendo+Museum,34.8927989,135.784166",
         "overviewUrl": "https://www.google.com/search?q=Nintendo+Museum%2C+Kansai%2C+Japan",
-        "q": "nintendo museum kansai kyoto",
-        "area": "Kyoto"
+        "q": "nintendo museum kansai kyoto ニンテントーミューシアム otaku",
+        "area": "Kyoto",
+        "otaku": true,
+        "otakuNotes": "Card: Uji — Nintendo Museum + matcha · Hook: Nintendo Museum (timed tickets) · Food/culture: Byodo-in + tea street matcha · When: MUST BLOCK ~Jan 4–10 · lottery prefs Jan 6/7/8 (ENTERED) · CLOSED Tue + Dec 30–Jan 3 · earliest after NY is Jan 4+ · Booking: Lottery ENTERED prefs 6/7/8 · results ~Nov 1 · pay by Nov 7 · https://museum-tickets.nintendo.com/ · Travel Guide books · Pace: Hot · From Meguro: 2.5–3.5 h (Tokyo→Kyoto→Uji) · How: Tokaido Shinkansen to Kyoto → JR Nara Line to Uji · Notes: A-lock inside Kansai weekday stay · Uji matcha same day or next · NOT same day as Toei Uzumasa · sleep Kyoto then Meguro\nLocked anchor “Nintendo Museum Uji”: Lottery ENTERED — prefs Jan 6/7/8 · When: Winning day among Jan 6–8 2027 · Results ~Nov 1; pay by Nov 7 · no walk-ups · closed Tue + Dec 30–Jan 3 · Uji matcha same day or next · Travel Guide books\nLocked anchor “Nintendo Museum Uji tickets”: Entered Jan 2027 lottery · When: Prefs Jan 6 / 7 / 8 · results ~Nov 1 · pay by Nov 7 · https://museum-tickets.nintendo.com/ · Travel Guide books; Otaku watches\nLinks: https://museum-tickets.nintendo.com/"
       },
       {
         "id": "03c31ca51584",
@@ -15185,6 +15759,54 @@ window.PLACES_DATA = {
         "area": "Uzumasa",
         "tokusatsu": true,
         "tokusatsuArea": "KYOTO"
+      },
+      {
+        "id": "1a8b63c7962b",
+        "name": "Den Den Town (Nipponbashi) (でんでんタウン)",
+        "lat": 34.661069,
+        "lng": 135.504911,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%A7%E3%82%93%E3%81%A7%E3%82%93%E3%82%BF%E3%82%A6%E3%83%B3,34.661069,135.504911",
+        "overviewUrl": "https://www.google.com/search?q=%E3%81%A7%E3%82%93%E3%81%A7%E3%82%93%E3%82%BF%E3%82%A6%E3%83%B3%2C+Kansai%2C+Japan",
+        "q": "den town nipponbashi てんてんタウン kansai otaku",
+        "area": "Kansai",
+        "otaku": true,
+        "otakuNotes": "Card: Osaka — Den Den Town + food · Hook: Den Den Town otaku shops · Food/culture: Osaka food densest payoff · When: After Jan 4 · Booking: None for shopping · Pace: Hot · From Meguro: 2.5–3 h Shinkansen · How: Tokaido/Sanyo to Shin-Osaka → Midosuji to Namba/Nipponbashi · Notes: Roam-and-book style fits"
+      },
+      {
+        "id": "f7275ce18ed0",
+        "name": "Nabana no Sato (なばなの里)",
+        "lat": 35.079906,
+        "lng": 136.704865,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%AA%E3%81%B0%E3%81%AA%E3%81%AE%E9%87%8C,35.079906,136.704865",
+        "overviewUrl": "https://www.google.com/search?q=%E3%81%AA%E3%81%B0%E3%81%AA%E3%81%AE%E9%87%8C%2C+Kansai%2C+Japan",
+        "q": "nabana no sato なはなの里 kansai mie aichi otaku",
+        "area": "Mie/Aichi",
+        "otaku": true,
+        "otakuNotes": "Card: Nabana no Sato (via Nagoya) · Hook: Add-on to Nagoya SCMaglev / Osu / Kasugai day · Food/culture: Huge winter light garden · When: CONFIRMED LIMITED: 2026-10-17 → 2027-05-31 · CLOSED Jan 6–7 2027 · Booking: Konbini tickets typical · Pace: Hot · From Meguro: ~2–2.5 h + local bus · How: Tokaido Shinkansen to Nagoya → flagged bus to Nabana no Sato · Notes: Only with Nagoya hop; skip closed Jan 6–7\nLocked anchor “Nabana no Sato”: Season confirmed · When: 2026-10-17 → 2027-05-31 · CLOSED Jan 6–7 2027; Nagoya add-on"
+      },
+      {
+        "id": "a2bb81ec4b1f",
+        "name": "Hankyu Umeda Main Store (阪急うめだ本店)",
+        "lat": 34.702713,
+        "lng": 135.498432,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E9%98%AA%E6%80%A5%E3%81%86%E3%82%81%E3%81%A0%E6%9C%AC%E5%BA%97,34.702713,135.498432",
+        "overviewUrl": "https://www.google.com/search?q=%E9%98%AA%E6%80%A5%E3%81%86%E3%82%81%E3%81%A0%E6%9C%AC%E5%BA%97%2C+Kansai%2C+Japan",
+        "q": "hankyu umeda main store 阪急うめた本店 kansai otaku",
+        "area": "Kansai",
+        "otaku": true,
+        "otakuNotes": "Card: FMA × Yomi no Tsugai Exhibition — Osaka (Hankyu Umeda) · Hook: Fullmetal Alchemist × Daemons of the Shadow Realm exhibition (tour stop) · Food/culture: Umeda food; stack with Den Den / Kansai swing · When: MUST before 2027-01-10 close · put in ~Jan 4–10 Kansai block with Nintendo · best weekdays · skip Dec 31–Jan 3 crowds · Nagoya Feb stop AFTER trip · Booking: Check venue/asoview when Osaka tickets drop · https://magazine.jp.square-enix.com/gangan/campaign/hagaren_yomi_ten/ · Pace: Hot · From Meguro: 2.5–3 h Shinkansen (+ Kansai local) · How: Tokaido/Sanyo to Shin-Osaka → Midosuji to Umeda / Hankyu Umeda · Notes: Time-limited lock with Nintendo Kansai block · Umeda + Den Den/Osaka food same day · Nintendo/Uji and Toei Uzumasa = separate days\nLocked anchor “FMA × Yomi no Tsugai (Osaka)”: MUST in Kansai block (ends Jan 10) · When: Before 2027-01-10 · with Den Den / Osaka food same day · Hankyu Umeda · only trip-window stop · Nagoya stop is after Jan 25 · lock with Nintendo weekday block\nLinks: https://magazine.jp.square-enix.com/gangan/campaign/hagaren_yomi_ten/"
+      },
+      {
+        "id": "9fc100e68d36",
+        "name": "Sumaura Sanjo Yuen (須磨浦山上遊園)",
+        "lat": 34.6419,
+        "lng": 135.094206,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E9%A0%88%E7%A3%A8%E6%B5%A6%E5%B1%B1%E4%B8%8A%E9%81%8A%E5%9C%92,34.6419,135.094206",
+        "overviewUrl": "https://www.google.com/search?q=%E9%A0%88%E7%A3%A8%E6%B5%A6%E5%B1%B1%E4%B8%8A%E9%81%8A%E5%9C%92%2C+Kansai%2C+Japan",
+        "q": "sumaura sanjo yuen 須磨浦山上遊園 kansai otaku",
+        "area": "Kansai",
+        "otaku": true,
+        "otakuNotes": "Card: Sumaura Sanjo Yuen (須磨浦山上遊園) — Kobe ropeway / lift / tower cafe · Hook: Thin pure otaku — Showa amusement / view ride nostalgia · Food/culture: Kobe harbor / beef / bakery same swing; tower cafe on site · When: LIMITATIONS: 2026–27 winter calendar NOT announced yet — confirm later · standing pattern 10:00–17:00, CLOSED Tuesdays (likely Dec 29, Jan 5/12/19) · Jan 1 often sunrise early hours (~5–13), lift may not run · cold/wind/short daylight; thin winter rides · only worth if already west + clear non-Tuesday weather · Booking: Set A ~¥2,100 adult · confirm on-site hours once winter calendar posts · Pace: Half-slow · From Meguro: Not a Meguro day trip · only if already Kansai/Kobe (~30m from Sannomiya, ~60m from Umeda) · How: Sanyo Electric Railway to 須磨浦公園 → ropeway · カーレーター · sightseeing lift (stations せっつ・はりま) · rotating tower cafe · Notes: Kobe add-on trump only — not its own Shinkansen from Meguro · piggyback on Kansai/Kobe day after Jan 4 · skip Tue / bad weather / Jan 1 sunrise-only quirks"
       }
     ],
     "Chugoku": [
@@ -16157,6 +16779,18 @@ window.PLACES_DATA = {
         "overviewUrl": "https://www.google.com/search?q=%E3%82%AF%E3%83%AA%E3%82%B9%E3%82%BF%E3%83%AB%E3%83%AD%E3%83%BC%E3%83%89%2C+Chugoku%2C+Japan",
         "q": "kurisutaruroodo クリスタルロート chugoku hiroshima",
         "area": "Hiroshima"
+      },
+      {
+        "id": "d99bc264e2f8",
+        "name": "Korakuen (後楽園)",
+        "lat": 34.66633,
+        "lng": 133.937395,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E5%BE%8C%E6%A5%BD%E5%9C%92,34.66633,133.937395",
+        "overviewUrl": "https://www.google.com/search?q=%E5%BE%8C%E6%A5%BD%E5%9C%92%2C+Chugoku%2C+Japan",
+        "q": "korakuen 後楽園 chugoku otaku",
+        "area": "Chugoku",
+        "otaku": true,
+        "otakuNotes": "Card: Okayama — Korakuen · Hook: Thin otaku · Food/culture: Korakuen garden · When: Only if already west · after Jan 4 · Booking: Garden fee · Pace: Hot · From Meguro: 3.5–4 h from Tokyo · How: Sanyo Shinkansen · Notes: CUT unless already west"
       }
     ],
     "Shikoku": [
@@ -21683,10 +22317,12 @@ window.PLACES_DATA = {
         "lng": 140.375836,
         "url": "https://www.google.com/maps/search/?api=1&query=Sukagawa+Ultraman+Street+%28Taimatsu-dori%29+%E2%80%94+13+statues,37.289678,140.375836",
         "overviewUrl": "https://www.google.com/search?q=Sukagawa+Ultraman+Street+%28Taimatsu-dori%29+%E2%80%94+13+statues%2C+Tohoku%2C+Japan",
-        "q": "sukagawa ultraman street taimatsu dori 13 statues tohoku tokusatsu fukushima s hometown",
+        "q": "sukagawa ultraman street taimatsu dori 13 statues tohoku 須賀川 ウルトラマン通り tokusatsu fukushima s hometown otaku",
         "area": "Taimatsu-dori",
         "tokusatsu": true,
-        "tokusatsuArea": "FUKUSHIMA — Ultraman's hometown"
+        "tokusatsuArea": "FUKUSHIMA — Ultraman's hometown",
+        "otaku": true,
+        "otakuNotes": "Card: Sukagawa Ultraman Street + Tsuburaya Museum (tette) · Hook: Ultraman statues, tette museum, Archive if open · Food/culture: Town food thin — pack snacks · When: LIMITED: after Jan 4 only — tette CLOSED Dec 29–Jan 3 · Booking: Museum free typical; check Archive · Pace: Hot · From Meguro: 2.5–3.5 h one way · How: Tohoku Shinkansen to Koriyama → local to Sukagawa · Notes: One day-trip that earns it; early out / late back\nLocked anchor “Sukagawa Ultraman / tette”: High want · When: After Jan 4 · Closed Dec 29–Jan 3\nLinks: https://www.google.com/maps/search/?api=1&query=%E9%A0%88%E8%B3%80%E5%B7%9D%E5%B8%82%E6%B0%91%E4%BA%A4%E6%B5%81%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20tette%20%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%A0%88%E8%B3%80%E5%B7%9D%E5%B8%82%E4%B8%AD%E7%94%BA4-1"
       },
       {
         "id": "4db4ea555f8e",
@@ -21695,10 +22331,12 @@ window.PLACES_DATA = {
         "lng": 140.376,
         "url": "https://www.google.com/maps/search/?api=1&query=Sukagawa+Tokusatsu+Museum+%28Civic+Center+%22tette%22%29,37.289,140.376",
         "overviewUrl": "https://www.google.com/search?q=Sukagawa+Tokusatsu+Museum+%28Civic+Center+%22tette%22%29%2C+Tohoku%2C+Japan",
-        "q": "sukagawa tokusatsu museum civic center tette tohoku fukushima ultraman s hometown",
+        "q": "sukagawa tokusatsu museum civic center tette tohoku exchange tsuburaya eiji 5f 須賀川市民交流センター 円谷英二ミューシアム fukushima ultraman s hometown otaku",
         "area": "Civic Center \"tette\"",
         "tokusatsu": true,
-        "tokusatsuArea": "FUKUSHIMA — Ultraman's hometown"
+        "tokusatsuArea": "FUKUSHIMA — Ultraman's hometown",
+        "otaku": true,
+        "otakuNotes": "Address: 〒962-0845 福島県須賀川市中町4-1 / 4-1 Nakamachi, Sukagawa, Fukushima 962-0845\nAdd-on of card “Sukagawa Ultraman Street + Tsuburaya Museum (tette)” · Hook: Ultraman statues, tette museum, Archive if open · Food/culture: Town food thin — pack snacks · When: LIMITED: after Jan 4 only — tette CLOSED Dec 29–Jan 3 · Booking: Museum free typical; check Archive · Pace: Hot · From Meguro: 2.5–3.5 h one way · How: Tohoku Shinkansen to Koriyama → local to Sukagawa · Notes: One day-trip that earns it; early out / late back\nLocked anchor “Sukagawa Ultraman / tette”: High want · When: After Jan 4 · Closed Dec 29–Jan 3\nLinks: https://www.google.com/maps/search/?api=1&query=%E9%A0%88%E8%B3%80%E5%B7%9D%E5%B8%82%E6%B0%91%E4%BA%A4%E6%B5%81%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20tette%20%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%A0%88%E8%B3%80%E5%B7%9D%E5%B8%82%E4%B8%AD%E7%94%BA4-1"
       },
       {
         "id": "86f58b6dd33c",
@@ -21711,6 +22349,18 @@ window.PLACES_DATA = {
         "area": "Fukushima",
         "tokusatsu": true,
         "tokusatsuArea": "FUKUSHIMA — Ultraman's hometown"
+      },
+      {
+        "id": "41684f33046d",
+        "name": "Sukagawa Tokusatsu Archive Center (須賀川特撮アーカイブセンター)",
+        "lat": 37.318485,
+        "lng": 140.26384,
+        "url": "https://www.google.com/maps/search/?api=1&query=%E9%A0%88%E8%B3%80%E5%B7%9D%E7%89%B9%E6%92%AE%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC,37.318485,140.26384",
+        "overviewUrl": "https://www.google.com/search?q=%E9%A0%88%E8%B3%80%E5%B7%9D%E7%89%B9%E6%92%AE%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%2C+Tohoku%2C+Japan",
+        "q": "sukagawa tokusatsu archive center 須賀川特撮アーカイフセンター tohoku fukushima otaku",
+        "area": "Fukushima",
+        "otaku": true,
+        "otakuNotes": "Add-on of card “Sukagawa Ultraman Street + Tsuburaya Museum (tette)” · Hook: Ultraman statues, tette museum, Archive if open · Food/culture: Town food thin — pack snacks · When: LIMITED: after Jan 4 only — tette CLOSED Dec 29–Jan 3 · Booking: Museum free typical; check Archive · Pace: Hot · From Meguro: 2.5–3.5 h one way · How: Tohoku Shinkansen to Koriyama → local to Sukagawa · Notes: One day-trip that earns it; early out / late back\nLinks: https://www.google.com/maps/search/?api=1&query=%E9%A0%88%E8%B3%80%E5%B7%9D%E5%B8%82%E6%B0%91%E4%BA%A4%E6%B5%81%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20tette%20%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%A0%88%E8%B3%80%E5%B7%9D%E5%B8%82%E4%B8%AD%E7%94%BA4-1"
       }
     ],
     "Hokkaido": [

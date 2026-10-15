@@ -428,3 +428,19 @@ python3 app/build-places.py
 ```
 
 Open `index.html` in a browser: toggle region checkboxes, confirm unchecked regions collapse and cannot expand, search filters list **and** map within selected regions, Tokusatsu chip filters tagged places, Reset vs native search **x**. Also check locate (soft fail), `?g=&q=&t=` + `#p=` persist/share, theme (sidebar only; map stays OSM), mobile selected bar, short-height tabs, region-tinted markers, `/` + arrow keyboard nav, `aria-expanded` / `aria-pressed`, and CDN `integrity` attributes on Leaflet/MarkerCluster tags.
+---
+
+## `Locations/Otaku.md` — Otaku trip sheet (generated)
+
+- Source: `Japan_Trip_Trump_Cards.xlsx` (tabs **Trump cards** + **Locked anchors**; **How to use** ignored).
+- **Generated** by `python3 app/import_otaku_sheet.py [xlsx]` — don't hand-edit; edit the sheet or `CARD_PLACES` / `ANCHOR_PLACES` in the importer. `build-locations.py` never deletes it.
+- Bundled cards are split into real, locatable places via `CARD_PLACES` (add-ons say “Add-on of card …” in notes). Generic mentions (food loops, “Utsunomiya gyoza”) stay as text in the parent's notes. New cards with no mapping are imported best-effort and flagged in the report.
+- Optional sheet columns `official_name_en` / `official_name_ja` / `address` / `maps_url`: when present they become the display name + Japanese name, `maps_url` is the popup Maps link, and coords come from `maps_url` (if it embeds lat,lng) or the `address` via GSI address search. For multi-place cards `OFFICIAL_TARGET` says which sub-place the columns describe.
+- Geocoding (no official address): Nominatim search → GSI address search fallback, ≥1 req/s, cache `app/otaku_geocode_cache.json`, prefecture guard against homonyms. No coords are invented; unresolved places are listed in `app/otaku-import-report.md` and left off the map.
+- Build: `merge_otaku()` in `parse_places.py` runs after Tokusatsu merge. A sheet place merges onto an existing pin (KML or Tokusatsu) when names match (token Jaccard ≥ 0.5 or containment, stopwords ignored) within 150 m, or the Japanese name is identical within 2 km. `OTAKU_NO_MERGE` lists reviewed never-merge pairs (Yanaka Ginza vs the KML gelato shop, Meiji Jingu vs 御苑, Midtown Hibiya vs Godzilla Square, Roppongi Midtown vs Hibiya). The one `byCoord` entry in `name_overrides.json` (Kawagoe Ichibangai) exists only to merge that KML pin with the sheet row; A2 enrich proposals remain unapplied. Merges and unmerged near-matches are printed in `app/build-report.txt`.
+- UI: **Otaku** chip (`#filter-otaku`), URL param `o=1`, localStorage `jtp.otaku`, badge on list rows, sheet notes (hook / dates / booking / anchors) in the popup. Chips AND together.
+- One-command refresh: `app/sync_otaku_sheet.sh [xlsx]` (import → rebuild → tests → diff).
+
+## `Locations/Manual.md` — hand-added pins
+
+Hand-maintained untagged pins added to a KML group/area without editing the KML (columns: Group | Area | Name | Japanese | Coordinates `lng,lat,0` | Google Maps | Notes). Parsed by `parse_manual_md()` and appended before dedupe/tag merges; `build-locations.py` never deletes it. First row: asatte (asatteのジェラート, 谷中3-10-14), alongside the KML pin Guru Guru Gelato Yanaka Ginza (TOKYO.kml, folder "Ōta").

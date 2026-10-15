@@ -41,5 +41,10 @@
       "aliases": ["Estátua do Godzilla", "Godzilla Statue"]
     }
   },
-  "byCoord": {}
+  "byCoord": {
+    "35.92314,139.48288": {
+      "name": "Kawagoe Ichibangai (川越一番街)",
+      "aliases": ["Kurazukuri no Machinami / Warehouse District", "Kawagoe Ichibangai", "川越一番街", "蔵造りの町並み", "Kurazukuri no Machinami"]
+    }
+  }
 }

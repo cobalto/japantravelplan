@@ -1,0 +1,88 @@
+# Otaku sheet import report
+
+- Sheet rows: 61 trump cards + 21 locked anchors
+- Places extracted: 75 · geocoded: 75 · unresolved: 0
+
+## Unresolved (no coordinates; not on the map)
+- none
+
+## Rows skipped / needing a mapping
+- [Trump cards] Meguro–Ebisu–Nakameguro food loop — not a single locatable place
+- [Locked anchors] Kansai / Kyoto weekday stay — logistics block, not a place
+
+## Geocode sources
+- Akihabara Electric Town: nominatim (name: 秋葉原駅) — Akihabara Station, 東京メトロ秋葉原駅;5番出入口, Kanda-Sakumachō 1, Kanda-Sakumachō, Chiyoda, Tokyo, 101-0025, Japan
+- Nakano Broadway: nominatim (name: 中野ブロードウェイ) — One-Up, 15, Nakano 5, Nakano, Tokyo, 101-0021, Japan
+- Square Enix Cafe & Shop Shinjuku: nominatim (name: Square Enix Cafe Shinjuku) — SQUARE ENIX cafe & Shop SHINJUKU, 1, Shinjuku 3, Shinjuku, Tokyo, 160-0022, Japan
+- Godzilla Store Tokyo (Shinjuku Marui Annex): nominatim (name: 新宿マルイ アネックス) — Brooklyn Parlor Shinjuku, 26, Shinjuku 3, Shinjuku, Tokyo, 160-0022, Japan
+- Godzilla Head — Gracery Hotel Shinjuku: nominatim (name: ホテルグレイスリー新宿) — Hotel Gracery Shinjuku, Hanamichi-dori Street, Kabukichō 1, Kabukichō, Shinjuku, Tokyo, 160-0021, Japan
+- Kinuta Park: nominatim (name: 砧公園) — Kinuta Park, Setagaya, Tokyo, Japan
+- Soshigaya-Okura Ultraman Street: nominatim (name: 祖師ヶ谷大蔵駅) — 祖師ヶ谷大蔵駅, Soshigaya-dori St., Soshigaya 1, Soshigaya, Setagaya, Tokyo, 157-0072, Japan
+- Toho Studios: nominatim (name: 東宝スタジオ) — Toho Studios, 1, Kinuta 7, Kinuta, Setagaya, Tokyo, 157-8561, Japan
+- Tokyo Big Sight: nominatim (name: 東京ビッグサイト) — Tokyo Big Sight, Ariake, Koto, Tokyo, 135-0063, Japan
+- Shimokitazawa: nominatim (name: 下北沢駅) — Shimo-Kitazawa Station, Shimokitazawa South Exit Shopping Street, Kitazawa 2, Kitazawa, Setagaya, Tokyo, 155-0031, Japan
+- Yanaka Ginza shopping street: gsi (address: 東京都台東区谷中3丁目) — 東京都台東区谷中三丁目
+- Meguro Fudoson (Ryusenji): nominatim (name: Ryusenji, Meguro, Tokyo) — Ryusenji Meguro Fudo, 三折坂, Shimomeguro 3-chome, Shimo-Meguro, Meguro, Tokyo, 153-0064, Japan
+- Kami-Meguro Hikawa Shrine (Hikawa-jinja, Ohashi): gsi (address: 東京都目黒区大橋2-16-21) — 東京都目黒区大橋二丁目１６番２１号
+- Meiji Jingu (Meiji Shrine): gsi (address: 東京都渋谷区代々木神園町1-1) — 東京都渋谷区代々木神園町１番１号
+- Railway Museum (Omiya): nominatim (name: 鉄道博物館 さいたま) — The Railway Museum, Onaricho 3-chome, Ōmiya Ward, Saitama, Saitama Prefecture, 330-0852, Japan
+- JAXA Tsukuba Space Center — Space Dome: nominatim (name: 筑波宇宙センター) — JAXA Tsukuba Space Center, 1, Sengen 2-chome, Kurakake, Tsukuba, Ibaraki Prefecture, 305-8505, Japan
+- Yokohama Business Park: nominatim (name: 横浜ビジネスパーク) — Yokohama Business Park, Hodogaya Ward, Yokohama, Kanagawa Prefecture, 231-0017, Japan
+- Yokohama Chinatown: nominatim (name: 横浜中華街) — Yokohama Chinatown, 港町, Naka ward, Yokohama, Kanagawa Prefecture, 231-0023, Japan
+- Cape Inamuragasaki: nominatim (name: Inamuragasaki, Kamakura) — Inamuragasaki, Kamakura, Kanagawa Prefecture, 248-0023, Japan
+- Enoshima: nominatim (name: 江の島) — Enoshima, Fujisawa, Kanagawa Prefecture, 251-0036, Japan
+- JAXA Sagamihara Campus (ISAS): nominatim (name: Institute of Space and Astronautical Science, Sagamihara) — Institute of Space and Astronautical Science, 銀河天の川通り, Takane 3-chome, 弥栄, Chuo Ward, Sagamihara, Kanagawa Prefecture, 2
+- Sagamihara City Museum: nominatim (name: 相模原市立博物館) — 相模原市立博物館, 銀河天の川通り, Takane 3-chome, 弥栄, Chuo Ward, Sagamihara, Kanagawa Prefecture, 252-5210, Japan
+- Sukagawa Ultraman Street: gsi (address: 福島県須賀川市中町) — 福島県須賀川市中町
+- Sukagawa Civic Exchange Center tette (Tsuburaya Eiji Museum, 5F): gsi (address: 福島県須賀川市中町4-1) — 福島県須賀川市中町
+- Sukagawa Tokusatsu Archive Center: gsi (address: 福島県須賀川市柱田字中地前22) — 福島県須賀川市柱田
+- Nintendo Museum: nominatim (name: ニンテンドーミュージアム) — Nintendo Museum, Joyo Uji Line, Nanryocho 3-chome, Oguracho, Uji, Kyoto Prefecture, 611-0042, Japan
+- Toei Kyoto Studio Park (Uzumasa Eigamura): nominatim (name: 東映太秦映画村) — TOEI Kyoto Studio Park, 10, Uzumasa-Higashihachiokacho, 御室岡ノ裾町, Sakyō Ward, Kyoto, Kyoto Prefecture, 616-8161, Japan
+- Den Den Town (Nipponbashi): nominatim (name: Ota Road, Naniwa, Osaka) — Kishu Kaidō, Nipponbashi 4, Naniwa Ward, Osaka, Osaka Prefecture, 556-0005, Japan
+- SCMaglev and Railway Park: nominatim (name: リニア・鉄道館) — SCMAGLEV and Railway Park, メキシコ大通, Kinjofuto 2-chome, Minato Ward, Nagoya, Aichi Prefecture, Japan
+- Osu Shopping District: nominatim (name: Osu Kannon, Nagoya) — Ōsu Kannon, Fushimi Street, Osu 2-chome, Monzencho, Naka Ward, Nagoya, Aichi Prefecture, 460-8799, Japan
+- Kobe Harborland: nominatim (name: 神戸ハーバーランド) — Kobe Harborland, 3, Higashi-Kawasakicho 1-chome, Chuo Ward, Kobe, Hyogo Prefecture, 650-0044, Japan
+- Korakuen: nominatim (name: 岡山後楽園) — Kōraku Garden, North Ward, Okayama, Okayama Prefecture, Japan
+- Makuhari Messe: nominatim (name: 幕張メッセ) — Makuhari Messe, Nakase 2-chome, Mihama Ward, Chiba, Chiba Prefecture, 261-0023, Japan
+- Kagurazaka: nominatim (name: 神楽坂駅) — 神楽坂駅, 早稲田通り, Yaraicho, Kagurazaka, Shinjuku, Tokyo, 162-0825, Japan
+- Jiyugaoka: nominatim (name: 自由が丘駅) — Jiyugaoka Station, Megami Street, Jiyugaoka 1, Jiyugaoka, Meguro, Tokyo, 152-0035, Japan
+- Kawagoe Ichibangai (Kurazukuri warehouse street): gsi (address: 埼玉県川越市幸町) — 埼玉県川越市幸町
+- Nishiki Market: nominatim (name: 錦市場) — Nishiki Market, Nishikikōji Street, Higashiuoyachō, Nakagyo Ward, Kyoto, Kyoto Prefecture, 604-8123, Japan
+- Kasugai Civic Hall (venue of Ultra Heroes THE LIVE in Aichi Kasugai): gsi (address: 愛知県春日井市鳥居松町5-44) — 愛知県春日井市鳥居松町五丁目４４番地
+- Sagamiko MORI MORI (formerly Sagamiko Pleasure Forest) – Sagamiko Illumillion: gsi (address: 神奈川県相模原市緑区若柳1634) — 神奈川県相模原市緑区若柳
+- Animate Ikebukuro Main Store: nominatim (name: アニメイト池袋本店) — Jiang Lai, アニメイト通り, Higashi-Ikebukuro 1, Higashi-Ikebukuro, Toshima, Tokyo, 170-0013, Japan
+- Otome Road: nominatim (name: 乙女ロード) — Otome Road, Higashi-Ikebukuro, Toshima, Tokyo, 170-0013, Japan
+- Nintendo TOKYO (Shibuya PARCO): nominatim (name: 渋谷PARCO) — Shibuya Parco, 1, Udagawachō, Shibuya, Tokyo, 150-8377, Japan
+- Toei Tokyo Studio: nominatim (name: 東映東京撮影所) — 東映東京撮影所, Nerima, Tokyo, Japan
+- The Gundam Base Tokyo (DiverCity Tokyo Plaza): nominatim (name: ダイバーシティ東京 プラザ) — Diver City Tokyo, 10, Aomi 1, Aomi, Koto, Tokyo, 135-0064, Japan
+- Yellow Submarine Akihabara Main Store ★MINT: gsi (address: 東京都千代田区外神田1-15-16) — 東京都千代田区外神田一丁目１５番１６号
+- Kodomo no Kuni: nominatim (name: こどもの国 横浜) — Kodomonokuni, Kodomonokuni dori, Nara-cho, Aoba Ward, Yokohama, Kanagawa Prefecture, 231-0017, Japan
+- Ajinomoto Stadium: nominatim (name: 味の素スタジアム) — Ajinomoto Stadium, アジパンダ広場, Nishimachi, Chofu, Tokyo, 182-0036, Japan
+- Bandai Hobby Center: nominatim (name: バンダイホビーセンター) — Bandai Hobby Center, Bandai Shizuoka Factory, 長沼, Aoi Ward, Shizuoka, Shizuoka Prefecture, 420-0813, Japan
+- Tokorozawa Aviation Memorial Park: nominatim (name: 所沢航空記念公園) — Tokorozawa Aviation Memorial Park, Tokorozawa, Saitama Prefecture, Japan
+- Tokyo Midtown: nominatim (name: 東京ミッドタウン) — Tokyo Midtown, Akasaka, Minato, Tokyo, 107-0052, Japan
+- Marunouchi Naka-dori: nominatim (name: 丸の内仲通り) — Marunouchi-Naka Street, Marunouchi 2, Marunouchi, Chiyoda, Tokyo, 100-0005, Japan
+- Keyakizaka Street (Roppongi Hills): nominatim (name: けやき坂 六本木) — Keyaki-zaka, Roppongi 6, Roppongi, Minato, Tokyo, 106-0032, Japan
+- Tokyo Midtown Hibiya (Hibiya Magic Time Illumination): gsi (address: 東京都千代田区有楽町1-1-2) — 東京都千代田区有楽町一丁目１番
+- Yebisu Garden Place: nominatim (name: 恵比寿ガーデンプレイス) — Ebisu Garden Place, 恵比寿プロムナード, Ebisu 4, Ebisu, Shibuya, Tokyo, 150-0013, Japan
+- Yomiuriland: nominatim (name: よみうりランド) — Yomiuri Land, Yomiuri V dōri, Sugesengoku 4, Sugesengoku, Tama Ward, Inagi, Kawasaki, Kanagawa Prefecture, 214-0006, Jap
+- Ashikaga Flower Park: nominatim (name: あしかがフラワーパーク) — Ashikaga Flower Park, Kiryu-Iwafune Line, 迫間町, Ashikaga, Tochigi Prefecture, 326-0022, Japan
+- Nabana no Sato: nominatim (name: なばなの里) — なばなの里, Kuwana, Mie Prefecture, 511-1144, Japan
+- Shibamata Taishakuten: nominatim (name: 柴又帝釈天) — Shibamata Taishakuten Temple, 3, Shibamata 7, Shibamata, Katsushika, Tokyo, 125-0052, Japan
+- Hamarikyu Gardens: nominatim (name: 浜離宮恩賜庭園) — Hama-rikyu Gardens, Chuo, Tokyo, 104-0046, Japan
+- Ippodo Tea Aoyama Store: gsi (address: 東京都港区南青山4-23-6) — 東京都港区南青山四丁目２３番
+- Nezu Museum: nominatim (name: 根津美術館) — Nezu Museum, 1, Minami-Aoyama 6, Minami-Aoyama, Minato, Tokyo, 107-0062, Japan
+- Edo-Tokyo Open Air Architectural Museum: nominatim (name: 江戸東京たてもの園) — Edo-Tokyo Open Air Architectural Museum, 1, Sakuracho 3, Sakuracho, Koganei, Tokyo, 184-0005, Japan
+- Jimbocho Book Town: nominatim (name: 神保町駅) — Jimbocho, Hakusan Street, Kanda-Jimbocho 1, Kanda-Jimbocho, Chiyoda, Tokyo, 101-0051, Japan
+- Inokashira Park: nominatim (name: 井の頭恩賜公園) — Inokashira Imperial Grant Park, 31, Mitaka, Tokyo, 181-0001, Japan
+- Harmonica Yokocho: nominatim (name: ハモニカ横丁) — Harmonica Yokocho, Kichijoji Honcho, Musashino, Tokyo, 180-0000, Japan
+- Sawara Old Town: nominatim (name: 佐原駅) — Sawara Station, 佐原イ, Katori, Chiba Prefecture, 287-0003, Japan
+- Tokyo National Museum — Hyokeikan: nominatim (name: 表慶館) — Hyokeikan, Kanda-Hakusan Line, Ueno Park, Taito, Tokyo, 110-0007, Japan
+- Hankyu Umeda Main Store: nominatim (name: 阪急うめだ本店) — Hankyu Umeda Main Store, National Highway Route 176, Kakudacho, Kita Ward, Osaka, Osaka Prefecture, 530-0017, Japan
+- Tokyo Dome City Prism Hall: nominatim (name: 東京ドームシティ プリズムホール) — Prism Hall, Crystal Avenue, Kōraku 1, Kōraku, Bunkyō, Tokyo, 112-0004, Japan
+- Yokohama Arena: nominatim (name: 横浜アリーナ) — Yokohama Arena, Shin-Yokohama 3-chome, Kohoku Ward, Yokohama, Kanagawa Prefecture, 222-0033, Japan
+- Omiya Sonic City: nominatim (name: 大宮ソニックシティ) — Omiya Sonic City, 大宮停車場大成線, Sakuragicho 2-chome, Kamikocho, Ōmiya Ward, Saitama, Saitama Prefecture, 330-0802, Japan
+- Sumaura Sanjo Yuen: nominatim (name: 須磨浦山上遊園) — Sumaura Sanjo Yuen Park, 塩屋北町５号線, Shioya-kitamachi 4-chome, Shimohatacho, Tarumi Ward, Kobe, Hyogo Prefecture, 655-0861,
+- Bandai Museum: nominatim (name: バンダイミュージアム 壬生) — Omochanomachi Bandai Museum, 20, Omocha Danchi, Mibu, Shimotsuga County, Tochigi Prefecture, 321-0202, Japan
+- Oya History Museum: nominatim (name: 大谷資料館) — 大谷資料館, 乙女橋, 大谷町, Utsunomiya, Tochigi Prefecture, 320-0061, Japan
+- Mibu Toy Museum: nominatim (name: 壬生町おもちゃ博物館) — おもちゃ博物館, Sukegai Bypass, Sukegai, Mibu, Shimotsuga County, Tochigi Prefecture, 321-0211, Japan

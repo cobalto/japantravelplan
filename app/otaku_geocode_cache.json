@@ -1,0 +1,522 @@
+{
+ "Inamuragasaki, Kamakura": {
+  "label": "Inamuragasaki, Kamakura, Kanagawa Prefecture, 248-0023, Japan",
+  "lat": 35.301696,
+  "lng": 139.525462,
+  "via": "nominatim"
+ },
+ "Institute of Space and Astronautical Science, Sagamihara": {
+  "label": "Institute of Space and Astronautical Science, 銀河天の川通り, Takane 3-chome, 弥栄, Chuo Ward, Sagamihara, Kanagawa Prefecture, 2",
+  "lat": 35.558298,
+  "lng": 139.394492,
+  "via": "nominatim"
+ },
+ "JAXA相模原キャンパス": null,
+ "Osu Kannon, Nagoya": {
+  "label": "Ōsu Kannon, Fushimi Street, Osu 2-chome, Monzencho, Naka Ward, Nagoya, Aichi Prefecture, 460-8799, Japan",
+  "lat": 35.161404,
+  "lng": 136.898096,
+  "via": "nominatim"
+ },
+ "Ota Road, Naniwa, Osaka": {
+  "label": "Kishu Kaidō, Nipponbashi 4, Naniwa Ward, Osaka, Osaka Prefecture, 556-0005, Japan",
+  "lat": 34.661069,
+  "lng": 135.504911,
+  "via": "nominatim"
+ },
+ "Ryusenji, Meguro, Tokyo": {
+  "label": "Ryusenji Meguro Fudo, 三折坂, Shimomeguro 3-chome, Shimo-Meguro, Meguro, Tokyo, 153-0064, Japan",
+  "lat": 35.628222,
+  "lng": 139.708565,
+  "via": "nominatim"
+ },
+ "Sagamiko Resort Pleasure Forest": null,
+ "Square Enix Cafe Shinjuku": {
+  "label": "SQUARE ENIX cafe & Shop SHINJUKU, 1, Shinjuku 3, Shinjuku, Tokyo, 160-0022, Japan",
+  "lat": 35.689802,
+  "lng": 139.702002,
+  "via": "nominatim"
+ },
+ "Yanaka Ginza, Taito, Tokyo": {
+  "label": "Yanaka Ginza, Yanaka 3, Yanaka, Taito, Tokyo, 110-0001, Japan",
+  "lat": 35.727669,
+  "lng": 139.765317,
+  "via": "nominatim"
+ },
+ "tette 須賀川": null,
+ "あしかがフラワーパーク": {
+  "label": "Ashikaga Flower Park, Kiryu-Iwafune Line, 迫間町, Ashikaga, Tochigi Prefecture, 326-0022, Japan",
+  "lat": 36.315158,
+  "lng": 139.518393,
+  "via": "nominatim"
+ },
+ "けやき坂 六本木": {
+  "label": "Keyaki-zaka, Roppongi 6, Roppongi, Minato, Tokyo, 106-0032, Japan",
+  "lat": 35.659201,
+  "lng": 139.730062,
+  "via": "nominatim"
+ },
+ "こどもの国 横浜": {
+  "label": "Kodomonokuni, Kodomonokuni dori, Nara-cho, Aoba Ward, Yokohama, Kanagawa Prefecture, 231-0017, Japan",
+  "lat": 35.558135,
+  "lng": 139.486543,
+  "via": "nominatim"
+ },
+ "さがみ湖プレジャーフォレスト": null,
+ "なばなの里": {
+  "label": "なばなの里, Kuwana, Mie Prefecture, 511-1144, Japan",
+  "lat": 35.079906,
+  "lng": 136.704865,
+  "via": "nominatim"
+ },
+ "よみうりランド": {
+  "label": "Yomiuri Land, Yomiuri V dōri, Sugesengoku 4, Sugesengoku, Tama Ward, Inagi, Kawasaki, Kanagawa Prefecture, 214-0006, Jap",
+  "lat": 35.625246,
+  "lng": 139.518798,
+  "via": "nominatim"
+ },
+ "アニメイト池袋本店": {
+  "label": "Jiang Lai, アニメイト通り, Higashi-Ikebukuro 1, Higashi-Ikebukuro, Toshima, Tokyo, 170-0013, Japan",
+  "lat": 35.730337,
+  "lng": 139.715246,
+  "via": "nominatim"
+ },
+ "ダイバーシティ東京 プラザ": {
+  "label": "Diver City Tokyo, 10, Aomi 1, Aomi, Koto, Tokyo, 135-0064, Japan",
+  "lat": 35.625316,
+  "lng": 139.77588,
+  "via": "nominatim"
+ },
+ "ニンテンドーミュージアム": {
+  "label": "Nintendo Museum, Joyo Uji Line, Nanryocho 3-chome, Oguracho, Uji, Kyoto Prefecture, 611-0042, Japan",
+  "lat": 34.89257,
+  "lng": 135.784205,
+  "via": "nominatim"
+ },
+ "ハモニカ横丁": {
+  "label": "Harmonica Yokocho, Kichijoji Honcho, Musashino, Tokyo, 180-0000, Japan",
+  "lat": 35.703754,
+  "lng": 139.579323,
+  "via": "nominatim"
+ },
+ "バンダイホビーセンター": {
+  "label": "Bandai Hobby Center, Bandai Shizuoka Factory, 長沼, Aoi Ward, Shizuoka, Shizuoka Prefecture, 420-0813, Japan",
+  "lat": 34.989357,
+  "lng": 138.411598,
+  "via": "nominatim"
+ },
+ "バンダイミュージアム 壬生": {
+  "label": "Omochanomachi Bandai Museum, 20, Omocha Danchi, Mibu, Shimotsuga County, Tochigi Prefecture, 321-0202, Japan",
+  "lat": 36.465429,
+  "lng": 139.83835,
+  "via": "nominatim"
+ },
+ "ホテルグレイスリー新宿": {
+  "label": "Hotel Gracery Shinjuku, Hanamichi-dori Street, Kabukichō 1, Kabukichō, Shinjuku, Tokyo, 160-0021, Japan",
+  "lat": 35.695563,
+  "lng": 139.702277,
+  "via": "nominatim"
+ },
+ "リニア・鉄道館": {
+  "label": "SCMAGLEV and Railway Park, メキシコ大通, Kinjofuto 2-chome, Minato Ward, Nagoya, Aichi Prefecture, Japan",
+  "lat": 35.048873,
+  "lng": 136.851206,
+  "via": "nominatim"
+ },
+ "下北沢駅": {
+  "label": "Shimo-Kitazawa Station, Shimokitazawa South Exit Shopping Street, Kitazawa 2, Kitazawa, Setagaya, Tokyo, 155-0031, Japan",
+  "lat": 35.661266,
+  "lng": 139.666921,
+  "via": "nominatim"
+ },
+ "中野ブロードウェイ": {
+  "label": "One-Up, 15, Nakano 5, Nakano, Tokyo, 101-0021, Japan",
+  "lat": 35.709263,
+  "lng": 139.665786,
+  "via": "nominatim"
+ },
+ "丸の内仲通り": {
+  "label": "Marunouchi-Naka Street, Marunouchi 2, Marunouchi, Chiyoda, Tokyo, 100-0005, Japan",
+  "lat": 35.680027,
+  "lng": 139.762849,
+  "via": "nominatim"
+ },
+ "乙女ロード": {
+  "label": "Otome Road, Higashi-Ikebukuro, Toshima, Tokyo, 170-0013, Japan",
+  "lat": 35.730545,
+  "lng": 139.717906,
+  "via": "nominatim"
+ },
+ "井の頭恩賜公園": {
+  "label": "Inokashira Imperial Grant Park, 31, Mitaka, Tokyo, 181-0001, Japan",
+  "lat": 35.69891,
+  "lng": 139.578699,
+  "via": "nominatim"
+ },
+ "佐原駅": {
+  "label": "Sawara Station, 佐原イ, Katori, Chiba Prefecture, 287-0003, Japan",
+  "lat": 35.894531,
+  "lng": 140.494052,
+  "via": "nominatim"
+ },
+ "味の素スタジアム": {
+  "label": "Ajinomoto Stadium, アジパンダ広場, Nishimachi, Chofu, Tokyo, 182-0036, Japan",
+  "lat": 35.664186,
+  "lng": 139.527075,
+  "via": "nominatim"
+ },
+ "埼玉県川越市幸町": {
+  "label": "埼玉県川越市幸町",
+  "lat": 35.923046,
+  "lng": 139.48262,
+  "via": "gsi"
+ },
+ "壬生町おもちゃ博物館": {
+  "label": "おもちゃ博物館, Sukegai Bypass, Sukegai, Mibu, Shimotsuga County, Tochigi Prefecture, 321-0211, Japan",
+  "lat": 36.463828,
+  "lng": 139.808967,
+  "via": "nominatim"
+ },
+ "大宮ソニックシティ": {
+  "label": "Omiya Sonic City, 大宮停車場大成線, Sakuragicho 2-chome, Kamikocho, Ōmiya Ward, Saitama, Saitama Prefecture, 330-0802, Japan",
+  "lat": 35.905577,
+  "lng": 139.619563,
+  "via": "nominatim"
+ },
+ "大谷資料館": {
+  "label": "大谷資料館, 乙女橋, 大谷町, Utsunomiya, Tochigi Prefecture, 320-0061, Japan",
+  "lat": 36.599963,
+  "lng": 139.824751,
+  "via": "nominatim"
+ },
+ "大須商店街": {
+  "label": "Fukunominami Terakata Osaka Line, Senbayashi 2-chome, Asahi Ward, Osaka, Osaka Prefecture, 535-0012, Japan",
+  "lat": 34.723985,
+  "lng": 135.552842,
+  "via": "nominatim"
+ },
+ "岡山後楽園": {
+  "label": "Kōraku Garden, North Ward, Okayama, Okayama Prefecture, Japan",
+  "lat": 34.66633,
+  "lng": 133.937395,
+  "via": "nominatim"
+ },
+ "川越 一番街": {
+  "label": "川越市蔵造り資料館, Ichibangai, 元町一丁目, 幸町, Kawagoe, Saitama Prefecture, 350-0063, Japan",
+  "lat": 35.923713,
+  "lng": 139.482847,
+  "via": "nominatim"
+ },
+ "幕張メッセ": {
+  "label": "Makuhari Messe, Nakase 2-chome, Mihama Ward, Chiba, Chiba Prefecture, 261-0023, Japan",
+  "lat": 35.647302,
+  "lng": 140.034652,
+  "via": "nominatim"
+ },
+ "恵比寿ガーデンプレイス": {
+  "label": "Ebisu Garden Place, 恵比寿プロムナード, Ebisu 4, Ebisu, Shibuya, Tokyo, 150-0013, Japan",
+  "lat": 35.642042,
+  "lng": 139.71356,
+  "via": "nominatim"
+ },
+ "愛知県春日井市鳥居松町5-44": {
+  "label": "愛知県春日井市鳥居松町五丁目４４番地",
+  "lat": 35.247383,
+  "lng": 136.972458,
+  "via": "gsi"
+ },
+ "所沢航空記念公園": {
+  "label": "Tokorozawa Aviation Memorial Park, Tokorozawa, Saitama Prefecture, Japan",
+  "lat": 35.798006,
+  "lng": 139.474296,
+  "via": "nominatim"
+ },
+ "新宿マルイ アネックス": {
+  "label": "Brooklyn Parlor Shinjuku, 26, Shinjuku 3, Shinjuku, Tokyo, 160-0022, Japan",
+  "lat": 35.690136,
+  "lng": 139.70598,
+  "via": "nominatim"
+ },
+ "日本橋 でんでんタウン": {
+  "label": "東京都中央区日本橋",
+  "lat": 35.682903,
+  "lng": 139.775345,
+  "via": "gsi"
+ },
+ "明治神宮": {
+  "label": "Meiji Jingu Main Shrine, 1, Yoyogi Kamizono-chō, Shibuya, Tokyo, 151-8557, Japan",
+  "lat": 35.674842,
+  "lng": 139.699627,
+  "via": "nominatim"
+ },
+ "東京ドームシティ プリズムホール": {
+  "label": "Prism Hall, Crystal Avenue, Kōraku 1, Kōraku, Bunkyō, Tokyo, 112-0004, Japan",
+  "lat": 35.704412,
+  "lng": 139.753263,
+  "via": "nominatim"
+ },
+ "東京ビッグサイト": {
+  "label": "Tokyo Big Sight, Ariake, Koto, Tokyo, 135-0063, Japan",
+  "lat": 35.632053,
+  "lng": 139.797805,
+  "via": "nominatim"
+ },
+ "東京ミッドタウン": {
+  "label": "Tokyo Midtown, Akasaka, Minato, Tokyo, 107-0052, Japan",
+  "lat": 35.665841,
+  "lng": 139.730923,
+  "via": "nominatim"
+ },
+ "東京ミッドタウン日比谷": {
+  "label": "TOKYO Midtown HIBIYA, 日比谷仲通り, Yurakuchō 1, Yurakuchō, Chiyoda, Tokyo, 100-0006, Japan",
+  "lat": 35.673472,
+  "lng": 139.759249,
+  "via": "nominatim"
+ },
+ "東京都千代田区外神田1-15-16": {
+  "label": "東京都千代田区外神田一丁目１５番１６号",
+  "lat": 35.697674,
+  "lng": 139.771881,
+  "via": "gsi"
+ },
+ "東京都千代田区有楽町1-1-2": {
+  "label": "東京都千代田区有楽町一丁目１番",
+  "lat": 35.674088,
+  "lng": 139.759552,
+  "via": "gsi"
+ },
+ "東京都台東区谷中3丁目": {
+  "label": "東京都台東区谷中三丁目",
+  "lat": 35.726913,
+  "lng": 139.765411,
+  "via": "gsi"
+ },
+ "東京都渋谷区代々木神園町1-1": {
+  "label": "東京都渋谷区代々木神園町１番１号",
+  "lat": 35.669868,
+  "lng": 139.702255,
+  "via": "gsi"
+ },
+ "東京都港区南青山4-23-6": {
+  "label": "東京都港区南青山四丁目２３番",
+  "lat": 35.662777,
+  "lng": 139.717621,
+  "via": "gsi"
+ },
+ "東京都目黒区大橋2-16-21": {
+  "label": "東京都目黒区大橋二丁目１６番２１号",
+  "lat": 35.652496,
+  "lng": 139.688141,
+  "via": "gsi"
+ },
+ "東宝スタジオ": {
+  "label": "Toho Studios, 1, Kinuta 7, Kinuta, Setagaya, Tokyo, 157-8561, Japan",
+  "lat": 35.635649,
+  "lng": 139.605057,
+  "via": "nominatim"
+ },
+ "東映太秦映画村": {
+  "label": "TOEI Kyoto Studio Park, 10, Uzumasa-Higashihachiokacho, 御室岡ノ裾町, Sakyō Ward, Kyoto, Kyoto Prefecture, 616-8161, Japan",
+  "lat": 35.016464,
+  "lng": 135.708206,
+  "via": "nominatim"
+ },
+ "東映東京撮影所": {
+  "label": "東映東京撮影所, Nerima, Tokyo, Japan",
+  "lat": 35.753662,
+  "lng": 139.594723,
+  "via": "nominatim"
+ },
+ "柴又帝釈天": {
+  "label": "Shibamata Taishakuten Temple, 3, Shibamata 7, Shibamata, Katsushika, Tokyo, 125-0052, Japan",
+  "lat": 35.758447,
+  "lng": 139.878767,
+  "via": "nominatim"
+ },
+ "根津美術館": {
+  "label": "Nezu Museum, 1, Minami-Aoyama 6, Minami-Aoyama, Minato, Tokyo, 107-0062, Japan",
+  "lat": 35.662243,
+  "lng": 139.717255,
+  "via": "nominatim"
+ },
+ "横浜アリーナ": {
+  "label": "Yokohama Arena, Shin-Yokohama 3-chome, Kohoku Ward, Yokohama, Kanagawa Prefecture, 222-0033, Japan",
+  "lat": 35.512273,
+  "lng": 139.620192,
+  "via": "nominatim"
+ },
+ "横浜ビジネスパーク": {
+  "label": "Yokohama Business Park, Hodogaya Ward, Yokohama, Kanagawa Prefecture, 231-0017, Japan",
+  "lat": 35.454124,
+  "lng": 139.598064,
+  "via": "nominatim"
+ },
+ "横浜中華街": {
+  "label": "Yokohama Chinatown, 港町, Naka ward, Yokohama, Kanagawa Prefecture, 231-0023, Japan",
+  "lat": 35.442664,
+  "lng": 139.645191,
+  "via": "nominatim"
+ },
+ "江の島": {
+  "label": "Enoshima, Fujisawa, Kanagawa Prefecture, 251-0036, Japan",
+  "lat": 35.300105,
+  "lng": 139.480637,
+  "via": "nominatim"
+ },
+ "江戸東京たてもの園": {
+  "label": "Edo-Tokyo Open Air Architectural Museum, 1, Sakuracho 3, Sakuracho, Koganei, Tokyo, 184-0005, Japan",
+  "lat": 35.716374,
+  "lng": 139.512741,
+  "via": "nominatim"
+ },
+ "浜離宮恩賜庭園": {
+  "label": "Hama-rikyu Gardens, Chuo, Tokyo, 104-0046, Japan",
+  "lat": 35.660176,
+  "lng": 139.763824,
+  "via": "nominatim"
+ },
+ "渋谷PARCO": {
+  "label": "Shibuya Parco, 1, Udagawachō, Shibuya, Tokyo, 150-8377, Japan",
+  "lat": 35.661927,
+  "lng": 139.698749,
+  "via": "nominatim"
+ },
+ "瀧泉寺": {
+  "label": "瀧泉寺, Tsuchiura-Ryugasaki Line, Chuo 1-chome, Tatsutamachi, Tsuchiura, Ibaraki Prefecture, 300-0043, Japan",
+  "lat": 36.084492,
+  "lng": 140.200944,
+  "via": "nominatim"
+ },
+ "相模原市立博物館": {
+  "label": "相模原市立博物館, 銀河天の川通り, Takane 3-chome, 弥栄, Chuo Ward, Sagamihara, Kanagawa Prefecture, 252-5210, Japan",
+  "lat": 35.559308,
+  "lng": 139.393076,
+  "via": "nominatim"
+ },
+ "砧公園": {
+  "label": "Kinuta Park, Setagaya, Tokyo, Japan",
+  "lat": 35.630366,
+  "lng": 139.620254,
+  "via": "nominatim"
+ },
+ "祖師ヶ谷大蔵駅": {
+  "label": "祖師ヶ谷大蔵駅, Soshigaya-dori St., Soshigaya 1, Soshigaya, Setagaya, Tokyo, 157-0072, Japan",
+  "lat": 35.643258,
+  "lng": 139.609145,
+  "via": "nominatim"
+ },
+ "神保町駅": {
+  "label": "Jimbocho, Hakusan Street, Kanda-Jimbocho 1, Kanda-Jimbocho, Chiyoda, Tokyo, 101-0051, Japan",
+  "lat": 35.695008,
+  "lng": 139.758269,
+  "via": "nominatim"
+ },
+ "神奈川県相模原市緑区若柳1634": {
+  "label": "神奈川県相模原市緑区若柳",
+  "lat": 35.60717,
+  "lng": 139.205704,
+  "via": "gsi"
+ },
+ "神戸ハーバーランド": {
+  "label": "Kobe Harborland, 3, Higashi-Kawasakicho 1-chome, Chuo Ward, Kobe, Hyogo Prefecture, 650-0044, Japan",
+  "lat": 34.678512,
+  "lng": 135.180311,
+  "via": "nominatim"
+ },
+ "神楽坂駅": {
+  "label": "神楽坂駅, 早稲田通り, Yaraicho, Kagurazaka, Shinjuku, Tokyo, 162-0825, Japan",
+  "lat": 35.70392,
+  "lng": 139.734228,
+  "via": "nominatim"
+ },
+ "福島県須賀川市中町": {
+  "label": "福島県須賀川市中町",
+  "lat": 37.28841,
+  "lng": 140.375595,
+  "via": "gsi"
+ },
+ "福島県須賀川市中町4-1": {
+  "label": "福島県須賀川市中町",
+  "lat": 37.28841,
+  "lng": 140.375595,
+  "via": "gsi"
+ },
+ "福島県須賀川市柱田字中地前22": {
+  "label": "福島県須賀川市柱田",
+  "lat": 37.318485,
+  "lng": 140.26384,
+  "via": "gsi"
+ },
+ "秋葉原駅": {
+  "label": "Akihabara Station, 東京メトロ秋葉原駅;5番出入口, Kanda-Sakumachō 1, Kanda-Sakumachō, Chiyoda, Tokyo, 101-0025, Japan",
+  "lat": 35.69716,
+  "lng": 139.775159,
+  "via": "nominatim"
+ },
+ "稲村ヶ崎": {
+  "label": "竹村循環器内科, National Highway Route 33, 旭町三丁目, 本宮町, Kōchi, Kochi Prefecture, 780-8571, Japan",
+  "lat": 33.555571,
+  "lng": 133.51413,
+  "via": "nominatim"
+ },
+ "筑波宇宙センター": {
+  "label": "JAXA Tsukuba Space Center, 1, Sengen 2-chome, Kurakake, Tsukuba, Ibaraki Prefecture, 305-8505, Japan",
+  "lat": 36.068126,
+  "lng": 140.126778,
+  "via": "nominatim"
+ },
+ "自由が丘駅": {
+  "label": "Jiyugaoka Station, Megami Street, Jiyugaoka 1, Jiyugaoka, Meguro, Tokyo, 152-0035, Japan",
+  "lat": 35.607828,
+  "lng": 139.668547,
+  "via": "nominatim"
+ },
+ "表慶館": {
+  "label": "Hyokeikan, Kanda-Hakusan Line, Ueno Park, Taito, Tokyo, 110-0007, Japan",
+  "lat": 35.718609,
+  "lng": 139.775243,
+  "via": "nominatim"
+ },
+ "谷中銀座商店街": {
+  "label": "福島県矢吹町谷中",
+  "lat": 37.203449,
+  "lng": 140.393936,
+  "via": "gsi"
+ },
+ "鉄道博物館 さいたま": {
+  "label": "The Railway Museum, Onaricho 3-chome, Ōmiya Ward, Saitama, Saitama Prefecture, 330-0852, Japan",
+  "lat": 35.921729,
+  "lng": 139.617861,
+  "via": "nominatim"
+ },
+ "錦市場": {
+  "label": "Nishiki Market, Nishikikōji Street, Higashiuoyachō, Nakagyo Ward, Kyoto, Kyoto Prefecture, 604-8123, Japan",
+  "lat": 35.005024,
+  "lng": 135.76557,
+  "via": "nominatim"
+ },
+ "阪急うめだ本店": {
+  "label": "Hankyu Umeda Main Store, National Highway Route 176, Kakudacho, Kita Ward, Osaka, Osaka Prefecture, 530-0017, Japan",
+  "lat": 34.702713,
+  "lng": 135.498432,
+  "via": "nominatim"
+ },
+ "須磨浦山上遊園": {
+  "label": "Sumaura Sanjo Yuen Park, 塩屋北町５号線, Shioya-kitamachi 4-chome, Shimohatacho, Tarumi Ward, Kobe, Hyogo Prefecture, 655-0861,",
+  "lat": 34.6419,
+  "lng": 135.094206,
+  "via": "nominatim"
+ },
+ "須賀川市民交流センター": {
+  "label": "大須賀市民交流センター, 相良大須賀線, 洋望台, 河原町, Kakegawa, Shizuoka Prefecture, 437-1301, Japan",
+  "lat": 34.678973,
+  "lng": 137.988623,
+  "via": "nominatim"
+ },
+ "須賀川駅": {
+  "label": "Sukagawa, 須賀川停車場線, 中山, Sukagawa, Fukushima Prefecture, 962-0001, Japan",
+  "lat": 37.300476,
+  "lng": 140.371917,
+  "via": "nominatim"
+ }
+}
